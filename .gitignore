@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 *#
 =======
 .tst
@@ -16,3 +17,6 @@
 =======
 *.tst
 >>>>>>> 3531d50... Update gitignore
+=======
+.tst
+>>>>>>> 437d351... 0x00-shell_basics project tasks submission

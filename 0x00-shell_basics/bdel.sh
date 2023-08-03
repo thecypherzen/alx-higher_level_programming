@@ -34,8 +34,12 @@ else
 fi
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 437d351... 0x00-shell_basics project tasks submission
 =======
 >>>>>>> 29bb7f9... 0x02-shell-redirections project
+=======
+
+>>>>>>> 437d351... 0x00-shell_basics project tasks submission
