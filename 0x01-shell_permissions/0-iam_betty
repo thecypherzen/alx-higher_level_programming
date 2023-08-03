@@ -1,6 +1,7 @@
 #!/bin/bash
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 su betty
 =======
 sudo su - betty
@@ -8,3 +9,6 @@ sudo su - betty
 =======
 su betty
 >>>>>>> 1fb379f... Update scripts 0, 1 and 13
+=======
+sudo su - betty
+>>>>>>> 401c3c2... 0x01-shell_permissions tasks update
