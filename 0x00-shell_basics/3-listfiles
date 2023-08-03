@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ls -l
 =======
 cd ~
@@ -12,3 +13,6 @@ ls -l
 =======
 cd ~
 >>>>>>> 437d351... 0x00-shell_basics project tasks submission
+=======
+ls -l
+>>>>>>> a765322... Update scripts 1 - 3 and file.tst
