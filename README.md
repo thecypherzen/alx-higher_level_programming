@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d03ba35... docs(sys/devops): update repo
 # Overview #
@@ -23,3 +24,6 @@ Finally, I made it through the gates of shell into sprint 2 and here is the begi
 >>>>>>> 437d351... 0x00-shell_basics project tasks submission
 =======
 >>>>>>> d03ba35... docs(sys/devops): update repo
+=======
+## More Coming Soon ##
+>>>>>>> 437d351... 0x00-shell_basics project tasks submission

@@ -32,3 +32,7 @@ else
 	exit 1
     fi
 fi
+<<<<<<< HEAD
+=======
+
+>>>>>>> 437d351... 0x00-shell_basics project tasks submission

@@ -1,2 +1,6 @@
 #!/bin/bash
+<<<<<<< HEAD
 ls -l
+=======
+cd ~
+>>>>>>> 437d351... 0x00-shell_basics project tasks submission

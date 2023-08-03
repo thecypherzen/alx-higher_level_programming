@@ -1,2 +1,6 @@
 #!/bin/bash
+<<<<<<< HEAD
 mv [A-Z]* /tmp/su
+=======
+mv [[:upper:]]* /tmp/u
+>>>>>>> 437d351... 0x00-shell_basics project tasks submission
