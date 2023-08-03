@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 #!/bin/bash
+=======
+!/bin/bash
+>>>>>>> 401c3c2... 0x01-shell_permissions tasks update
 whoami
