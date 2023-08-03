@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/bin/bash
 =======
 !/bin/bash
@@ -11,4 +12,7 @@
 =======
 !/bin/bash
 >>>>>>> 401c3c2... 0x01-shell_permissions tasks update
+=======
+#!/bin/bash
+>>>>>>> 1fb379f... Update scripts 0, 1 and 13
 whoami
