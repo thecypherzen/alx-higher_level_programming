@@ -1,6 +1,10 @@
 #!/bin/bash
 <<<<<<< HEAD
+<<<<<<< HEAD
 cat /etc/passwd | grep -v "bin"
 =======
 cat /etc/passwd | grep -vw "bin"
 >>>>>>> 29bb7f9... 0x02-shell-redirections project
+=======
+cat /etc/passwd | grep -v "bin"
+>>>>>>> 61b692e... 0x02-shell-redirections corrections
