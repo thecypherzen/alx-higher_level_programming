@@ -1,2 +1,6 @@
 #!/bin/bash
+<<<<<<< HEAD
 find . -type d ! -name "." | wc -l
+=======
+find . -type -d ! -name '.'
+>>>>>>> 29bb7f9... 0x02-shell-redirections project

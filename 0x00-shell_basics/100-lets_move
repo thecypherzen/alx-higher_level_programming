@@ -1,6 +1,10 @@
 #!/bin/bash
 <<<<<<< HEAD
+<<<<<<< HEAD
 mv [A-Z]* /tmp/su
 =======
 mv [[:upper:]]* /tmp/u
 >>>>>>> 437d351... 0x00-shell_basics project tasks submission
+=======
+mv [A-Z]* /tmp/su
+>>>>>>> 29bb7f9... 0x02-shell-redirections project
