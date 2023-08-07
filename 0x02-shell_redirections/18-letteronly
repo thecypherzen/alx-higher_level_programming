@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 cat /etc/ssh/sshd_config | grep "^[[:alpha:]]"
 =======
 cat /etc/ssh/sshd_config | grep "[[:alpha:]]"
@@ -12,3 +13,6 @@ cat /etc/ssh/sshd_config | grep "^[[:alpha:]]"
 =======
 cat /etc/ssh/sshd_config | grep "[[:alpha:]]"
 >>>>>>> 29bb7f9... 0x02-shell-redirections project
+=======
+cat /etc/ssh/sshd_config | grep "^[[:alpha:]]"
+>>>>>>> 61b692e... 0x02-shell-redirections corrections
