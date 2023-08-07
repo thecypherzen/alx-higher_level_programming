@@ -1,6 +1,7 @@
 #!/bin/bash
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 cat /etc/passwd
 =======
 ls /etc/passwd
@@ -8,3 +9,6 @@ ls /etc/passwd
 =======
 cat /etc/passwd
 >>>>>>> 61b692e... 0x02-shell-redirections corrections
+=======
+ls /etc/passwd
+>>>>>>> 29bb7f9... 0x02-shell-redirections project

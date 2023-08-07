@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 chown --reference=olleh hello
 =======
 chmod --reference=olleh hello
@@ -12,3 +13,6 @@ chown --reference=olleh hello
 =======
 chmod --reference=olleh hello
 >>>>>>> 401c3c2... 0x01-shell_permissions tasks update
+=======
+chown --reference=olleh hello
+>>>>>>> 29bb7f9... 0x02-shell-redirections project
