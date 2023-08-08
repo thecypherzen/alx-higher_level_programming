@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 cat $1 | cut -c1 | paste -sd ''
 =======
 cat $1 | cut -c1 | paste -d '' - - - - - - - - -
@@ -12,3 +13,6 @@ cat $1 | cut -c1 | paste -sd ''
 =======
 cat $1 | cut -c1 | paste -d '' - - - - - - - - -
 >>>>>>> 29bb7f9... 0x02-shell-redirections project
+=======
+cat $1 | cut -c1 | paste -sd ''
+>>>>>>> 8af4d89... Update scripts 24(101) and 25(102)
