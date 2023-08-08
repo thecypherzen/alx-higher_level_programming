@@ -1,2 +1,6 @@
 #!/bin/bash
+<<<<<<< HEAD
 export PATH=$PATH:/action
+=======
+export PATH=$PATH://action
+>>>>>>> 871fca6... Project 0x03 first commit of tasks 0-3

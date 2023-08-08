@@ -1,4 +1,5 @@
 #!/bin/bash
+<<<<<<< HEAD
 files=$@
 editor=$EDITOR
 nof=$#
@@ -31,4 +32,21 @@ else
 	editor=$EDITOR
     fi
         $editor $1
+=======
+file=$1
+
+#Check if file name is provided
+if [ ! $file ]; then
+    echo "Sorry, filename needed. Try again."
+    exit 1
+else
+    touch $file
+    chmod 744 $file
+    echo "Script $file created"
+    read -p "Open with: " editor
+    if [ $editor ]; then
+	echo "#!/bin/bash" > $file
+	$editor $file
+    fi
+>>>>>>> 871fca6... Project 0x03 first commit of tasks 0-3
 fi
