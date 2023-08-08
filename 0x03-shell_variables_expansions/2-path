@@ -1,6 +1,7 @@
 #!/bin/bash
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export PATH=$PATH:/action
 =======
 export PATH=$PATH://action
@@ -8,3 +9,6 @@ export PATH=$PATH://action
 =======
 export PATH=$PATH:/action
 >>>>>>> b2b71c3... Update script 2, add scripts 3 and 16
+=======
+export PATH=$PATH://action
+>>>>>>> 871fca6... Project 0x03 first commit of tasks 0-3
