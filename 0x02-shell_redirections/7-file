@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 echo "Best School" > \\\*\\\\"'\"Best School\"\\'"\\\\\*\$\\\?\\\*\\\*\\\*\\\*\\\*\:\)
 =======
 touch \\*\\\\\'\"Best\ School\"\\\'\\\\*\\\$\\?\\*\\*\\*\\*\\*\:\)
@@ -18,3 +19,6 @@ echo "Best School" > \\\*\\\\"'\"Best School\"\\'"\\\\\*\$\\\?\\\*\\\*\\\*\\\*\\
 touch \\*\\\\\'\"Best\ School\"\\\'\\\\*\\\$\\?\\*\\*\\*\\*\\*\:\)
 #\*\\'"Best School"\'\\*$\?\*\*\*\*\*:)
 >>>>>>> 29bb7f9... 0x02-shell-redirections project
+=======
+echo "Best School" > \\\\\\\"'\"Best School\"\\'"\\\\\\$\\\?\\\\\\\\\\\\\\\*\:\)
+>>>>>>> 32a8dd0... Updte scripts 7 and 26
