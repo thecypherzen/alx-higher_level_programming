@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 cat $1 | tail -n +2 | cut -f1 | sort | uniq -c | sort -g -k1 -r | tr -s ' '| cut -d " " -f 3 | head -11
 =======
 cat $1 | cut -f1 | sort | uniq -c | sort -nk1r | tr -s ' '  \
@@ -13,3 +14,6 @@ cat $1 | cut -f1 | sort | uniq -c | sort -n -k1 -r | tr -s ' '| tr ' ' '*'| cut 
 =======
 cat $1 | cut -f1 | sort | uniq -c | sort -n -k1 -r | tr -s ' '| cut -d " " -f 3 | head -11
 >>>>>>> 32a8dd0... Updte scripts 7 and 26
+=======
+cat $1 | cut -f1 | sort | uniq -c | sort -g -k1 -r | tr -s ' '| cut -d " " -f 3 | head -11
+>>>>>>> 026755f... update script 26
