@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 find -type f -name "*.gif" | rev | cut -d "/" -f 1 | cut -d . -f 2- | rev | LC_ALL=C sort -f
 =======
 find . -type f -name "*.gif" | rev | cut -c 5- | cut -d "/" -f1 | rev | sort  -f
@@ -14,3 +15,6 @@ find . -type f -name "*.gif" | rev | cut -c 5- | cut -d "/" -f1 | rev |\
 find . -type f -name "*.gif" | rev | cut -d "/" -f1 | cut -d "." -f2- | rev \
     | LC_ALL=C sort -f
 >>>>>>> 8af4d89... Update scripts 24(101) and 25(102)
+=======
+find -type f -name "*.gif" | rev | cut -d "/" -f 1 | cut -d . -f 2-| rev | LC_ALL=C sort -f
+>>>>>>> 96e967c... Updte script 101
