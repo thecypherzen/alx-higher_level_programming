@@ -1,3 +1,2 @@
 #!/bin/bash
-cat $1 | cut -f1 | sort | uniq -c | sort -nk1r | tr -s ' '  \
-    | tr ' ' '*'| cut -d "*" -f3 | head -11
+cat $1 | cut -f1 | sort | uniq -c | sort -n -k1 -r | tr -s ' '| tr ' ' '*'| cut -d "*" -f 3 | head -11
