@@ -1,5 +1,6 @@
 #!/bin/bash
 <<<<<<< HEAD
+<<<<<<< HEAD
 files=$@
 editor=$EDITOR
 nof=$#
@@ -34,19 +35,41 @@ else
         $editor $1
 =======
 file=$1
+=======
+files=$@
+editor=$EDITOR
+nof=$#
+>>>>>>> 301b3ba... Update mkscript to set default editor
 
-#Check if file name is provided
-if [ ! $file ]; then
-    echo "Sorry, filename needed. Try again."
+#Check if file name is provided.
+#If at least one file is provided, create it with shebang and set x permission.
+#If no default editor, prompt user to set 
+if [[ ! $1 ]]; then
+    echo "Sorry, at least 1 filename needed. Try again."
     exit 1
 else
-    touch $file
-    chmod 744 $file
-    echo "Script $file created"
-    read -p "Open with: " editor
-    if [ $editor ]; then
+    for file in $files;  do
+	touch $file
 	echo "#!/bin/bash" > $file
-	$editor $file
+	chmod 744 $file
+    done
+
+    if [[ $nof -eq 1 ]]; then
+	echo "File created."
+    else
+	echo "$nof files created."
     fi
+
+    sleep 1
+
+    if [ ! $editor ]; then
+	read -p "Set your default editor: " EDITOR
+	export EDITOR
+	editor=$EDITOR
+    fi
+<<<<<<< HEAD
 >>>>>>> 871fca6... Project 0x03 first commit of tasks 0-3
+=======
+        $editor $1
+>>>>>>> 301b3ba... Update mkscript to set default editor
 fi
