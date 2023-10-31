@@ -12,7 +12,7 @@
 
 def fizzbuzz():
     for n in range(1, 101):
-        sep = "" if n == 100 else " "
+        sep = " "
         if not n % 3 and n % 5:
             print(f"{'Fizz'}", end=sep)
         elif not n % 5 and n % 3:
