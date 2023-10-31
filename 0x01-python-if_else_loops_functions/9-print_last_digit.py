@@ -8,8 +8,6 @@
 
 
 def print_last_digit(number):
-    ret = number % 10 \
-        if number >= 0 \
-        else ((number * -1) % 10)
+    ret = abs(number) % 10
     print("{}".format(ret), end="")
     return (ret)
