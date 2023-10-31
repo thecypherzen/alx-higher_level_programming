@@ -9,7 +9,7 @@
 
 def remove_char_at(str, n):
     sz = len(str)
-    if n <= sz and n > 0:
+    if n <= sz and n >= 0:
         newstr = str[:n] + str[n+1:sz]
     else:
         newstr = str[:sz]
