@@ -7,6 +7,7 @@
  * @number: number to insert
  * Return: ptr the new node on success. NULL if it failed.
  */
+
 listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *temp = NULL, *prev = NULL, *new_node;
@@ -22,12 +23,16 @@ listint_t *insert_node(listint_t **head, int number)
 	/* straighten out a looping node (if there is)*/
 	temp = get_loop(*head);
 	if (temp)
+	{
+		printf("looping node: %p\n", (void *)temp);
 		temp->next = NULL;
+	}
 
 	/* insert the new node */
 	new_node->n = number;
 	if (*head == NULL)
 	{
+		printf("head == null");
 		new_node->next = NULL;
 		*head = new_node;
 	}
@@ -35,7 +40,12 @@ listint_t *insert_node(listint_t **head, int number)
 	{
 		temp = *head;
 		while (temp && (temp->n <= number))
+		{
+			/*printf("inside loop\n");*/
 			prev = temp, temp = temp->next;
+			/*printf("prev: %i, temp: %i\n", prev->n, temp->n);*/
+			/*sleep(1); */
+		}
 		new_node->next = temp;
 		if (prev)
 			prev->next = new_node;
@@ -44,11 +54,6 @@ listint_t *insert_node(listint_t **head, int number)
 	}
 	return (new_node);
 }
-
-
-
-
-
 /**
  * get_loop - gets the address of looping node
  * @head: ptr to head of list
