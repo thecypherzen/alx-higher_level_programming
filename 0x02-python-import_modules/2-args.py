@@ -10,6 +10,7 @@ if __name__ == "__main__":
         None
     """
     import sys
+    import dis
     args = sys.argv
     len = len(args)
 
@@ -20,3 +21,4 @@ if __name__ == "__main__":
         print("{} {}:".format(len - 1, a_msg))
         for i in range(1, len):
             print("{}: {}".format(i, args[i]))
+

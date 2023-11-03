@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import dis
 def add(a, b):
     """My addition function
 
@@ -10,3 +11,4 @@ def add(a, b):
         The return value. a + b
     """
     return (a + b)
+dis.dis(add)
