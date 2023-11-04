@@ -16,4 +16,5 @@ def print_matrix_integer(matrix=[[]]):
     if matrix is not None:
         for row in matrix:
             if row is not None:
-                print(*row)
+                sz = len(row)
+                print((" ".join(["{}" for i in range(sz)])).format(*row))
