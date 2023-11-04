@@ -13,6 +13,8 @@ def print_reversed_list_integer(my_list=[]):
     Return:
         None
     """
-    max = len(my_list)
-    for i in range(max - 1, -1, -1):
+    if my_list is None:
+        return None
+    max = len(my_list) - 1
+    for i in range(max, -1, -1):
         print("{:d}".format(my_list[i]))
