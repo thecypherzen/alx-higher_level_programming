@@ -13,6 +13,6 @@ def element_at(my_list, idx):
         The element retrieved from the list
     """
     max = len(my_list)
-    if idx < 0 or idx >= max or idx is not int:
+    if idx < 0 or idx >= max or type(idx) is not int:
         return None
     return my_list[idx]
