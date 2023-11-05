@@ -18,6 +18,6 @@ def print_matrix_integer(matrix=[[]]):
     else:
         for row in matrix:
             if row is not None:
-                print(" ".join(["{}"] * len(row)).format(*row))
+                print(" ".join(["{:d}"] * len(row)).format(*row))
             else:
                 print("{}".format(None))
