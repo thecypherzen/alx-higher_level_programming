@@ -23,3 +23,4 @@ if __name__ == "__main__":
         for i in range(1, args_len):
             sum = (add(sum, int(args_list[i])))
         print(sum)
+

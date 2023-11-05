@@ -14,3 +14,6 @@ def remove_char_at(str, n):
     else:
         newstr = str[:sz]
     return newstr
+
+from dis import dis
+dis(remove_char_at)
