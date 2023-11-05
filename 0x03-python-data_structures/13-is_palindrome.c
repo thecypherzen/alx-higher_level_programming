@@ -11,7 +11,7 @@ int is_palindrome(listint_t **head)
 	listint_t *temp;
 
 	if (!head)
-		return (!is_pali);
+		return (is_pali);
 	list_len = get_list_len(*head);
 	if (!list_len)
 		return (is_pali);
