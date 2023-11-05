@@ -28,4 +28,8 @@ def add_tuple(tuple_a=(), tuple_b=()):
                 res.append(j)
             else:
                 res[i] += j
+    reslen = len(res)
+    while reslen < 2:
+        res.append(0)
+        reslen = len(res)
     return tuple(res)
