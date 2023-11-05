@@ -13,10 +13,14 @@ def print_matrix_integer(matrix=[[]]):
     Return:
         None
     """
-    if matrix is not None:
+    if matrix is None:
+        print("{}".format(None))
+    else:
         for row in matrix:
             if row is not None:
                 sz = len(row)
                 for i in range(sz):
                     sep = "\n" if i == sz - 1 else " "
                     print("{}".format(row[i]), end=sep)
+            else:
+                print("{}".format(None))
