@@ -8,6 +8,6 @@ def best_score(a_dictionary):
     Return:
         The key with bigges value integer
     """
-    if a_dictionary is None:
+    if a_dictionary is None or not a_dictionary:
         return None
     return sorted(a_dictionary, key=lambda x: a_dictionary[x], reverse=True)[0]
