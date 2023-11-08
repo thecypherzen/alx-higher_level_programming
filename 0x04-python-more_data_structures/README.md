@@ -21,5 +21,5 @@ This folder contains files for the **Python - More Data Structures: Set, Diction
 Files on the project are task based and are as follows:
 | SN | File | Description |
 |----|------|-------------|
-| 1. |[0-square_matrix_simple.py](https://github.com)| A function that computes the square value of all integers of a matrix.</br>**Constraints**:<ul><li>matrix is a 2 dimensional array.</li><li>Initial matrix should not be modified.</li><li>Returns a new matrix<li>Same size as matrix</li><li>Each value should be the square of the value of the input</li></li><li>Module imports not allowed.</li><li>Can use retular loops, maps, etc.</li></ul>|
+| 1. |[0-square_matrix_simple.py](https://github.com)| A function that computes the square value of all integers of a matrix.</br>**Constraints**:<ul><li>*matrix* is a 2 dimensional array.</li><li>Initial matrix should not be modified.</li><li>Returns a new matrix<ul><li>Same size as matrix</li><li>Each value should be the square of the value of the input</li></ul></li><li>Module imports not allowed.</li><li>Can use retular loops, maps, etc.</li></ul>|
 | 2. | Pending |
