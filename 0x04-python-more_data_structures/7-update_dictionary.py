@@ -10,7 +10,7 @@ def update_dictionary(a_dictionary, key, value):
     Return:
         The dictionary with updated values
     """
-    if not a_dictionary:
+    if a_dictionary is None:
         return dict()
     a_dictionary[key] = value
     return a_dictionary
