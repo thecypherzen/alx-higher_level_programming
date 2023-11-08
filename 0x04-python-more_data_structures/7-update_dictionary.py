@@ -12,7 +12,6 @@ def update_dictionary(a_dictionary, key, value):
     """
     if not a_dictionary:
         return dict()
-    if type(key) is not str:
-        return a_dictionary
-    a_dictionary[key] = value
-    return a_dictionary
+    new_dict = dict(a_dictionary)
+    new_dict[key] = value
+    return new_dict
