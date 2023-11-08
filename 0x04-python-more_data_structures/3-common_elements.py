@@ -12,10 +12,6 @@ def common_elements(set_1, set_2):
     Notes:
         - No imports allowed
     """
-    if set_1 and not set_2:
-        return set_1.copy()
-    if set_2 and not set_1:
-        return set_2.copy()
-    if not set_1 and not set_2:
+    if not set_1 or not set_2:
         return set()
     return set(set_1 & set_2)
