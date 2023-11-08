@@ -18,4 +18,4 @@ def square_matrix_simple(matrix=[]):
     if not matrix:
         return None
     return list(list(map(lambda x: x ** 2 if x else None, row))
-                for row in matrix)
+                for row in matrix if row)
