@@ -219,7 +219,15 @@ print(dirfiles)
 # print(f"\nAfter:\nList:{mylist}\nDeque: {mydeque}\n")
 
 #tuples
-tpl1 = 'this', 3, 4.9, "that"
-print(tpl1[2])
-tpl2 = tpl1, 'second', 'minute'
-print(*tpl2[1])
+# tpl1 = 'this', 3, 4.9, "that"
+# print(tpl1[2])
+# tpl2 = tpl1, 'second', 'minute'
+# print(*tpl2[1])
+
+
+dict1 = {"this": "that", "here": "there", "them": "us"}
+dict1keys = list(dict1.keys())
+dict1vals = list(dict1.values())
+dict1.update({"this":"they", "here":"the place"})
+val = dict1["this"]
+print(val)

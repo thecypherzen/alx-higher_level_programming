@@ -51,3 +51,18 @@ print(increase(5))
 print(auto_incrementor.__doc__)
 print(auto_incrementor.__annotations__)
 """
+
+"""
+# REturning a function from a function
+def getmult_func(num):
+	def mult_n(n):
+		return n * num
+	return mult_n
+
+mult5 = getmult_func(5)
+mult10 = getmult_func(10)
+
+print("2 * 5 = ", mult5(2))
+print("2 * 10 = ", mult10(2))
+"""
+
