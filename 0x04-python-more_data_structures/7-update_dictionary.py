@@ -11,7 +11,6 @@ def update_dictionary(a_dictionary, key, value):
         The dictionary with updated values
     """
     if not a_dictionary:
-        return dict()
-    new_dict = dict(a_dictionary)
-    new_dict[key] = value
-    return new_dict
+        return None
+    a_dictionary[key] = value
+    return a_dictionary
