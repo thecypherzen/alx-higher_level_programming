@@ -20,3 +20,6 @@ def weight_average(my_list=[]):
         tot += total[i]
     av = sum / tot
     return av
+
+# when I use a tougher check: type(tuple) is tuple, I get 5/6 output
+# checks red
