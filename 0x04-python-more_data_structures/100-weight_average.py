@@ -13,9 +13,8 @@ def weight_average(my_list=[]):
         return 0
     sum = 0.0
     tot = 0.0
-    weights = list(tupl[0] * tupl[1] for tupl in my_list
-                   if type(tupl) is tuple)
-    total = list(tupl[1] for tupl in my_list if type(tuple) is tuple)
+    weights = list(tupl[0] * tupl[1] for tupl in my_list)
+    total = list(tupl[1] for tupl in my_list)
     for i in range(len(my_list)):
         sum += weights[i]
         tot += total[i]
