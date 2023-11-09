@@ -22,10 +22,10 @@ void print_python_bytes(PyObject *p)
 		obj = (PyBytesObject *)p;
 		objsize = obj->ob_base.ob_size;
 		printf("[.] bytes object info\n");
-		printf("  size: %ld\n", objsize);
-		printf("  trying string: %s\n", obj->ob_sval);
+		printf(" size: %ld\n", objsize);
+		printf(" trying string: %s\n", obj->ob_sval);
 		max_len = objsize + 1 <= 10 ? objsize + 1 : 10;
-		printf("  first %lu bytes:", max_len);
+		printf(" first %lu bytes:", max_len);
 		for (i = 0; i < max_len; i++)
 			printf("  %02x", (unsigned char)obj->ob_sval[i]);
 		printf("\n");
