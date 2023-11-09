@@ -22,10 +22,10 @@ void print_python_bytes(PyObject *p)
 		obj = (PyBytesObject *)p;
 		objsize = obj->ob_base.ob_size;
 		printf("[.] bytes object info\n");
-		printf("   size: %ld\n", objsize);
-		printf("   trying string: %s\n", obj->ob_sval);
+		printf("  size: %ld\n", objsize);
+		printf("  trying string: %s\n", obj->ob_sval);
 		max_len = objsize + 1 <= 10 ? objsize + 1 : 10;
-		printf("   first %lu bytes:", max_len);
+		printf("  first %lu bytes:", max_len);
 		for (i = 0; i < max_len; i++)
 			printf("  %02x", (unsigned char)obj->ob_sval[i]);
 		printf("\n");
@@ -41,10 +41,10 @@ void print_python_bytes(PyObject *p)
 void print_python_list(PyObject *p)
 {
 	PyListObject *listobj = (PyListObject *)p;
-	Py_ssize_t list_sz = listobj->ob_base.ob_size, i;
+	Py_ssize_t i = 0, list_sz = listobj->ob_base.ob_size;
 
 	printf("[*] Python list info\n");
-	printf("[*] Size of the Python List = 2: %ld\n", list_sz);
+	printf("[*] Size of the Python List = %ld\n", list_sz);
 	printf("[*] Allocated: %ld\n", listobj->allocated);
 	for (i = 0; i < list_sz; i++)
 		printf("Element: %ld, %s\n", i, listobj->ob_item[i]->ob_type->tp_name);
