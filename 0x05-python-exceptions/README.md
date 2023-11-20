@@ -21,5 +21,5 @@ This directory contains files for the **Python - Exceptions** project, in partia
 Files on the project are task based and are as follows:
 | SN | File | Description |
 |----|------|-------------|
-| 1. |[0-safe_print_list.py](https://github.com)| A function that prints x elements of a list. - All elements must be printed on the same line followed by a new line.<ul><li> x represents the number of elements to print </li><li> x can be bigger than the length of my_list </li><li> Returns the real number of elements printed </li><li>Have to use try: / except:</li><li>Not allowed to import any module</li><li>Not allowed to use len() </li></ul>|
+| 1. |[0-safe_print_list.py](https://github.com)| A function that prints x elements of a list.<ul><li>All elements must be printed on the same line followed by a new line.</li><li> x represents the number of elements to print </li><li> x can be bigger than the length of my_list </li><li> Returns the real number of elements printed </li><li>Have to use try: / except:</li><li>Not allowed to import any module</li><li>Not allowed to use len() </li></ul>|
 | 2. | Pending |
