@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 class Square():
-    """A class that defines a square
+    """A class that defines a square"""
 
-    Attributes:
-        size (:obj:`int` or :`float`): size of the square in given units
-    """
     def __init__(self, size):
+        """Square class initialization
+
+        Args:
+            __size(:obj: `int`): size of the square's side
+        """
         self.__size = size
