@@ -56,6 +56,11 @@ class Square():
 
     @size.setter
     def size(self, value=None):
+        """Size must be valid to set successfully
+
+        * by default it doesn't change the already existing value
+        * performs same checks on size as in __init__ befor setting
+        """
         if value is None:
             return
         if not isinstance(value, int):
@@ -63,3 +68,22 @@ class Square():
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
+    def my_print(self):
+        """A method of the square class - prints out the square
+
+        Description:
+            * if self.__size is 0, it prints a new line
+            * Else it prints out the square using `#`
+        """
+        if not self.area():
+            print("")
+        else:
+            i = self.size
+            while i > 0:
+                j = self.size
+                while j:
+                    print("#", end="")
+                    j -= 1
+                print("")
+                i -= 1
