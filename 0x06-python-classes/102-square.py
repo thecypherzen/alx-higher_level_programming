@@ -27,6 +27,18 @@ class Square():
             __init__: initialises the class
             __repr__: string representation of class.
                 Matches what Square.my_print() produces
+            __eq__: Returns True if
+                A instance of Square == B instance of Square, else False.
+            __ne__: Returns True if:
+                A instance of Square != B instance of Square, else False.
+            __ge__: Returns True if:
+                A instance of Square >= B instance of Square, else False.
+            __le__: Returns True if:
+                A instance of Square <= B instance of Square, else False.
+            __gt__: Returns True if:
+                A instance of Square > B instance of Square, else False.
+            __lt__: Returns True if:
+                A instance of Square < B instance of Square, else False.
             area: calculates the area of square
             size: a getter method of __size. Has @size.setter method.
             my_print: prints a visual representation of square using
@@ -38,8 +50,8 @@ class Square():
         Sets ``__size`` to ``size`` if ``size`` is valid
         """
         # validate size and set
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
+        if not isinstance(size, int) and not isinstance(size, float):
+            raise TypeError("size must be a number")
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
@@ -80,6 +92,66 @@ class Square():
             i -= 1
         return res
 
+    def __eq__(self, other):
+        """Checks if two intances of Square are equal
+
+        Returns:
+            True if equal. Otherwise, False
+        """
+        if isinstance(other, Square):
+            return self.size == other.size
+        return False
+
+    def __ne__(self, other):
+        """Checks if two intances of Square are not equal
+
+        Returns:
+            True if not equal. Otherwise, False
+        """
+        if isinstance(other, Square):
+            return self.size != other.size
+        return False
+
+    def __lt__(self, other):
+        """Checks if one instance of Square is < another
+
+        Returns:
+            True if self < other. Otherwise, False
+        """
+        if isinstance(other, Square):
+            return self.size < other.size
+        return False
+
+    def __gt__(self, other):
+        """Checks if one instance of Square is < another
+
+        Returns:
+            True if self > other. Otherwise, False
+        """
+        if isinstance(other, Square):
+            return self.size > other.size
+        return False
+
+    def __ge__(self, other):
+        """Checks if one instance of Square is >= another
+
+        Returns:
+            True if self >= other. Otherwise, False
+        """
+        if isinstance(other, Square):
+            return self.size >= other.size
+        return False
+
+    def __le__(self, other):
+        """Checks if one instance of Square is <= another
+
+        Returns:
+            True if self <= other. Otherwise, False
+        """
+        if isinstance(other, Square):
+            return self.size <= other.size
+        return False
+
     @property
     def size(self):
         """Is a getter of the value of __size
@@ -101,8 +173,8 @@ class Square():
         """
         if value is None:
             return
-        if not isinstance(value, int):
-            raise TypeError("size must be an integer")
+        if not isinstance(value, int) and not isinstance(value, float):
+            raise TypeError("size must be a number")
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
