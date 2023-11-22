@@ -52,7 +52,7 @@ class Square():
             a stringyfied result of self.my_print()
         """
         if not self.__size:
-            return "\n"
+            return ""
         else:
             res = ""
             # print y shift
