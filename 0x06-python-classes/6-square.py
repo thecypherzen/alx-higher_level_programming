@@ -117,7 +117,7 @@ class Square():
             i = self.size
             while i:
                 # print leading spaces based on position
-                j = 0 if not self.position[1] else self.position[0]
+                j = self.position[1]
                 while j:
                     print(" ", end="")
                     j -= 1
