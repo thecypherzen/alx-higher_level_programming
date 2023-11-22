@@ -45,6 +45,37 @@ class Square():
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = position
 
+    def __repr__(self):
+        """Representation of the Square object
+
+        Returns:
+            a stringyfied result of self.my_print()
+        """
+        if not self.__size:
+            return "\n"
+        else:
+            res = ""
+            # print y shift
+            i = self.position[1]
+            while i:
+                res += "\n"
+                i -= 1
+            # set height and width of square
+            i = self.size
+            while i:
+                x = self.position[0]
+                j = self.size
+                while x:
+                    res += " "
+                    x -= 1
+                while j:
+                    res += "#"
+                    j -= 1
+                if i > 1:
+                    res += "\n"
+                i -= 1
+        return res
+
     @property
     def size(self):
         """Is a getter of the value of __size
@@ -104,7 +135,7 @@ class Square():
             * Preceeds the `#` with corresponding to position[0] if
                 position[1] == 0 otherwise with position[1]
         """
-        if not self.area():
+        if not self.__size:
             print("")
         else:
             # print y shift
