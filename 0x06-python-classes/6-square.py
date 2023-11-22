@@ -114,15 +114,19 @@ class Square():
         if not self.area():
             print("")
         else:
+            # print y shift
+            i = self.position[1]
+            while i:
+                print("")
+                i -= 1
+            # set height and width of square
             i = self.size
             while i:
-                # print leading spaces based on position
-                j = self.position[1]
-                while j:
-                    print(" ", end="")
-                    j -= 1
-                # set width of square
+                x = self.position[0]
                 j = self.size
+                while x:
+                    print(" ", end="")
+                    x -= 1
                 while j:
                     print("#", end="")
                     j -= 1
