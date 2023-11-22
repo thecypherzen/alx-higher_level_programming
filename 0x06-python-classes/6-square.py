@@ -42,6 +42,9 @@ class Square():
         # validate positiona and set
         if not isinstance(position, tuple) or len(position) < 2:
             raise TypeError("position must be a tuple of 2 positive integers")
+        if not isinstance(position[0],
+                          int) or not isinstance(position[1], int):
+            raise TypeError("position must be a tuple of 2 positive integers")
         if position[0] < 0 or position[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = position
@@ -93,6 +96,8 @@ class Square():
         """
         if not isinstance(value, tuple) or len(value) < 2:
             raise TypeError("position must be a tuple of 2 positive integers")
+        if not isinstance(value[0], int) or not isinstance(value[1], int):
+            raise TypeError("position must be a tuple of 2 positive integers")
         if value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
@@ -112,10 +117,7 @@ class Square():
             i = self.size
             while i:
                 # print leading spaces based on position
-                if not self.position[1]:
-                    j = self.position[0]
-                else:
-                    j = self.position[1]
+                j = 0 if not self.position[1] else self.position[0]
                 while j:
                     print(" ", end="")
                     j -= 1
