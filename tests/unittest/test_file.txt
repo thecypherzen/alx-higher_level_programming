@@ -1,0 +1,32 @@
+setUpClass executed
+
+TestCase set up successfully
+apply_discount tested
+
+TestCase set up successfully
+customer_mail tested
+
+TestCase set up successfully
+full_name tested
+tearDownClass executed
+setUpClass executed
+
+TestCase set up successfully
+
+TestCase set up successfully
+customer_mail tested
+
+TestCase set up successfully
+full_name tested
+tearDownClass executed
+setUpClass executed
+
+TestCase set up successfully
+apply_discount tested
+
+TestCase set up successfully
+customer_mail tested
+
+TestCase set up successfully
+full_name tested
+tearDownClass executed
