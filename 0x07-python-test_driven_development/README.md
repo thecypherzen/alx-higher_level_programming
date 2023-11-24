@@ -35,8 +35,8 @@ No doube therefore, that this directory contains files for the **Python - Test-d
 Files on the project are task based and are as follows:
 | SN | File | Description |
 |----|------|-------------|
-| 1. |[0-add_integer.py](https://github.com)| A function that adds 2 integers. <ul><li>def add_integer(a, b=98):</li><li>a and b must be integers or floats, else raise a TypeError exception with the message <em>a must be an integer or b must be an integer</em></li><li>a and b must be first casted to integers if they are float</li><li>Returns an integer: the sum of a and b</li><li>Module imports not allowed.</li></ul> |
-| 2. | Pending |
+| 1. |[0-add_integer.py](https://github.com)  | A function that adds 2 integers. <ul><li>def add_integer(a, b=98):</li><li>a and b must be integers or floats, else raise a TypeError exception with the message <em>a must be an integer or b must be an integer</em></li><li>a and b must be first casted to integers if they are float</li><li>Returns an integer: the sum of a and b</li><li>Module imports not allowed.</li></ul> |
+| 2. | Pending |        |
 |  . | tests | Tasks folder. </br>Files here are as follows: |
 | 1. | [0-add_integer.txt](https://github.com) | Test of [0-add_integer.py](https://github.com) |
-| 2. | Pending |
+| 2. | Pending | 	|
