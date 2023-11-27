@@ -5,7 +5,7 @@ div_matrix = __import__("2-matrix_divided").matrix_divided
 
 class TestMatrix(unittest.TestCase):
 	# check 1: matrix is None
-	def matrix_is_none(self):
+	def test_matrix_is_none(self):
 		with self.assertRaises(TypeError) as err:
 			div_matrix(None, 0)
 		self.assertEqual(str(err.exception),
