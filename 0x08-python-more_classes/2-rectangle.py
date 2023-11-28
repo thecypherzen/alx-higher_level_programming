@@ -111,9 +111,31 @@ class Rectangle:
         self.__width = width
 
     def area(self):
-        """Calculates and returns area of rectangle"""
+        """Calculates and returns area of rectangle
+
+        Returns:
+            area of rectangle
+        """
         return self.width * self.height
 
     def perimeter(self):
-        """Calculates and returns perimeter of rectangle"""
+        """Calculates and returns perimeter of rectangle
+
+        Returns:
+            perimeter of rectangle
+        """
         return 2 * (self.__height + self.__width)
+
+
+my_rectangle = Rectangle(2, 4)
+print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+print(my_rectangle.__dict__)
+print("--")
+
+my_rectangle.width = 10
+my_rectangle.height = 3
+print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+print(my_rectangle.__dict__)
+
+print()
+print(Rectangle.__dict__)
