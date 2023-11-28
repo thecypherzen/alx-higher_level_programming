@@ -40,7 +40,7 @@ class Rectangle:
         self.height = height
         self.width = width
 
-    def __repr__(self):
+    def __str__(self):
         """creates a representation of rectangle instance"""
         if not self.height or not self.width:
             return ""
