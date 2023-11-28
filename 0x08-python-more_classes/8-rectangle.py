@@ -6,13 +6,15 @@ class Rectangle:
     """A Class that defines a rectangle
 
     Methods:
-        __init__(method): initialises instance of Rectangle
+        __init__: initialises instance of Rectangle
             with optional args @width and @height
-        __str__(method): creates and returns a string representation of class
-        __repr__(method): creates official class object representation
-        __del__(method): detects class instance deletion
-        area(method): calculates the area of rectangle instance
-        perimeter(method): calculates the perimeter of rectangle instance
+        __str__: creates and returns a string representation of class
+        __repr__: creates official class object representation
+        __del__: detects class instance deletion
+        area: calculates the area of rectangle instance
+        perimeter: calculates the perimeter of rectangle instance
+        bigger_or_equal: compares two rectangle instances
+            and returns the bigger one
 
     Variables:
         number_of_instances(class attr:int): number of instances of class
