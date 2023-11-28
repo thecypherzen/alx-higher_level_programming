@@ -11,9 +11,9 @@ class Rectangle:
             with optional args @width and @height
         __str__(method): creates and returns a string representation of class
         __repr__(method): creates official class object representation
+        __del__(method): detects class instance deletion
         area(method): calculates the area of rectangle instance
         perimeter(method): calculates the perimeter of rectangle instance
-
 
     Variables:
         width(:obj:int:private): the width of Rectangle instance
@@ -42,7 +42,7 @@ class Rectangle:
         self.width = width
 
     def __str__(self):
-        """creates and returns a string rep of rectangle instance"""
+        """creates a representation of rectangle instance"""
         if not self.height or not self.width:
             return ""
         res = ""
@@ -58,8 +58,15 @@ class Rectangle:
         return res
 
     def __repr__(self):
-        """creates and returns a rep of rectangle object"""
+        """creates a representation of rectangle instance"""
         return "Rectangle({}, {})".format(self.width, self.height)
+
+    def __del__(self):
+        """Detects class instance deletion
+
+        Prints a simple message
+        """
+        print("Bye rectangle...")
 
     @property
     def height(self):
