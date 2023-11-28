@@ -31,7 +31,7 @@ class Rectangle:
             Must be an integer
             Has @property and @setter
     """
-    number_of_instances:int = 0  # number of class instances
+    number_of_instances: int = 0  # number of class instances
     print_symbol = '#'  # defines class representation symbol
 
     def __init__(self, width=0, height=0):
