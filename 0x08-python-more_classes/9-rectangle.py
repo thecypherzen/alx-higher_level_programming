@@ -34,11 +34,6 @@ class Rectangle:
             Must be an integer
             Has @property and @setter
     """
-    @classmethod
-    def square(cls, size=0):
-        """Returns new rectangle of height = width = size"""
-        return cls(size, size)
-
     number_of_instances: int = 0  # number of class instances
     print_symbol = '#'  # defines class representation symbol
 
@@ -200,3 +195,13 @@ class Rectangle:
             raise TypeError("rect_2 must be an instance of Rectangle")
         return rect_1 if Rectangle.area(rect_1) >= Rectangle.area(rect_2)\
             else rect_2
+
+    @classmethod
+    def square(cls, size=0):
+        """Returns new rectangle of height = width = size"""
+
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
+        return cls(size, size)
