@@ -190,9 +190,9 @@ class Rectangle:
                     where n corresponds to rect_1 or rect_2 respectively
         """
         if not isinstance(rect_1, Rectangle):
-            raise TypeError("rect_1 must be an instance of Rectangle")
+            raise TypeError(f"{rect_1} must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
-            raise TypeError("rect_2 must be an instance of Rectangle")
+            raise TypeError(f"{rect_2} must be an instance of Rectangle")
         return rect_1 if Rectangle.area(rect_1) >= Rectangle.area(rect_2)\
             else rect_2
 
