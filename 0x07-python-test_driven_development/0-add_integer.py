@@ -16,11 +16,11 @@ def add_integer(a, b=98):
         sum of a and b
         always returns type int
     """
-    if a is None or (not isinstance(a, int)
-					and not isinstance(a, float)):
-        raise TypeError("a must be an integer or b must be an integer")
+    if a is None or (not isinstance(a, int) and not
+                     isinstance(a, float)):
+        raise TypeError("a must be an integer")
     if b is None or (not isinstance(b, int)
-					and not isinstance(b, float)):
-        raise TypeError("b must be an integer or b must be an integer")
+                     and not isinstance(b, float)):
+        raise TypeError("b must be an integer")
     res = int(a) + int(b)
     return res
