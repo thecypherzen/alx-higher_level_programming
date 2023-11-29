@@ -127,3 +127,22 @@ Missing div
 >>> div_matrix(matrix)
 Traceback (innermost last):
 TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+======== CHECK 21 =======
+checking for div is +inf
+>>> matrix = [[-1], [2]]
+>>> div_matrix(matrix, float('inf'))
+[[-0.0], [0.0]]
+
+======== CHECK 22 =======
+checking for div is -inf
+>>> matrix = [[-1], [2]]
+>>> div_matrix(matrix, -float('inf'))
+[[0.0], [-0.0]]
+
+======== CHECK 22 =======
+checking for div is nan
+>>> matrix = [[-1], [2]]
+>>> div_matrix(matrix, float('nan'))
+Traceback (most recent call last):
+TypeError: div must be a number
