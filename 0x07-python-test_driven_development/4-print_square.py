@@ -8,15 +8,16 @@ Notes:
     Module imports not permitted
 """
 
+
 def print_square(size):
     """A function that prints a square with the character #
-    
+
     Parameters:
         size(:obj:int): the length of the square
-    
+
     Returns:
         None
-    
+
     Raises:
         TypeError: if type(size) is not int
             Message:
@@ -25,7 +26,7 @@ def print_square(size):
             Message:
                 ``size must be >= 0``
         TypeError: if type(size) is float and size < 0
-            Message: 
+            Message:
                 ``size must be an integer``
     """
     if not isinstance(size, int):
