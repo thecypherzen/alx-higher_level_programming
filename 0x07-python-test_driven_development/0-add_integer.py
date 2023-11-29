@@ -21,5 +21,4 @@ def add_integer(a, b=98):
                for i in (a, b)):
         raise TypeError("a must be an integer or b must be an integer")
     res = int(a) + int(b)
-    print(add_integer.__dir__)
     return res
