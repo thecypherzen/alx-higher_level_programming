@@ -22,5 +22,10 @@ def add_integer(a, b=98):
     if b is None or (not isinstance(b, int)
                      and not isinstance(b, float)):
         raise TypeError("b must be an integer")
+    if a != a or b != b:
+        raise ValueError("convert float Nan to integer")
+    if a == float('inf') or a == -float('inf') \
+        or b == float('inf') or b == -float('inf'):
+        raise OverflowError("cannot convert float infinity to integer")
     res = int(a) + int(b)
     return res
