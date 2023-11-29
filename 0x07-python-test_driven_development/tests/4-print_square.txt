@@ -1,4 +1,4 @@
-""""Doctest""
+"""Doctest"""
 
 >>> square_print = __import__("4-print_square").print_square
 
@@ -86,3 +86,20 @@ size is pos int
 ###############
 ###############
 
+====== check 13: ======
+size is tuple
+>>> square_print((1,))
+Traceback (innermost last):
+TypeError: size must be an integer
+
+====== check 14: ======
+size is dict
+>>> square_print({1:2, 2:9})
+Traceback (innermost last):
+TypeError: size must be an integer
+
+====== check 15: ======
+size is tuple
+>>> square_print([2])
+Traceback (innermost last):
+TypeError: size must be an integer
