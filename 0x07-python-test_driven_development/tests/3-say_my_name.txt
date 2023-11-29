@@ -45,3 +45,7 @@ My name is Kershima Akombo
 >>> say_name("Jasmine", None)
 Traceback (innermost last):
 TypeError: last_name must be a string
+
+======== [ CHECK 9: first_name not string, last_name string] =======
+>>> say_name()
+My name is  
