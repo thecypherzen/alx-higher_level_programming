@@ -1,0 +1,44 @@
+"""Doctest for 7-base_geometry"""
+
+>>> BaseGeo = __import__("7-base_geometry").BaseGeometry
+>>> bg = BaseGeo()
+
+check 0: normal entry - nothing expected
+>>> bg.integer_validator("height", 13)
+
+check 1: value float
+>>> bg.integer_validator("size", 12.93)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+check 2: value == 0
+>>> bg.integer_validator("date", 0)
+Traceback (most recent call last):
+ValueError: date must be greater than 0
+
+check 3: value < 0
+>>> bg.integer_validator("time", -2)
+Traceback (most recent call last):
+ValueError: time must be greater than 0
+
+check 4: value is string
+>>> bg.integer_validator("size", "this")
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+check 5: value is inf
+>>> bg.integer_validator("more", float('inf'))
+Traceback (most recent call last):
+TypeError: more must be an integer
+
+>>> bg.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> bg.integer_validator("height")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> bg.integer_validator(value=14)
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'name'
