@@ -31,39 +31,53 @@ check 5: value is inf
 Traceback (most recent call last):
 TypeError: more must be an integer
 
+check 6: no argument passed
 >>> bg.integer_validator()
 Traceback (most recent call last):
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
+
+check 7: value missing
 >>> bg.integer_validator("height")
 Traceback (most recent call last):
 TypeError: integer_validator() missing 1 required positional argument: 'value'
 
+check 8: name missing
 >>> bg.integer_validator(value=14)
 Traceback (most recent call last):
 TypeError: integer_validator() missing 1 required positional argument: 'name'
 
-
+check 9: value is type None
 >>> bg.integer_validator("ally", None)
 Traceback (most recent call last):
 TypeError: ally must be an integer
 
+check 10: value is type list
 >>> bg.integer_validator("ally", [2, 3])
 Traceback (most recent call last):
 TypeError: ally must be an integer
 
+check 11: value is type tuple
 >>> bg.integer_validator("ally", (2, 3))
 Traceback (most recent call last):
 TypeError: ally must be an integer
 
+check 12: value is type dictionary
 >>> bg.integer_validator("ally", {1:2, 2:3})
 Traceback (most recent call last):
 TypeError: ally must be an integer
 
->>> bg.integer_validator("ally", -float('inf'))
+check 13: value is of type set
+>>> bg.integer_validator("ally", {a, b, 3})
 Traceback (most recent call last):
 TypeError: ally must be an integer
 
+check 14: value is of type bool
+>>> bg.integer_validator("ally", True)
+Traceback (most recent call last):
+TypeError: ally must be an integer
+
+check 15: test bg area
 >>> bg.area()
 Traceback (most recent call last):
 Exception: area() is not implemented
