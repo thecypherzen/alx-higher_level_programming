@@ -26,6 +26,7 @@ class Square(Rectangle):
 
         Raises: Errors raised by integer_validator in Rectangle
         """
+        self.integer_validator("size", size)
         Rectangle.__init__(self, size, size)
         self.__size = size
 
