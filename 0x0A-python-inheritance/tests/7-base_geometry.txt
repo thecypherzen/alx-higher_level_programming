@@ -68,7 +68,7 @@ Traceback (most recent call last):
 TypeError: ally must be an integer
 
 check 13: value is of type set
->>> bg.integer_validator("ally", {a, b, 3})
+>>> bg.integer_validator("ally", {'a', 'b', 3})
 Traceback (most recent call last):
 TypeError: ally must be an integer
 
