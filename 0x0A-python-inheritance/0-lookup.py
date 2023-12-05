@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""0x0A. Python - Inheritance module
+"""0x0A. Python - Inheritance module - Task 0
 
 Functions:
     lookup: lists available attributes and methods of an object.
