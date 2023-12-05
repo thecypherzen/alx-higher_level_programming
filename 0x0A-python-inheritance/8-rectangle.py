@@ -1,9 +1,9 @@
-
 #!/usr/bin/python3
-"""0x0A. Python - Inheritance module - Task 7
+"""0x0A. Python - Inheritance module - Task 8
 
 Classes:
-    BaseGeometry:
+    BaseGeometry: Base class
+    Rectangle: BaseGeometry child
 """
 
 
@@ -32,4 +32,27 @@ class BaseGeometry:
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
-        pass
+
+
+class Rectangle(BaseGeometry):
+    """Inherits from BaseGeometry
+
+    Attributes:
+        __init__(method): class initializer
+    """
+    def __init__(self, width, height):
+        """Initialises a Rectangle
+
+        Params:
+            width: rectangle width
+            height: rectangle height
+
+        Returns:
+            None
+
+        Raises: Errors raised by BaseGeometry.integer_validator()
+        """
+        super().integer_validator("width", width)
+        super().integer_validator("height", height)
+        self.__width = width
+        self.__height = height
