@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""0x0A. Python - Inheritance module - Task 9
+"""0x0A. Python - Inheritance module - Task 11
 
 Classes:
     Square: Rectangle's child.
