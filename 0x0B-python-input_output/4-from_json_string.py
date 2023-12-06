@@ -12,7 +12,7 @@ def from_json_string(my_str):
 
 
     Parameters:
-        my_obj: the given object
+        my_str: the json string
 
     Returns: the JSON representation of the given object
 
