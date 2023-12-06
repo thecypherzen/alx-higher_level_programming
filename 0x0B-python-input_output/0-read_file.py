@@ -17,6 +17,6 @@ def read_file(filename=""):
     Returns: None
     """
     if type(filename) is str:
-        with open(filename, "r", encoding='utf-8') as ifile:
-            res = ifile.read()
-            print(res)
+        with open(filename, mode="r", encoding='utf-8') as ifile:
+            for line in ifile.readlines():
+                print(line)
