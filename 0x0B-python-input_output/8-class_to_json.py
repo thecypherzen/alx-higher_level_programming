@@ -28,6 +28,4 @@ def class_to_json(obj):
             represent an object.
         don't need to manage file permission exceptions.
     """
-    import json
-    str_data = json.dumps(obj.__dict__)
-    return json.loads(str_data)
+    return obj.__dict__
