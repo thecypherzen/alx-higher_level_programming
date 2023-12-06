@@ -2,12 +2,12 @@
 """0x0B. Python - Input/Output - Task 2
 
 Function(s):
-    write_file: writes content to a file
+    append_write: appends content to a file
 """
 
 
 def append_write(filename="", text=""):
-    """A function that writes a string to a UTF8 text file
+    """A function that appends a string to end of a UTF8 text file
 
     Doesn't check for any exceptions or permissions
 
@@ -21,6 +21,7 @@ def append_write(filename="", text=""):
         Must use with statement
         Create file if not exists
         Overwrite file if it exists
+        Module imports not allowed
     """
     if type(filename) is str:
         with open(filename, mode="a", encoding='utf-8') as ifile:
