@@ -36,5 +36,8 @@ class Student:
 
     def to_json(self):
         """returns dict representation of instance of Student
+
+        Returns:
+            the dictionary representation of a class
         """
         return self.__dict__
