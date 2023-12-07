@@ -61,4 +61,5 @@ class Student:
 
     def reload_from_json(self, json):
         """Reloads a class from json string in a file"""
-        self.__dict__ = dict(json)
+        if len(json):
+            self.__dict__ = dict(json)
