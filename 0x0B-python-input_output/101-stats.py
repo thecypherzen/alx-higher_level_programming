@@ -115,19 +115,21 @@ def log_update(line):
     global log_data, total_size, itr
     line = line.rstrip('\n').split(' ')
     itr += 1
-    if (len(line) >= 2):
-        key = line[-2]
+    try:
+        log_size = int(line[-1])
+        total_size += log_size
         try:
-            log_size = int(line[-1])
+            key = line[-2]
             if key in log_data:
                 log_data[key]["count"] += 1
                 log_data[key]["size"] += log_size
-                total_size += log_size
         except Exception:
             pass
-        finally:
-            if not itr % 10:
-                print_log(log_data, total_size)
+    except Exception:
+        pass
+    finally:
+        if not itr % 10:
+            print_log(log_data, total_size)
 
 
 if __name__ == "__main__":
