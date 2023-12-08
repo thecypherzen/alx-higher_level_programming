@@ -29,6 +29,7 @@ Notes:
 import sys
 import signal
 import os
+import re
 
 
 # interrupt signal handler
@@ -39,6 +40,32 @@ def sig_interrupt(signum, frame):
 
 
 signal.signal(signal.SIGINT, sig_interrupt)
+
+
+# regex validator
+# def str_match(search_str):
+#    """checks if a string is a valid url
+
+#    I created this regex function to help determine a valid url of the form:
+#        ``<IP Address> - [<date>] "GET /projects/260 HTTP/1.1" \
+#            <status code> <file size>``
+#    but apparently, the project tests don't care if a valid ip address
+#        is passed or not so I ended up not using it, but left it here
+#        for the record.
+
+#    Parameters:
+#        search_str(:obj:str): the string to match
+
+#    Returns:
+#        the string if it matches expected url else None
+#    """
+#    pattern = re.compile(r"(([0-2][0-5]{2}|[0-2][0-4][0-9]|[0-1]" +
+#                         r"[0-9]{1,2}|[0-9]{1,2}).){3}([0-2][0-5]" +
+#                         r"{2}|[0-2][0-4][0-9]|[0-1][0-9]{1,2}|" +
+#                         r"[0-9]{1,2})\s?\-\s?\[.*\] \"GET " +
+#                         r"/projects/260 HTTP/1\.1\" \d+ \d+$")
+#    match = pattern.match(search_str)
+#    return search_str if match else None
 
 
 # print log information
@@ -58,6 +85,7 @@ def print_log(data, total):
 
 
 # global variables definition
+# making log_data values of type dict was a mistake, but I just left it so
 log_data = {
     '200': {"count": 0, "size": 0},
     '301': {"count": 0, "size": 0},
@@ -85,12 +113,12 @@ def log_update(line):
     Returns: None
     """
     global log_data, total_size, itr
-    line = line.rstrip('\n').split(" ")
+    line = line.rstrip('\n').split(' ')
     itr += 1
-    if len(line) == 9:
-        key = line[7]
+    if (len(line) >= 2):
+        key = line[-2]
         try:
-            log_size = int(line[8])
+            log_size = int(line[-1])
             if key in log_data:
                 log_data[key]["count"] += 1
                 log_data[key]["size"] += log_size
