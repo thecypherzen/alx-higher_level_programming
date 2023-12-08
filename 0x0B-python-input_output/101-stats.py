@@ -27,8 +27,8 @@ Notes:
 
 
 import sys
-import time
 import signal
+import os
 
 
 # interrupt signal handler
@@ -87,14 +87,19 @@ def log_update(line):
     global log_data, total_size, itr
     line = line.rstrip('\n').split(" ")
     itr += 1
-    log_size = int(line[8])
-    key = line[7]
-    if key in log_data:
-        log_data[key]["count"] += 1
-        log_data[key]["size"] += log_size
-        total_size += log_size
-        if not itr % 10:
-            print_log(log_data, total_size)
+    if len(line) == 9:
+        key = line[7]
+        try:
+            log_size = int(line[8])
+            if key in log_data:
+                log_data[key]["count"] += 1
+                log_data[key]["size"] += log_size
+                total_size += log_size
+        except Exception:
+            pass
+        finally:
+            if not itr % 10:
+                print_log(log_data, total_size)
 
 
 if __name__ == "__main__":
@@ -104,3 +109,4 @@ if __name__ == "__main__":
     """
     for line in sys.stdin:
         log_update(line)
+    os.kill(os.getpid(), signal.SIGINT)
