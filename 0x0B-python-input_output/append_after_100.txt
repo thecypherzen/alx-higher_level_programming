@@ -1,2 +1,0 @@
-c is fun!
-Python is cool!
