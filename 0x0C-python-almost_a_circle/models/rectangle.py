@@ -1,14 +1,23 @@
 #!/usr/bin/python3
-"""0x0C. Python - Almost a circle - Task 2
+"""0x0C. Python - Almost a circle - Tasks 2-9
+
+This module implements incremental solutions to tasks 2 through 9
+of this project.
 
 Class(s):
     Rectange: a class defining a rectangle
+Functions(s):
+
 """
 
 
-# local imports
+# Standard imports
+from importlib.machinery import SourceFileLoader as Loader
+
+# Local imports
 from base import Base
 
+validators = Loader("validators", "../validators.py").load_module()
 
 class Rectangle(Base):
     """Defines a rectangle
@@ -29,7 +38,11 @@ class Rectangle(Base):
             y (`any`): position on y axis
             id(`any`): instance's id number
         """
-        Base.__init__(id)
+        validators.gt_zero_validate(width, "width", typ="int")
+        validators.gt_zero_validate(height, "height", typ="int")
+        validators.pos_num_validate(x, 'x')
+        validators.pos_num_validate(y, 'y')
+        Base.__init__(self, id)
         self.__width = width
         self.__height = height
         self.__x = x
