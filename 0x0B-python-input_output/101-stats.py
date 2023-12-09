@@ -29,7 +29,7 @@ Notes:
 import sys
 import signal
 import os
-import re
+# import re
 
 
 # interrupt signal handler

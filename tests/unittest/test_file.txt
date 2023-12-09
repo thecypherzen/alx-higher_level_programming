@@ -12,6 +12,7 @@ tearDownClass executed
 setUpClass executed
 
 TestCase set up successfully
+apply_discount tested
 
 TestCase set up successfully
 customer_mail tested
