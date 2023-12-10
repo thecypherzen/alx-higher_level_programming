@@ -271,6 +271,21 @@ class TestRect(TestCase):
                 _ = Rectangle(1, 0, (2, 4), 4)
             self.assertEqual(str(err.exception), "height must be > 0")
 
+    # ******* __str__ test cases *******
+    # [Rectangle] (<id>) <x>/<y> - <width>/<height>
+    def test_str_res(self):
+        with self.subTest(msg="rect1(7,5)"):
+            res = str(self.rect1)
+            self.assertEqual(res, "[Rectangle] (1) 0/0 - 7/5")
+        with self.subTest(msg="rect2(2,10,4,3,11)"):
+            res = str(self.rect2)
+            self.assertEqual(res, "[Rectangle] (11) 4/3 - 2/10")
+        with self.subTest(msg="rect3(4,3,2.2,0)"):
+            res = str(self.rect3)
+            self.assertEqual(res, "[Rectangle] (2) 2.2/0 - 4/3")
+        with self.subTest(msg="rect4(699,1030,3.3,2.9,-2.2)"):
+            res = str(self.rect4)
+            self.assertEqual(res, "[Rectangle] (-2.2) 3.3/2.9 - 699/1030")
 
     # ******* width test cases *******
     # test width as expected
