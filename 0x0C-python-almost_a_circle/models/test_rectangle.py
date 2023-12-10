@@ -286,6 +286,10 @@ class TestRect(TestCase):
         with self.subTest(msg="rect4(699,1030,3.3,2.9,-2.2)"):
             res = str(self.rect4)
             self.assertEqual(res, "[Rectangle] (-2.2) 3.3/2.9 - 699/1030")
+        with self.subTest(msg="rect4(9,10,30,id=19)"):
+            rect = Rectangle(9, 10, 30, id=19)
+            res = str(rect)
+            self.assertEqual(res, "[Rectangle] (19) 30/0 - 9/10")
 
     # ******* width test cases *******
     # test width as expected

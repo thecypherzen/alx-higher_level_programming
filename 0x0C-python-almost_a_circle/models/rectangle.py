@@ -9,10 +9,10 @@ Class(s):
 """
 
 
-
 # Local imports
 import validators
 from base import Base
+
 
 class Rectangle(Base):
     """Defines a rectangle
@@ -102,12 +102,25 @@ class Rectangle(Base):
     def y(self, value) -> None:
         self.__y = value
 
+    # magic methods
+    def __str__(self):
+        """Creates a string representation of rectangle instance
+
+        Returns: string format of Rectangle class suitable for printing
+            format: [Rectangle] (<id>) <x>/<y> - <width>/<height>
+        """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.x, self.y,
+                                                       self.width, self.height)
+
+    # public methods
     def area(self) -> int:
         """Calculates the area of rectangle
 
         Returns: area of rectangle
         """
         return self.width * self.height
+
     def display(self) -> str:
         """Renders rectangle as a string
 
