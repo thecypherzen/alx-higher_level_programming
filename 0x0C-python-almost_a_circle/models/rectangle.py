@@ -129,14 +129,14 @@ class Rectangle(Base):
         """
         res = ""
         # render '\n' for y
-        i = self.y
+        i = int(self.y)
         while i:
             res += '\n'
             i -= 1
         i = self.height
         while i:
             # render ' ' for x
-            j = self.x
+            j = int(self.x)
             while j:
                 res += ' '
                 j -= 1

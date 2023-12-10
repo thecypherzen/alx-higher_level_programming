@@ -68,13 +68,14 @@ class TestRect(TestCase):
             y = int(self.rect1.y)
             self.assertEqual(length, 5+y)
 
-            # check num of new_lines == y
-            for i in range(y):
-                with self.subTest(msg=f"i={i}(y={y})"):
-                    self.assertEqual(lines[i], '\n')
+            # check num of new_lines == y if y
+            if y:
+                for i in range(y):
+                    with self.subTest(msg=f"i={i}(y={y})"):
+                        self.assertEqual(lines[i], '\n')
+                del lines[0:y-1]
 
-            # remove new_lines && check length of each line
-            del lines[0:y-1]
+            # check length of each line and validate 'x' and '#'
             for i in range(length - y):
                 with self.subTest(msg=f"line:{i}y:{y}"):
                     line = lines[i].rstrip('\n')
@@ -100,14 +101,13 @@ class TestRect(TestCase):
             x = int(self.rect2.x)
             y = int(self.rect2.y)
             self.assertEqual(length, 10+y)
-
-            # check num of new_lines == y
-            for i in range(y):
-                with self.subTest(msg=f"i={i}(y={y})"):
-                    self.assertEqual(lines[i], '\n')
-
-            # remove new_lines && check length of each line
-            del lines[0:y-1]
+            # check num of new_lines == y if y
+            if y:
+                for i in range(y):
+                    with self.subTest(msg=f"i={i}(y={y})"):
+                        self.assertEqual(lines[i], '\n')
+                del lines[0:y]
+            # check length of each line and validate 'x' and '#'
             for i in range(length - y):
                 with self.subTest(msg=f"line:{i}y:{y}"):
                     line = lines[i].rstrip('\n')
@@ -123,7 +123,7 @@ class TestRect(TestCase):
                         with self.subTest(msg=f"#-check[{j}]"):
                             self.assertEqual(line[j], '#')
         # rectangle 3
-        with self.subTest(msg="rect1(4,3)"):
+        with self.subTest(msg="rect3(4,3)"):
             # display rectangle to stream & check num of lines
             sys.stdout = self.stream_w
             self.rect3.display()
@@ -133,14 +133,14 @@ class TestRect(TestCase):
             x = int(self.rect3.x)
             y = int(self.rect3.y)
             self.assertEqual(length, 3+y)
+            # check num of new_lines == y if y
+            if y:
+                for i in range(y):
+                    with self.subTest(msg=f"i={i}(y={y})"):
+                        self.assertEqual(lines[i], '\n')
+                del lines[0:y]
 
-            # check num of new_lines == y
-            for i in range(y):
-                with self.subTest(msg=f"i={i}(y={y})"):
-                    self.assertEqual(lines[i], '\n')
-
-            # remove new_lines && check length of each line
-            del lines[0:y-1]
+            # check length of each line and validate 'x' and '#'
             for i in range(length - y):
                 with self.subTest(msg=f"line:{i}y:{y}"):
                     line = lines[i].rstrip('\n')
@@ -160,21 +160,22 @@ class TestRect(TestCase):
             rect = Rectangle(9, 10, 30, id=19)
             # display rectangle to stream & check num of lines
             sys.stdout = self.stream_w
-            self.rect.display()
+            rect.display()
             sys.stdout = sys.__stdout__
             lines = self.stream_r.readlines()
             length = len(lines)
-            x = int(self.rect.x)
-            y = int(self.rect.y)
+            x = int(rect.x)
+            y = int(rect.y)
             self.assertEqual(length, 10+y)
 
-            # check num of new_lines == y
-            for i in range(y):
-                with self.subTest(msg=f"i={i}(y={y})"):
-                    self.assertEqual(lines[i], '\n')
+            # check num of new_lines == y if y
+            if y:
+                for i in range(y):
+                    with self.subTest(msg=f"i={i}(y={y})"):
+                        self.assertEqual(lines[i], '\n')
+                del lines[0:y]
 
-            # remove new_lines && check length of each line
-            del lines[0:y-1]
+            # check length of each line and validate 'x' and '#'
             for i in range(length - y):
                 with self.subTest(msg=f"line:{i}y:{y}"):
                     line = lines[i].rstrip('\n')
