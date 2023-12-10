@@ -20,8 +20,8 @@ class TestRect(TestCase):
         """Set up default test objects"""
         cls.rect1 = Rectangle(7, 5)
         cls.rect2 = Rectangle(2, 10, 4, 3, 11)
-        cls.rect3 = Rectangle(4, 3, 2.2, 0)
-        cls.rect4 = Rectangle(699, 1030, 3.3, 2.9, -2.2)
+        cls.rect3 = Rectangle(4, 3, 13)
+        cls.rect4 = Rectangle(1, 9, y=8, id=-2.2)
         cls.stream_w = open("stream.io", 'w', encoding="utf-8")
         cls.stream_r = open("stream.io", 'r', encoding="utf-8")
         cls.stream_a = open("stream.io", "a+", encoding="utf-8")
@@ -49,10 +49,10 @@ class TestRect(TestCase):
             print(self.rect3.area(), file=self.stream_w, end="", flush=True)
             res = self.stream_r.read()
             self.assertEqual(res, "12")
-        with self.subTest(msg="rect4(699,1030)"):
+        with self.subTest(msg="rect4(1,9)"):
             print(self.rect4.area(), file=self.stream_w, end="", flush=True)
             res = self.stream_r.read()
-            self.assertEqual(res, "719970")
+            self.assertEqual(res, '9')
 
     # ******* display test case *******
     def test_display(self):
@@ -64,11 +64,9 @@ class TestRect(TestCase):
             sys.stdout = sys.__stdout__
             lines = self.stream_r.readlines()
             length = len(lines)
-            x = int(self.rect1.x)
-            y = int(self.rect1.y)
+            x = self.rect1.x
+            y = self.rect1.y
             self.assertEqual(length, 5+y)
-
-            # check num of new_lines == y if y
             if y:
                 for i in range(y):
                     with self.subTest(msg=f"i={i}(y={y})"):
@@ -98,8 +96,8 @@ class TestRect(TestCase):
             sys.stdout = sys.__stdout__
             lines = self.stream_r.readlines()
             length = len(lines)
-            x = int(self.rect2.x)
-            y = int(self.rect2.y)
+            x = self.rect2.x
+            y = self.rect2.y
             self.assertEqual(length, 10+y)
             # check num of new_lines == y if y
             if y:
@@ -130,8 +128,8 @@ class TestRect(TestCase):
             sys.stdout = sys.__stdout__
             lines = self.stream_r.readlines()
             length = len(lines)
-            x = int(self.rect3.x)
-            y = int(self.rect3.y)
+            x = self.rect3.x
+            y = self.rect3.y
             self.assertEqual(length, 3+y)
             # check num of new_lines == y if y
             if y:
@@ -156,16 +154,15 @@ class TestRect(TestCase):
                         with self.subTest(msg=f"#-check[{j}]"):
                             self.assertEqual(line[j], '#')
         # rectangle 4
-        with self.subTest(msg="rect4(9,10)"):
-            rect = Rectangle(9, 10, 30, id=19)
+        with self.subTest(msg="rect4(1,9)"):
             # display rectangle to stream & check num of lines
             sys.stdout = self.stream_w
-            rect.display()
+            self.rect4.display()
             sys.stdout = sys.__stdout__
             lines = self.stream_r.readlines()
             length = len(lines)
-            x = int(rect.x)
-            y = int(rect.y)
+            x = self.rect4.x
+            y = self.rect4.y
             self.assertEqual(length, 10+y)
 
             # check num of new_lines == y if y
@@ -266,10 +263,10 @@ class TestRect(TestCase):
             print(self.rect3.height, end="", file=self.stream_w, flush=True)
             res = self.stream_r.read()
             self.assertEqual(res, '3')
-        with self.subTest(msg="height == 1030"):
+        with self.subTest(msg="height == 9"):
             print(self.rect4.height, end="", file=self.stream_w, flush=True)
             res = self.stream_r.read()
-            self.assertEqual(res, "1030")
+            self.assertEqual(res, "9")
 
     # test height is hidden
     def test_height_hidden(self):
@@ -354,16 +351,12 @@ class TestRect(TestCase):
         with self.subTest(msg="rect2(2,10,4,3,11)"):
             res = str(self.rect2)
             self.assertEqual(res, "[Rectangle] (11) 4/3 - 2/10")
-        with self.subTest(msg="rect3(4,3,2.2,0)"):
+        with self.subTest(msg="rect3(4,3,13)"):
             res = str(self.rect3)
-            self.assertEqual(res, "[Rectangle] (2) 2.2/0 - 4/3")
-        with self.subTest(msg="rect4(699,1030,3.3,2.9,-2.2)"):
+            self.assertEqual(res, "[Rectangle] (2) 13/0 - 4/3")
+        with self.subTest(msg="rect4(1,9,y=8,id=-2.2)"):
             res = str(self.rect4)
-            self.assertEqual(res, "[Rectangle] (-2.2) 3.3/2.9 - 699/1030")
-        with self.subTest(msg="rect4(9,10,30,id=19)"):
-            rect = Rectangle(9, 10, 30, id=19)
-            res = str(rect)
-            self.assertEqual(res, "[Rectangle] (19) 30/0 - 9/10")
+            self.assertEqual(res, "[Rectangle] (-2.2) 0/8 - 1/9")
 
     # ******* width test cases *******
     # test width as expected
@@ -380,10 +373,10 @@ class TestRect(TestCase):
             print(self.rect3.width, end="", file=self.stream_w, flush=True)
             res = self.stream_r.read()
             self.assertEqual(res, '4')
-        with self.subTest(msg="width == 699"):
+        with self.subTest(msg="width == 1"):
             print(self.rect4.width, end="", file=self.stream_w, flush=True)
             res = self.stream_r.read()
-            self.assertEqual(res, "699")
+            self.assertEqual(res, "1")
 
     # test width is hidden
     def test_width_hidden(self):
@@ -472,14 +465,28 @@ class TestRect(TestCase):
             print(self.rect2.x, end="", file=self.stream_w, flush=True)
             res = self.stream_r.read()
             self.assertEqual(res, '4')
-        with self.subTest(msg="x == 2.2"):
+        with self.subTest(msg="x == 13"):
             print(self.rect3.x, end="", file=self.stream_w, flush=True)
             res = self.stream_r.read()
-            self.assertEqual(res, '2.2')
-        with self.subTest(msg="x == 3.3"):
+            self.assertEqual(res, "13")
+        with self.subTest(msg="x == 0"):
             print(self.rect4.x, end="", file=self.stream_w, flush=True)
             res = self.stream_r.read()
-            self.assertEqual(res, '3.3')
+            self.assertEqual(res, '0')
+
+    # test x is Dict
+    def test_x_is_dict(self):
+        with self.subTest(msg="x is dict"):
+            with self.assertRaises(TypeError) as err:
+                _ = Rectangle(2, 3, {1:2})
+            self.assertEqual(str(err.exception), "x must be a number")
+
+    # test x is Float
+    def test_x_is_float(self):
+        with self.subTest(msg="x is dict"):
+            with self.assertRaises(TypeError) as err:
+                _ = Rectangle(2, 3, 2.9)
+            self.assertEqual(str(err.exception), "x must be an integer")
 
     # test x is hidden
     def test_x_is_hidden(self):
@@ -489,13 +496,6 @@ class TestRect(TestCase):
             self.assertEqual(str(err.exception),
                             "'Rectangle' object has no attribute" +
                             " '_TestRect__x'")
-
-    # test x is Dict
-    def test_x_is_dict(self):
-        with self.subTest(msg="x is dict"):
-            with self.assertRaises(TypeError) as err:
-                _ = Rectangle(2, 3, {1:2})
-            self.assertEqual(str(err.exception), "x must be a number")
 
     # test x is None
     def test_x_is_none(self):
@@ -541,10 +541,24 @@ class TestRect(TestCase):
             print(self.rect3.y, end="", file=self.stream_w, flush=True)
             res = self.stream_r.read()
             self.assertEqual(res, '0')
-        with self.subTest(msg="y == 2.9"):
+        with self.subTest(msg="y == 8"):
             print(self.rect4.y, end="", file=self.stream_w, flush=True)
             res = self.stream_r.read()
-            self.assertEqual(res, '2.9')
+            self.assertEqual(res, '8')
+
+    # test y is Dict
+    def test_y_is_dict(self):
+        with self.subTest(msg="y is dict"):
+            with self.assertRaises(TypeError) as err:
+                _ = Rectangle(2, 3, 9, {1:2})
+            self.assertEqual(str(err.exception), "y must be a number")
+
+    # test y is Float
+    def test_x_is_float(self):
+        with self.subTest(msg="x is dict"):
+            with self.assertRaises(TypeError) as err:
+                _ = Rectangle(2, 3, y=2.9)
+            self.assertEqual(str(err.exception), "y must be an integer")
 
     # test y is hidden
     def test_y_is_hidden(self):
@@ -554,13 +568,6 @@ class TestRect(TestCase):
             self.assertEqual(str(err.exception),
                             "'Rectangle' object has no attribute" +
                             " '_TestRect__y'")
-
-    # test y is Dict
-    def test_y_is_dict(self):
-        with self.subTest(msg="y is dict"):
-            with self.assertRaises(TypeError) as err:
-                _ = Rectangle(2, 3, 9, {1:2})
-            self.assertEqual(str(err.exception), "y must be a number")
 
     # test y is None
     def test_y_is_none(self):
@@ -589,8 +596,6 @@ class TestRect(TestCase):
             with self.assertRaises(ValueError) as err:
                 _ = Rectangle(1, 2, 2, -4)
             self.assertEqual(str(err.exception), "y must be >= 0")
-
-
 
 
 if __name__ == "___main__":
