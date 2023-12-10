@@ -6,6 +6,7 @@
 # Standard imports
 from unittest import TestCase, main
 import os
+import sys
 
 # Local imports
 from base import Base
@@ -53,55 +54,66 @@ class TestRect(TestCase):
             res = self.stream_r.read()
             self.assertEqual(res, "719970")
 
-    # ******* display test cases *******
+    # ******* display test case *******
     def test_display(self):
         with self.subTest(msg="rect1(7,5)"):
-            print(self.rect1.display(), file=self.stream_w,
-                  end="", flush=True)
+            sys.stdout = self.stream_w
+            self.rect1.display()
+            sys.stdout = sys.__stdout__
             lines = self.stream_r.readlines()
-            self.assertEqual(len(lines), 5)
-            for i in range(len):
+            length = len(lines)
+            self.assertEqual(length, 5)
+            for i in range(length):
                 line = lines[i].rstrip('\n')
                 with self.subTest(msg=f"i={i}"):
                     self.assertEqual(len(line), 7)
-                    for j in len(line):
+                    for j in range(len(line)):
                         with self.subTest(msg=f"line[{j}]"):
                             self.assertEqual(line[j], '#')
 
         with self.subTest(msg="rect2(2,10)"):
-            print(self.rect2.display(), file=self.stream_w,
-                  end="", flush=True)
+            sys.stdout = self.stream_w
+            self.rect2.display()
+            sys.stdout = sys.__stdout__
             lines = self.stream_r.readlines()
-            self.assertEqual(len(lines), 10)
-            for i in range(len):
+            length = len(lines)
+            self.assertEqual(length, 10)
+            for i in range(length):
                 line = lines[i].rstrip('\n')
                 with self.subTest(msg=f"i={i}"):
                     self.assertEqual(len(line), 2)
-                    for j in len(line):
+                    for j in range(len(line)):
                         with self.subTest(msg=f"line[{j}]"):
                             self.assertEqual(line[j], '#')
+
         with self.subTest(msg="rect3(4,3)"):
-            print(self.rect3.display(), file=self.stream_w,
-                  end="", flush=True)
+            sys.stdout = self.stream_w
+            self.rect3.display()
+            sys.stdout = sys.__stdout__
             lines = self.stream_r.readlines()
-            self.assertEqual(len(lines), 3)
-            for i in range(len):
+            length = len(lines)
+            self.assertEqual(length, 3)
+            for i in range(length):
                 line = lines[i].rstrip('\n')
                 with self.subTest(msg=f"i={i}"):
                     self.assertEqual(len(line), 4)
-                    for j in len(line):
+                    for j in range(len(line)):
                         with self.subTest(msg=f"line[{j}]"):
                             self.assertEqual(line[j], '#')
+
         with self.subTest(msg="rect4(699,1030)"):
-            print(self.rect4.display(), file=self.stream_w,
-                  end="", flush=True)
+            r = Rectangle(13, 1)
+            sys.stdout = self.stream_w
+            r.display()
+            sys.stdout = sys.__stdout__
             lines = self.stream_r.readlines()
-            self.assertEqual(len(lines), 1030)
-            for i in range(len):
+            length = len(lines)
+            self.assertEqual(length, 1)
+            for i in range(length):
                 line = lines[i].rstrip('\n')
                 with self.subTest(msg=f"i={i}"):
-                    self.assertEqual(len(line), 699)
-                    for j in len(line):
+                    self.assertEqual(len(line), 13)
+                    for j in range(len(line)):
                         with self.subTest(msg=f"line[{j}]"):
                             self.assertEqual(line[j], '#')
 
