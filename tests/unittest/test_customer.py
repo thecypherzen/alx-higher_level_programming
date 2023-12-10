@@ -1,5 +1,10 @@
 #!/usr/bin/python3
+"""Test module for models.base module
+"""
+# Standard Imports
 import unittest
+
+# Local Imports
 from customer import Customer
 
 class TestCustomer(unittest.TestCase):
