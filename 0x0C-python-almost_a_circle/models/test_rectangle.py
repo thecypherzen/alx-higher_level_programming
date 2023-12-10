@@ -56,65 +56,138 @@ class TestRect(TestCase):
 
     # ******* display test case *******
     def test_display(self):
+        # rectangle 1
         with self.subTest(msg="rect1(7,5)"):
+            # display rectangle to stream & check num of lines
             sys.stdout = self.stream_w
             self.rect1.display()
             sys.stdout = sys.__stdout__
             lines = self.stream_r.readlines()
             length = len(lines)
-            self.assertEqual(length, 5)
-            for i in range(length):
-                line = lines[i].rstrip('\n')
-                with self.subTest(msg=f"i={i}"):
-                    self.assertEqual(len(line), 7)
-                    for j in range(len(line)):
-                        with self.subTest(msg=f"line[{j}]"):
-                            self.assertEqual(line[j], '#')
+            x = int(self.rect1.x)
+            y = int(self.rect1.y)
+            self.assertEqual(length, 5+y)
 
+            # check num of new_lines == y
+            for i in range(y):
+                with self.subTest(msg=f"i={i}(y={y})"):
+                    self.assertEqual(lines[i], '\n')
+
+            # remove new_lines && check length of each line
+            del lines[0:y-1]
+            for i in range(length - y):
+                with self.subTest(msg=f"line:{i}y:{y}"):
+                    line = lines[i].rstrip('\n')
+                    self.assertEqual(len(line), 7+x)
+
+                    # check num of spaces == x
+                    for j in range(x):
+                        with self.subTest(msg=f"x-check[{j}]"):
+                            self.assertEqual(line[j], ' ')
+
+                    # check for '#' chars after x chars left in line
+                    for j in range(x, len(line)):
+                        with self.subTest(msg=f"#-check[{j}]"):
+                            self.assertEqual(line[j], '#')
+        # rectangle2
         with self.subTest(msg="rect2(2,10)"):
+            # display rectangle to stream & check num of lines
             sys.stdout = self.stream_w
             self.rect2.display()
             sys.stdout = sys.__stdout__
             lines = self.stream_r.readlines()
             length = len(lines)
-            self.assertEqual(length, 10)
-            for i in range(length):
-                line = lines[i].rstrip('\n')
-                with self.subTest(msg=f"i={i}"):
-                    self.assertEqual(len(line), 2)
-                    for j in range(len(line)):
-                        with self.subTest(msg=f"line[{j}]"):
-                            self.assertEqual(line[j], '#')
+            x = int(self.rect2.x)
+            y = int(self.rect2.y)
+            self.assertEqual(length, 10+y)
 
-        with self.subTest(msg="rect3(4,3)"):
+            # check num of new_lines == y
+            for i in range(y):
+                with self.subTest(msg=f"i={i}(y={y})"):
+                    self.assertEqual(lines[i], '\n')
+
+            # remove new_lines && check length of each line
+            del lines[0:y-1]
+            for i in range(length - y):
+                with self.subTest(msg=f"line:{i}y:{y}"):
+                    line = lines[i].rstrip('\n')
+                    self.assertEqual(len(line), 2+x)
+
+                    # check num of spaces == x
+                    for j in range(x):
+                        with self.subTest(msg=f"x-check[{j}]"):
+                            self.assertEqual(line[j], ' ')
+
+                    # check for '#' chars after x chars left in line
+                    for j in range(x, len(line)):
+                        with self.subTest(msg=f"#-check[{j}]"):
+                            self.assertEqual(line[j], '#')
+        # rectangle 3
+        with self.subTest(msg="rect1(4,3)"):
+            # display rectangle to stream & check num of lines
             sys.stdout = self.stream_w
             self.rect3.display()
             sys.stdout = sys.__stdout__
             lines = self.stream_r.readlines()
             length = len(lines)
-            self.assertEqual(length, 3)
-            for i in range(length):
-                line = lines[i].rstrip('\n')
-                with self.subTest(msg=f"i={i}"):
-                    self.assertEqual(len(line), 4)
-                    for j in range(len(line)):
-                        with self.subTest(msg=f"line[{j}]"):
-                            self.assertEqual(line[j], '#')
+            x = int(self.rect3.x)
+            y = int(self.rect3.y)
+            self.assertEqual(length, 3+y)
 
-        with self.subTest(msg="rect4(699,1030)"):
-            r = Rectangle(13, 1)
+            # check num of new_lines == y
+            for i in range(y):
+                with self.subTest(msg=f"i={i}(y={y})"):
+                    self.assertEqual(lines[i], '\n')
+
+            # remove new_lines && check length of each line
+            del lines[0:y-1]
+            for i in range(length - y):
+                with self.subTest(msg=f"line:{i}y:{y}"):
+                    line = lines[i].rstrip('\n')
+                    self.assertEqual(len(line), 4+x)
+
+                    # check num of spaces == x
+                    for j in range(x):
+                        with self.subTest(msg=f"x-check[{j}]"):
+                            self.assertEqual(line[j], ' ')
+
+                    # check for '#' chars after x chars left in line
+                    for j in range(x, len(line)):
+                        with self.subTest(msg=f"#-check[{j}]"):
+                            self.assertEqual(line[j], '#')
+        # rectangle 4
+        with self.subTest(msg="rect4(9,10)"):
+            rect = Rectangle(9, 10, 30, id=19)
+            # display rectangle to stream & check num of lines
             sys.stdout = self.stream_w
-            r.display()
+            self.rect.display()
             sys.stdout = sys.__stdout__
             lines = self.stream_r.readlines()
             length = len(lines)
-            self.assertEqual(length, 1)
-            for i in range(length):
-                line = lines[i].rstrip('\n')
-                with self.subTest(msg=f"i={i}"):
-                    self.assertEqual(len(line), 13)
-                    for j in range(len(line)):
-                        with self.subTest(msg=f"line[{j}]"):
+            x = int(self.rect.x)
+            y = int(self.rect.y)
+            self.assertEqual(length, 10+y)
+
+            # check num of new_lines == y
+            for i in range(y):
+                with self.subTest(msg=f"i={i}(y={y})"):
+                    self.assertEqual(lines[i], '\n')
+
+            # remove new_lines && check length of each line
+            del lines[0:y-1]
+            for i in range(length - y):
+                with self.subTest(msg=f"line:{i}y:{y}"):
+                    line = lines[i].rstrip('\n')
+                    self.assertEqual(len(line), 9+x)
+
+                    # check num of spaces == x
+                    for j in range(x):
+                        with self.subTest(msg=f"x-check[{j}]"):
+                            self.assertEqual(line[j], ' ')
+
+                    # check for '#' chars after x chars left in line
+                    for j in range(x, len(line)):
+                        with self.subTest(msg=f"#-check[{j}]"):
                             self.assertEqual(line[j], '#')
 
     # ******* id test cases *******
