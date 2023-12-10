@@ -11,13 +11,10 @@ Functions(s):
 """
 
 
-# Standard imports
-from importlib.machinery import SourceFileLoader as Loader
 
 # Local imports
+import validators
 from base import Base
-
-validators = Loader("validators", "../validators.py").load_module()
 
 class Rectangle(Base):
     """Defines a rectangle
@@ -101,3 +98,6 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         self.__y = value
+
+    def area(self):
+        return self.width * self.height

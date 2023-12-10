@@ -27,8 +27,8 @@ class Base:
         Parameters:
             id(:obj:int): instance's id
         """
-        if type(id) is int:
-            self.id = id
         if id is None:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+        else:
+            self.id = id
