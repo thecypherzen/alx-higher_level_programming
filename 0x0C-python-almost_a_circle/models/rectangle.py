@@ -128,8 +128,20 @@ class Rectangle(Base):
             - does not handle x and y
         """
         res = ""
+        # render '\n' for y
+        i = self.y
+        while i:
+            res += '\n'
+            i -= 1
         i = self.height
         while i:
+            # render ' ' for x
+            j = self.x
+            while j:
+                res += ' '
+                j -= 1
+
+            # render '#' for width, & repeat for height
             j = self.width
             while j:
                 res += '#'
