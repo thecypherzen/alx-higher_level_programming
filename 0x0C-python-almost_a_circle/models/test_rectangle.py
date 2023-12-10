@@ -342,6 +342,103 @@ class TestRect(TestCase):
                 _ = Rectangle(1, 0, (2, 4), 4)
             self.assertEqual(str(err.exception), "height must be > 0")
 
+    # ******* setters test cases *******
+    def test_setters(self):
+        newrect = Rectangle(5, 8)
+
+        # width setter checks
+        with self.subTest(msg=f"sttr1:w=float"):
+            with self.assertRaises(TypeError) as err:
+                newrect.width = 1.2
+                msg = str(err.exception)
+                self.assertEqual(msg, "width must be an integer")
+        with self.subTest(msg=f"sttr2:w=0"):
+            with self.assertRaises(ValueError) as err:
+                newrect.width = 0
+                msg = str(err.exception)
+                self.assertEqual(msg, "width must be > 0")
+        with self.subTest(msg=f"sttr3:w<0"):
+            with self.assertRaises(ValueError) as err:
+                newrect.width = -3
+                msg = str(err.exception)
+                self.assertEqual(msg, "width must be > 0")
+        with self.subTest(msg=f"sttr4:w=None"):
+            with self.assertRaises(TypeError) as err:
+                newrect.width = None
+                msg = str(err.exception)
+                self.assertEqual(msg, "width must be an integer")
+        with self.subTest(msg=f"sttr5:w=int"):
+            newrect.width = 8
+            self.assertEqual(newrect.width, 8)
+
+        # height setter checks
+        with self.subTest(msg=f"sttr6:h=float"):
+            with self.assertRaises(TypeError) as err:
+                newrect.height = 0.0
+                msg = str(err.exception)
+                self.assertEqual(msg, "height must be an integer")
+        with self.subTest(msg=f"sttr7:h=0"):
+            with self.assertRaises(ValueError) as err:
+                newrect.height = 0
+                msg = str(err.exception)
+                self.assertEqual(msg, "height must be > 0")
+        with self.subTest(msg=f"sttr8:h<0"):
+            with self.assertRaises(ValueError) as err:
+                newrect.height = -3
+                msg = str(err.exception)
+                self.assertEqual(msg, "height must be > 0")
+        with self.subTest(msg=f"sttr9:h=None"):
+            with self.assertRaises(TypeError) as err:
+                newrect.height = None
+                msg = str(err.exception)
+                self.assertEqual(msg, "height must be an integer")
+        with self.subTest(msg=f"sttr10:h=int"):
+            newrect.height = 5
+            self.assertEqual(newrect.height, 5)
+
+        # x setter checks
+        with self.subTest(msg=f"sttr11:x=float"):
+            with self.assertRaises(TypeError) as err:
+                newrect.x = 1.2
+                msg = str(err.exception)
+                self.assertEqual(msg, "x must be an integer")
+        with self.subTest(msg=f"sttr12:x<0"):
+            with self.assertRaises(ValueError) as err:
+                newrect.x = -3
+                msg = str(err.exception)
+                self.assertEqual(msg, "x must be >= 0")
+        with self.subTest(msg=f"sttr13:x=None"):
+            with self.assertRaises(TypeError) as err:
+                newrect.x = None
+                msg = str(err.exception)
+                self.assertEqual(msg, "x must be an integer")
+        with self.subTest(msg=f"sttr14:x=int"):
+            newrect.x = 6
+            self.assertEqual(newrect.x, 6)
+
+        # y setter checks
+        with self.subTest(msg=f"sttr15:y=float"):
+            with self.assertRaises(TypeError) as err:
+                newrect.y = 22.2
+                msg = str(err.exception)
+                self.assertEqual(msg, "y must be an integer")
+        with self.subTest(msg=f"sttr16:y<0"):
+            with self.assertRaises(ValueError) as err:
+                newrect.y = -3
+                msg = str(err.exception)
+                self.assertEqual(msg, "y must be >= 0")
+        with self.subTest(msg=f"sttr17:y=None"):
+            with self.assertRaises(TypeError) as err:
+                newrect.y = None
+                msg = str(err.exception)
+                self.assertEqual(msg, "y must be an integer")
+        with self.subTest(msg=f"sttr18:y=int"):
+            newrect.y = 3
+            self.assertEqual(newrect.y, 3)
+        with self.subTest(msg=f"sttr19:id"):
+            newrect.id = -3
+            self.assertEqual(newrect.id, -3)
+
     # ******* __str__ test cases *******
     # [Rectangle] (<id>) <x>/<y> - <width>/<height>
     def test_str_res(self):
