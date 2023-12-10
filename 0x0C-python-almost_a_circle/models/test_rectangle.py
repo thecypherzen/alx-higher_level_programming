@@ -163,7 +163,7 @@ class TestRect(TestCase):
             length = len(lines)
             x = self.rect4.x
             y = self.rect4.y
-            self.assertEqual(length, 10+y)
+            self.assertEqual(length, 9+y)
 
             # check num of new_lines == y if y
             if y:
@@ -176,7 +176,7 @@ class TestRect(TestCase):
             for i in range(length - y):
                 with self.subTest(msg=f"line:{i}y:{y}"):
                     line = lines[i].rstrip('\n')
-                    self.assertEqual(len(line), 9+x)
+                    self.assertEqual(len(line), 1+x)
 
                     # check num of spaces == x
                     for j in range(x):
@@ -479,7 +479,7 @@ class TestRect(TestCase):
         with self.subTest(msg="x is dict"):
             with self.assertRaises(TypeError) as err:
                 _ = Rectangle(2, 3, {1:2})
-            self.assertEqual(str(err.exception), "x must be a number")
+            self.assertEqual(str(err.exception), "x must be an integer")
 
     # test x is Float
     def test_x_is_float(self):
@@ -502,21 +502,21 @@ class TestRect(TestCase):
         with self.subTest(msg="x is None"):
             with self.assertRaises(TypeError) as err:
                 _ = Rectangle(2, 3, None, 3)
-            self.assertEqual(str(err.exception), "x must be a number")
+            self.assertEqual(str(err.exception), "x must be an integer")
 
     # test x is string
     def test_x_is_string(self):
         with self.subTest(msg="x is string"):
             with self.assertRaises(TypeError) as err:
                 _ = Rectangle(2, 3, "2")
-            self.assertEqual(str(err.exception), "x must be a number")
+            self.assertEqual(str(err.exception), "x must be an integer")
 
     # test x is tuple
     def test_x_is_tuple(self):
         with self.subTest(msg="x tuple"):
             with self.assertRaises(TypeError) as err:
                 _ = Rectangle(1, 2, (2, 4), 4)
-            self.assertEqual(str(err.exception), "x must be a number")
+            self.assertEqual(str(err.exception), "x must be an integer")
 
     # test x is < 0
     def test_x_ltzero(self):
@@ -551,7 +551,7 @@ class TestRect(TestCase):
         with self.subTest(msg="y is dict"):
             with self.assertRaises(TypeError) as err:
                 _ = Rectangle(2, 3, 9, {1:2})
-            self.assertEqual(str(err.exception), "y must be a number")
+            self.assertEqual(str(err.exception), "y must be an integer")
 
     # test y is Float
     def test_x_is_float(self):
@@ -574,21 +574,21 @@ class TestRect(TestCase):
         with self.subTest(msg="y is None"):
             with self.assertRaises(TypeError) as err:
                 _ = Rectangle(2, 3, 3, None)
-            self.assertEqual(str(err.exception), "y must be a number")
+            self.assertEqual(str(err.exception), "y must be an integer")
 
     # test y is string
     def test_y_is_string(self):
         with self.subTest(msg="y is string"):
             with self.assertRaises(TypeError) as err:
                 _ = Rectangle(2, 3, 9, '2')
-            self.assertEqual(str(err.exception), "y must be a number")
+            self.assertEqual(str(err.exception), "y must be an integer")
 
     # test y is tuple
     def test_y_is_tuple(self):
         with self.subTest(msg="y tuple"):
             with self.assertRaises(TypeError) as err:
                 _ = Rectangle(1, 2, 4, (2, 4))
-            self.assertEqual(str(err.exception), "y must be a number")
+            self.assertEqual(str(err.exception), "y must be an integer")
 
     # test y is < 0
     def test_y_ltzero(self):

@@ -40,8 +40,8 @@ class Rectangle(Base):
         """
         validators.gt_zero_validate(width, "width", typ="int")
         validators.gt_zero_validate(height, "height", typ="int")
-        validators.pos_num_validate(x, 'x')
-        validators.pos_num_validate(y, 'y')
+        validators.pos_num_validate(x, 'x', typ="int")
+        validators.pos_num_validate(y, 'y', typ="int")
         Base.__init__(self, id)
         self.__width = width
         self.__height = height
@@ -136,7 +136,7 @@ class Rectangle(Base):
         i = self.height
         while i:
             # render ' ' for x
-            j = int(self.x)
+            j = self.x
             while j:
                 res += ' '
                 j -= 1

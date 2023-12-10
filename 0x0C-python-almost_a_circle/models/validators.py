@@ -82,14 +82,19 @@ def is_num_validate(var, name=None, msg=None):
         raise TypeError("{} {}".format(name, msg))
 
 
-def pos_num_validate(var, name=None, msg=None):
+def pos_num_validate(var, name=None, msg=None, typ=None):
     """Validates variable is a positive number.
 
     Raises:
         TypeError: if `var` is not a  number
         ValueError: if `var` is < 0
     """
-    is_num_validate(var, name, msg)
+    if typ == "float":
+        float_type_validate(var, name)
+    elif typ == "int":
+        int_type_validate(var, name)
+    else:
+        is_num_validate(var, name)
 
     if type(name) is not str:
         name = "variable"
