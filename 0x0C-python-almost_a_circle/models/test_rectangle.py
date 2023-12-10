@@ -457,56 +457,64 @@ class TestRect(TestCase):
 
     # ******* update test cases *******
     def test_update(self):
-        with self.subTest(msg=f"rect1(20,12,10,3,7)"):
-            self.rect1.update(20, 12, 10, 3, 7)
-            self.asserEqual(self.rect1.id, 20)
-            self.asserEqual(self.rect1.width, 12)
-            self.asserEqual(self.rect1.height, 10)
-            self.asserEqual(self.rect1.x, 3)
-            self.asserEqual(self.rect1.y, 7)
-        with self.subTest(msg=f"upd1: all ok)"):
+        new_rect = Rectangle(1, 4)
+
+        with self.subTest(msg=f"upd1:(20,12,10,3,7)"):
+            new_rect.update(20, 12, 10, 3, 7)
+            self.assertEqual(new_rect.id, 20)
+            self.assertEqual(new_rect.width, 12)
+            self.assertEqual(new_rect.height, 10)
+            self.assertEqual(new_rect.x, 3)
+            self.assertEqual(new_rect.y, 7)
+
+        with self.subTest(msg=f"upd2:h=0)"):
             with self.assertRaises(ValueError) as e:
-                self.rect2.update(3, 0, 2, 0, 0)
-            self.assertEqual(str(e.exception), "width must be > 0")
-        with self.subTest(msg=f"upd2: w=0"):
-            with self.assertRaises(ValueError) as e:
-                self.rect2.update(3, 4, 0, 1, 1)
+                new_rect.update(3, 1, 0, 0, 0)
             self.assertEqual(str(e.exception), "height must be > 0")
-        with self.subTest(msg=f"upd3: h=0"):
+
+        with self.subTest(msg=f"upd3:w=0"):
             with self.assertRaises(ValueError) as e:
-                self.rect2.update(3, -1, 2, 0, 0)
+                new_rect.update(0, 0, 5, 1, 1)
             self.assertEqual(str(e.exception), "width must be > 0")
-        with self.subTest(msg=f"upd4: w<0"):
+
+        with self.subTest(msg=f"upd4:h<0"):
             with self.assertRaises(ValueError) as e:
-                self.rect2.update(3, 0, -2, 0, 0)
+                new_rect.update(3, 1, -2, 0, 0)
             self.assertEqual(str(e.exception), "height must be > 0")
-        with self.subTest(msg=f"upd5: h<0"):
+
+        with self.subTest(msg=f"upd5:w<0"):
             with self.assertRaises(ValueError) as e:
-                self.rect2.update(3, 0, 2, 0, 0)
+                new_rect.update(-3, -1, 2, 0, 0)
             self.assertEqual(str(e.exception), "width must be > 0")
-        with self.subTest(msg=f"upd6: w=float"):
+
+        with self.subTest(msg=f"upd6:h=float"):
             with self.assertRaises(TypeError) as e:
-                self.rect2.update(3, 0.0, 2, 0, 0)
-            self.assertEqual(str(e.exception), "width must be an integer")
-        with self.subTest(msg=f"upd7: h=float"):
-            with self.assertRaises(TypeError) as e:
-                self.rect2.update(3, 0, 2.4, 0, 0)
+                new_rect.update(3, 3, 2.0, 0, 0)
             self.assertEqual(str(e.exception), "height must be an integer")
+
+        with self.subTest(msg=f"upd7:w=float"):
+            with self.assertRaises(TypeError) as e:
+                new_rect.update(9, 3.1, 2, 0, 0)
+            self.assertEqual(str(e.exception), "width must be an integer")
+
         with self.subTest(msg=f"upd8: x=None"):
             with self.assertRaises(TypeError) as e:
-                self.rect2.update(3, 0, 2, None, 0)
+                new_rect.update(3, 1, 1, None, 7)
             self.assertEqual(str(e.exception), "x must be an integer")
+
         with self.subTest(msg=f"upd9: y=None"):
             with self.assertRaises(TypeError) as e:
-                self.rect2.update(3, 0, 2, 0, None)
+                new_rect.update(3, 3, 2, 1, None)
             self.assertEqual(str(e.exception), "y must be an integer")
+
         with self.subTest(msg=f"upd10: x<0"):
             with self.assertRaises(ValueError) as e:
-                self.rect2.update(3, 0, 2, -2, 0)
+                new_rect.update(3, 4, 2, -2, 3)
             self.assertEqual(str(e.exception), "x must be >= 0")
+
         with self.subTest(msg=f"upd11: y<0"):
             with self.assertRaises(ValueError) as e:
-                self.rect2.update(3, 0, 2, 0, -4)
+                new_rect.update(1, 3, 2, 9, -4)
             self.assertEqual(str(e.exception), "y must be >= 0")
 
     # ******* width test cases *******
