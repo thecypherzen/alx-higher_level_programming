@@ -155,6 +155,17 @@ class Rectangle(Base):
                 res += '\n'
         print(res, flush=True)
 
-    #def update(self, *args):
-    #    self.
-    #    self.id = args[0]
+    # update method
+    def update(self, *args):
+        """Updates class attributes
+
+        There's no need to validate types and values as the setters
+            would do that.
+
+        Returns: None
+        """
+        self.id = args[0]
+        self.width = args[1]
+        self.height = args[2]
+        self.x = args[3]
+        self.y = args[4]
