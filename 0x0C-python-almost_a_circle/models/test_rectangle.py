@@ -36,22 +36,74 @@ class TestRect(TestCase):
 
     # ******* area test cases *******
     def test_area_as_expected(self):
-        with self.subTest(msg="rect1"):
+        with self.subTest(msg="rect1(7,5)"):
             print(self.rect1.area(), file=self.stream_w, end="", flush=True)
             res = self.stream_r.read()
             self.assertEqual(res, "35")
-        with self.subTest(msg="rect2"):
+        with self.subTest(msg="rect2(2,10)"):
             print(self.rect2.area(), file=self.stream_w, end="", flush=True)
             res = self.stream_r.read()
             self.assertEqual(res, "20")
-        with self.subTest(msg="rect3"):
+        with self.subTest(msg="rect3(4,3)"):
             print(self.rect3.area(), file=self.stream_w, end="", flush=True)
             res = self.stream_r.read()
             self.assertEqual(res, "12")
-        with self.subTest(msg="rect4"):
+        with self.subTest(msg="rect4(699,1030)"):
             print(self.rect4.area(), file=self.stream_w, end="", flush=True)
             res = self.stream_r.read()
             self.assertEqual(res, "719970")
+
+    # ******* display test cases *******
+    def test_display(self):
+        with self.subTest(msg="rect1(7,5)"):
+            print(self.rect1.display(), file=self.stream_w,
+                  end="", flush=True)
+            lines = self.stream_r.readlines()
+            self.assertEqual(len(lines), 5)
+            for i in range(len):
+                line = lines[i].rstrip('\n')
+                with self.subTest(msg=f"i={i}"):
+                    self.assertEqual(len(line), 7)
+                    for j in len(line):
+                        with self.subTest(msg=f"line[{j}]"):
+                            self.assertEqual(line[j], '#')
+
+        with self.subTest(msg="rect2(2,10)"):
+            print(self.rect2.display(), file=self.stream_w,
+                  end="", flush=True)
+            lines = self.stream_r.readlines()
+            self.assertEqual(len(lines), 10)
+            for i in range(len):
+                line = lines[i].rstrip('\n')
+                with self.subTest(msg=f"i={i}"):
+                    self.assertEqual(len(line), 2)
+                    for j in len(line):
+                        with self.subTest(msg=f"line[{j}]"):
+                            self.assertEqual(line[j], '#')
+        with self.subTest(msg="rect3(4,3)"):
+            print(self.rect3.display(), file=self.stream_w,
+                  end="", flush=True)
+            lines = self.stream_r.readlines()
+            self.assertEqual(len(lines), 3)
+            for i in range(len):
+                line = lines[i].rstrip('\n')
+                with self.subTest(msg=f"i={i}"):
+                    self.assertEqual(len(line), 4)
+                    for j in len(line):
+                        with self.subTest(msg=f"line[{j}]"):
+                            self.assertEqual(line[j], '#')
+        with self.subTest(msg="rect4(699,1030)"):
+            print(self.rect4.display(), file=self.stream_w,
+                  end="", flush=True)
+            lines = self.stream_r.readlines()
+            self.assertEqual(len(lines), 1030)
+            for i in range(len):
+                line = lines[i].rstrip('\n')
+                with self.subTest(msg=f"i={i}"):
+                    self.assertEqual(len(line), 699)
+                    for j in len(line):
+                        with self.subTest(msg=f"line[{j}]"):
+                            self.assertEqual(line[j], '#')
 
     # ******* id test cases *******
     # test id expected
