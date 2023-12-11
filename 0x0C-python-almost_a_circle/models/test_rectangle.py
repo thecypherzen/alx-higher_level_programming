@@ -4,9 +4,10 @@
 
 
 # Standard imports
-from unittest import TestCase, main
+import json
 import os
 import sys
+from unittest import TestCase, main
 
 # Local imports
 from base import Base
@@ -342,6 +343,62 @@ class TestRect(TestCase):
                 _ = Rectangle(1, 0, (2, 4), 4)
             self.assertEqual(str(err.exception), "height must be > 0")
 
+    # ******* save_to_file test case *******
+    def test_save_to_file(self):
+        # 1 - two rectangles passed
+        with self.subTest(msg="stf-1"):
+            Rectangle.save_to_file([self.rect1, self.rect2])
+
+            with open("Rectangle.json", 'r') as f:
+                data = json.load(f)
+
+            self.assertEqual(type(data), list)
+            self.assertEqual(len(data), 2)
+            for dic in data:
+                with self.subTest(msg="stf-1:type_chk"):
+                    self.assertEqual(type(dic), dict)
+
+            keys = ["id", "width", "height", "x", "y"]
+
+            # validate first_dictionary values
+            data1 = data[0]
+            vals = [1, 7, 5, 0, 0]
+            for key in keys:
+                with self.subTest(msg="stf-1:val_chk-a"):
+                    self.assertEqual(data1[key], vals[keys.index(key)])
+
+            # validate second dictionary values
+            data1 = data[1]
+            vals = [11, 2, 10, 4, 3]
+            for key in keys:
+                with self.subTest(msg="str-1:val_chk-b"):
+                    self.assertEqual(data1[key], vals[keys.index(key)])
+
+        # 2 - pass empty list
+        with self.subTest(msg="stf-2"):
+            Rectangle.save_to_file([])
+            with open("Rectangle.json", 'r') as f:
+                data = json.load(f)
+            self.assertEqual(type(data), list)
+            self.assertEqual(len(data), 0)
+
+        # 3- pass None
+        with self.subTest(msg="stf-2"):
+            Rectangle.save_to_file(None)
+            with open("Rectangle.json", 'r') as f:
+                data = json.load(f)
+            self.assertEqual(type(data), list)
+            self.assertEqual(len(data), 0)
+
+        # 4 - pass non-list
+        with self.subTest(msg="stf-2"):
+            Rectangle.save_to_file({1, 2})
+            with open("Rectangle.json", 'r') as f:
+                data = json.load(f)
+            self.assertEqual(type(data), list)
+            self.assertEqual(len(data), 0)
+
+
     # ******* setters test cases *******
     def test_setters(self):
         newrect = Rectangle(5, 8)
@@ -573,7 +630,6 @@ class TestRect(TestCase):
             ranstr = Rectangle.to_json_string([])
             self.assertEqual(type(ranstr), str)
             self.assertEqual(ranstr, "[]")
-
 
     # ******* width test cases *******
     # test width as expected
