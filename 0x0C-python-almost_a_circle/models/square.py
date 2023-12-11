@@ -19,7 +19,8 @@ class Square(Rectangle):
     Attributes:
         __init__(method, private): class constructor
         __str__(method, private): square string constructor
-        size:(method, getter, setter): gets and sets `size` attribute
+        size (method, getter, setter): gets and sets `size` attribute
+        update (method, public): updates instance values
     """
     def __init__(self, size:int, x:int=0, y:int=0, id:any=None) -> None:
         """Square class constructor
@@ -42,6 +43,7 @@ class Square(Rectangle):
             f"({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
         return rep
 
+    # getters and setters
     @property
     def size(self) -> int:
         """Getter method for `size` attribute
@@ -56,3 +58,44 @@ class Square(Rectangle):
     @size.setter
     def size(self, value:int) -> None:
         self.width = self.height = value
+
+    # public methods
+    def update(self, *args:tuple, **kwargs:dict) -> None:
+        """Updates Square class values
+
+        Args:
+            args: tuple of positional arguments
+            kwargs: dictionary of keyword arguments
+
+        Returns: None
+
+        Notes:
+            - if `args` is not None and not empty, `kwargs` is skipped
+            - args in `args` are in the order: id, size, x, y
+        """
+        length = len(args)
+        if args and length:
+            length = len(args)
+            if length == 1:
+                self.id = args[0]
+            elif length == 2:
+                self.id = args[0]
+                self.size = args[1]
+            elif length == 3:
+                self.id = args[0]
+                self.size = args[1]
+                self.x = args[2]
+            elif length == 4:
+                self.id = args[0]
+                self.size = args[1]
+                self.x = args[2]
+                self.y = args[3]
+        else:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "size" in kwargs:
+                self.size = kwargs["size"]
+            if 'x' in kwargs:
+                self.x = kwargs['x']
+            if 'y' in kwargs:
+                self.y = kwargs['y']
