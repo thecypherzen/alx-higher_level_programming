@@ -24,6 +24,8 @@ class Rectangle(Base):
         display(method, public): renders rectangle intance with
             the char '#'
         height (:obj: `getter`, `setter`): getter/setter of height
+        to_dictionary(method, public): returns the dictionary representation
+            of Rectangle instance.
         update(method, public): update's instance values
         width (:obj: `getter`, `setter`): getter/setter of width
         x (:obj: `getter`, `setter`): getter/setter of property x
@@ -158,7 +160,7 @@ class Rectangle(Base):
                 res += '\n'
         print(res, flush=True)
 
-    def to_dictionary(self):
+    def to_dictionary(self) -> dict:
         """Makes a dict representation of Rectangle
         """
         keys = ["id", "width", "height", 'x', 'y']
