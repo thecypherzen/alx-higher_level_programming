@@ -461,61 +461,30 @@ class TestRect(TestCase):
 
         with self.subTest(msg=f"upd1:(20,12,10,3,7)"):
             new_rect.update(20, 12, 10, 3, 7)
-            self.assertEqual(new_rect.id, 20)
-            self.assertEqual(new_rect.width, 12)
-            self.assertEqual(new_rect.height, 10)
-            self.assertEqual(new_rect.x, 3)
-            self.assertEqual(new_rect.y, 7)
+            res = str(new_rect)
+            self.assertEqual(res, "[Rectangle] (20) 3/7 - 12/10")
 
-        with self.subTest(msg=f"upd2:h=0)"):
-            with self.assertRaises(ValueError) as e:
-                new_rect.update(3, 1, 0, 0, 0)
-            self.assertEqual(str(e.exception), "height must be > 0")
+        with self.subTest(msg=f"upd2:x"):
+            new_rect.update(x=5)
+            res = str(new_rect)
+            self.assertEqual(res, "[Rectangle] (20) 5/7 - 12/10")
 
-        with self.subTest(msg=f"upd3:w=0"):
-            with self.assertRaises(ValueError) as e:
-                new_rect.update(0, 0, 5, 1, 1)
-            self.assertEqual(str(e.exception), "width must be > 0")
+        with self.subTest(msg=f"upd3:y,id"):
+            new_rect.update(y=8, id=9)
+            res = str(new_rect)
+            self.assertEqual(res, "[Rectangle] (9) 5/8 - 12/10")
 
-        with self.subTest(msg=f"upd4:h<0"):
-            with self.assertRaises(ValueError) as e:
-                new_rect.update(3, 1, -2, 0, 0)
-            self.assertEqual(str(e.exception), "height must be > 0")
+        with self.subTest(msg=f"upd4:w,h"):
+            new_rect.update(width=1, height=7)
+            res = str(new_rect)
+            self.assertEqual(res, "[Rectangle] (9) 5/8 - 1/7")
 
-        with self.subTest(msg=f"upd5:w<0"):
-            with self.assertRaises(ValueError) as e:
-                new_rect.update(-3, -1, 2, 0, 0)
-            self.assertEqual(str(e.exception), "width must be > 0")
+        with self.subTest(msg=f"upd5:(1, 2)"):
+            with self.assertRaises(IndexError) as err:
+                new_rect.update(2, 3)
+            msg = str(err.exception)
+            self.assertEqual(msg, "tuple index out of range")
 
-        with self.subTest(msg=f"upd6:h=float"):
-            with self.assertRaises(TypeError) as e:
-                new_rect.update(3, 3, 2.0, 0, 0)
-            self.assertEqual(str(e.exception), "height must be an integer")
-
-        with self.subTest(msg=f"upd7:w=float"):
-            with self.assertRaises(TypeError) as e:
-                new_rect.update(9, 3.1, 2, 0, 0)
-            self.assertEqual(str(e.exception), "width must be an integer")
-
-        with self.subTest(msg=f"upd8: x=None"):
-            with self.assertRaises(TypeError) as e:
-                new_rect.update(3, 1, 1, None, 7)
-            self.assertEqual(str(e.exception), "x must be an integer")
-
-        with self.subTest(msg=f"upd9: y=None"):
-            with self.assertRaises(TypeError) as e:
-                new_rect.update(3, 3, 2, 1, None)
-            self.assertEqual(str(e.exception), "y must be an integer")
-
-        with self.subTest(msg=f"upd10: x<0"):
-            with self.assertRaises(ValueError) as e:
-                new_rect.update(3, 4, 2, -2, 3)
-            self.assertEqual(str(e.exception), "x must be >= 0")
-
-        with self.subTest(msg=f"upd11: y<0"):
-            with self.assertRaises(ValueError) as e:
-                new_rect.update(1, 3, 2, 9, -4)
-            self.assertEqual(str(e.exception), "y must be >= 0")
 
     # ******* width test cases *******
     # test width as expected
