@@ -35,8 +35,13 @@ class Square(Rectangle):
         """Creates a string representation of square's instance
 
         Returns: string format of Rectangle class suitable for printing
-            format: [Rectangle] (<id>) <x>/<y> - <width>/<height>
+            format: [Square] (<id>) <x>/<y> - <width>/<height>
         """
-        rep = "[Square]" + \
+        rep = "[Square] " + \
             f"({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
         return rep
+
+
+s = Square(3)
+s.update(height=2)
+print(s.height)
