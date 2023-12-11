@@ -25,7 +25,8 @@ class Square(Rectangle):
             representation of Square instance
         update (method, public): updates instance values
     """
-    def __init__(self, size:int, x:int=0, y:int=0, id:any=None) -> None:
+    def __init__(self, size: int, x: int = 0,
+                 y: int = 0, id: any = None) -> None:
         """Square class constructor
 
         Args:
@@ -59,7 +60,7 @@ class Square(Rectangle):
         return self.width
 
     @size.setter
-    def size(self, value:int) -> None:
+    def size(self, value: int) -> None:
         self.width = self.height = value
 
     # public methods
@@ -72,7 +73,7 @@ class Square(Rectangle):
             rep[key] = getattr(self, key)
         return rep
 
-    def update(self, *args:tuple, **kwargs:dict) -> None:
+    def update(self, *args: tuple, **kwargs: dict) -> None:
         """Updates Square class values
 
         Args:
@@ -95,21 +96,3 @@ class Square(Rectangle):
         else:
             for key, val in kwargs.items():
                 setattr(self, key, val)
-
-
-
-s1 = Square(5)
-s2 = Square(7, 9, 1)
-list_squares_input = [s1, s2]
-
-Square.save_to_file(list_squares_input)
-
-list_squares_output = Square.load_from_file()
-
-for square in list_squares_input:
-    print("[{}] {}".format(id(square), square))
-
-print("---")
-
-for square in list_squares_output:
-    print("[{}] {}".format(id(square), square))
