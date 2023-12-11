@@ -47,14 +47,8 @@ class Base:
 
         Returns: json_string form of `list_dictionaries`.
         """
-        if not list_dictionaries or not len(list_dictionaries):
+        if not list_dictionaries or \
+            type(list_dictionaries) is not list or \
+                not len(list_dictionaries):
             return "[]"
         return json.dumps(list_dictionaries)
-
-    def save_to_file(cls, list_objs):
-        """saves a jsonifyed list to a given file
-
-        par
-        """
-        pass
-
