@@ -81,5 +81,5 @@ class Square(Rectangle):
             for i in range(max):
                 setattr(self, keys[i], args[i])
         else:
-            for key, val in kwargs:
+            for key, val in kwargs.items():
                 setattr(self, key, val)

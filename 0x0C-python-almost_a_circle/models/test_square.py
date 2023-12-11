@@ -128,32 +128,22 @@ class TestSquare(TestCase):
         with self.subTest(msg="upd-1"):
             self.sq.update(9)
             res = "[Square] (9) 0/0 - 5"
-            self.assertEqual(str(self.sz), res)
+            self.assertEqual(str(self.sq), res)
         # only args id, size
-        with self.subTest(msg="upd-1"):
-            self.sq.update(9)
-            res = "[Square] (9) 0/0 - 5"
-            self.assertEqual(str(self.sz), res)
-        # only args id, size, x
-        with self.subTest(msg="upd-1"):
-            self.sq.update(9)
-            res = "[Square] (9) 0/0 - 5"
-            self.assertEqual(str(self.sz), res)
-        # all args id, size, x, y
-        with self.subTest(msg="upd-1"):
-            self.sq.update(9)
-            res = "[Square] (9) 0/0 - 5"
-            self.assertEqual(str(self.sz), res)
-        # only kwargs size, y given
-        with self.subTest(msg="upd-1"):
-            self.sq.update(9)
-            res = "[Square] (9) 0/0 - 5"
-            self.assertEqual(str(self.sz), res)
-        # 2 args(id, size) and 2 kwargs
-        with self.subTest(msg="upd-1"):
-            self.sq.update(9)
-            res = "[Square] (9) 0/0 - 5"
-            self.assertEqual(str(self.sz), res)
+        with self.subTest(msg="upd-2"):
+            self.sq.update(12, 7)
+            res = "[Square] (12) 0/0 - 7"
+            self.assertEqual(str(self.sq), res)
+        # only kwargs x
+        with self.subTest(msg="upd-3"):
+            self.sq.update(x=4)
+            res = "[Square] (12) 4/0 - 7"
+            self.assertEqual(str(self.sq), res)
+        # kwargs id, y
+        with self.subTest(msg="upd-4"):
+            self.sq.update(y=9, id=24)
+            res = "[Square] (24) 4/9 - 7"
+            self.assertEqual(str(self.sq), res)
 
 if __name__ == "__main__":
     main()
