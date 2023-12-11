@@ -123,6 +123,9 @@ class TestSquare(TestCase):
             with self.subTest(msg="sz-2(4)"):
                 self.assertEqual(self.sq.height, 5)
 
+    def to_dictionary(self):
+        pass
+
     def test_update(self):
         # only args id
         with self.subTest(msg="upd-1"):

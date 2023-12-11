@@ -158,6 +158,15 @@ class Rectangle(Base):
                 res += '\n'
         print(res, flush=True)
 
+    def to_dictionary(self):
+        """Makes a dict representation of Rectangle
+        """
+        keys = ["id", "width", "height", 'x', 'y']
+        rep = {}
+        for key in keys:
+            rep[key] = getattr(self, key)
+        return rep
+
     # update method
     def update(self, *args, **kwargs) -> None:
         """Updates class attributes
