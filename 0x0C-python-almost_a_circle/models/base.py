@@ -37,7 +37,7 @@ class Base:
         else:
             self.id = id
 
-    def to_json_string(list_dictionaries:list) -> str:
+    def to_json_string(self, list_dictionaries:list) -> str:
         """creates json_string representation of Square
 
         Args:

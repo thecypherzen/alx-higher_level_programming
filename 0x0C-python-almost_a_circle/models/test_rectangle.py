@@ -536,6 +536,15 @@ class TestRect(TestCase):
                 with self.subTest(msg="d4-c:key2val-match"):
                     self.assertEqual(rect1_d[key], vals[keys.index(key)])
 
+    # ******* to_json test cases *******
+    def test_tojson(self):
+        dict_rep = self.rect1.to_dictionary()
+        json_str = self.rect1.to_json_string([dict_rep])
+        with self.subTest(msg="json-1"):
+            self.assertEqual(type(json_str), str)
+        with self.subTest(msg="json-2"):
+            self.assertEqual(type(dict_rep), dict)
+
 
     # ******* width test cases *******
     # test width as expected
