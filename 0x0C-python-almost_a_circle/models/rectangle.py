@@ -174,20 +174,11 @@ class Rectangle(Base):
         """
         keys = ["id", "width", "height", 'x', 'y']
 
-        if args is not None and len(args):
-            self.id = args[0]
-            self.width = args[1]
-            self.height = args[2]
-            self.x = args[3]
-            self.y = args[4]
+        if args and len(args):
+            length = len(args)
+            max = length if length < 5 else 5
+            for i in range(max):
+                setattr(self, keys[i], args[i])
         else:
-            if "height" in kwargs:
-                self.height = kwargs["height"]
-            if "id" in kwargs:
-                self.id = kwargs["id"]
-            if "width" in kwargs:
-                self.width = kwargs["width"]
-            if 'x' in kwargs:
-                self.x = kwargs['x']
-            if 'y' in kwargs:
-                self.y = kwargs['y']
+            for key, val in kwargs.items():
+                setattr(self, key, val)
