@@ -98,6 +98,23 @@ class TestSquare(TestCase):
                 res = "width must be an integer"
                 self.assertEqual(str(err.exception), res)
 
+    def test_size(self):
+        # get size as expected
+        with self.subTest(msg="sz-1"):
+            self.assertEqual(self.sq.size, 9)
+        # set size new value
+        with self.subTest(msg="sz-2"):
+            self.sq.size = 5
+            # check size change
+            with self.subTest(msg="sz-2(1)"):
+                self.assertEqual(self.sq.size, 5)
+
+            # check other sq values
+            with self.subTest(msg="sz-2(2)"):
+                res = "[Square] (1) 0/0 - 5/5"
+                self.assertEqual(str(self.sq), res)
+
+
 
 
 if __name__ == "__main__":
