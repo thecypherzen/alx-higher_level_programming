@@ -459,31 +459,30 @@ class TestRect(TestCase):
     def test_update(self):
         new_rect = Rectangle(1, 4)
 
-        with self.subTest(msg=f"upd1:(20,12,10,3,7)"):
-            new_rect.update(20, 12, 10, 3, 7)
+        with self.subTest(msg="upd-1"):
+            new_rect.update(20, 12)
             res = str(new_rect)
-            self.assertEqual(res, "[Rectangle] (20) 3/7 - 12/10")
+            self.assertEqual(res, "[Rectangle] (20) 0/0 - 12/4")
 
-        with self.subTest(msg=f"upd2:x"):
-            new_rect.update(x=5)
+        with self.subTest(msg="upd-2"):
+            new_rect.update(5)
             res = str(new_rect)
-            self.assertEqual(res, "[Rectangle] (20) 5/7 - 12/10")
+            self.assertEqual(res, "[Rectangle] (5) 0/0 - 12/4")
 
-        with self.subTest(msg=f"upd3:y,id"):
-            new_rect.update(y=8, id=9)
+        with self.subTest(msg="upd-3"):
+            new_rect.update(x=3, y=16)
             res = str(new_rect)
-            self.assertEqual(res, "[Rectangle] (9) 5/8 - 12/10")
+            self.assertEqual(res, "[Rectangle] (5) 3/16 - 12/4")
 
-        with self.subTest(msg=f"upd4:w,h"):
-            new_rect.update(width=1, height=7)
+        with self.subTest(msg="upd-4"):
+            new_rect.update(width=5, height=9)
             res = str(new_rect)
-            self.assertEqual(res, "[Rectangle] (9) 5/8 - 1/7")
+            self.assertEqual(res, "[Rectangle] (5) 3/16 - 5/9")
 
-        with self.subTest(msg=f"upd5:(1, 2)"):
-            with self.assertRaises(IndexError) as err:
-                new_rect.update(2, 3)
-            msg = str(err.exception)
-            self.assertEqual(msg, "tuple index out of range")
+        with self.subTest(msg="upd-5"):
+            new_rect.update(2, 3, 4, 5, 6)
+            res = str(new_rect)
+            self.assertEqual(res, "[Rectangle] (2) 5/6 - 3/4")
 
 
     # ******* width test cases *******
