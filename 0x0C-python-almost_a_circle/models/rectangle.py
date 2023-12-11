@@ -93,21 +93,25 @@ class Rectangle(Base):
     # private attribute setters
     @width.setter
     def width(self, value) -> None:
+        """width setter method"""
         validators.gt_zero_validate(value, "width", typ="int")
         self.__width = value
 
     @height.setter
     def height(self, value) -> None:
+        """height setter method"""
         validators.gt_zero_validate(value, "height", typ="int")
         self.__height = value
 
     @x.setter
     def x(self, value) -> None:
+        """x setter method"""
         validators.pos_num_validate(value, 'x', typ="int")
         self.__x = value
 
     @y.setter
     def y(self, value) -> None:
+        """y setter method"""
         validators.pos_num_validate(value, 'y', typ="int")
         self.__y = value
 
