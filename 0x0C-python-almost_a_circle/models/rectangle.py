@@ -18,6 +18,7 @@ class Rectangle(Base):
     """Defines a rectangle - inherits from Base
 
     Attributes:
+        __init__(method, private): class constructor
         __str__(method, magic): returns string format of rectangle
         area(method, public): returns the area of rectangle instance
         display(method, public): renders rectangle intance with
@@ -34,11 +35,11 @@ class Rectangle(Base):
         Args:
             width (`int`): rectangle's width, must be > 0
             height (`int`): rectangle's height, must be > 0
-            x (`int` or`float`, optional): position on x axis,
+            x (`int`, optional): position on x axis,
                 must be >= 0
-            y (`int` or `float`, optional): position on y axis,
+            y (`int`, optional): position on y axis,
                 must be >= 0
-            id(`any`, optional): instance's id number
+            id (`any`, optional): instance's id number
         """
         validators.gt_zero_validate(width, "width", typ="int")
         validators.gt_zero_validate(height, "height", typ="int")
