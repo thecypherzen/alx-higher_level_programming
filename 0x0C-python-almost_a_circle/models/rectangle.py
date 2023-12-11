@@ -15,11 +15,16 @@ from base import Base
 
 
 class Rectangle(Base):
-    """Defines a rectangle
+    """Defines a rectangle - inherits from Base
 
     Attributes:
-        width (:obj: `getter`, `setter`): getter/setter of width
+        __str__(method, magic): returns string format of rectangle
+        area(method, public): returns the area of rectangle instance
+        display(method, public): renders rectangle intance with
+            the char '#'
         height (:obj: `getter`, `setter`): getter/setter of height
+        update(method, public): update's instance values
+        width (:obj: `getter`, `setter`): getter/setter of width
         x (:obj: `getter`, `setter`): getter/setter of property x
         y (:obj: `getter`, `setter`): getter/setter of property y
     """
@@ -34,9 +39,6 @@ class Rectangle(Base):
             y (`int` or `float`, optional): position on y axis,
                 must be >= 0
             id(`any`, optional): instance's id number
-            area(method, public): returns the area of rectangle instance
-            display(method, public): renders rectangle intance with
-                the char '#'
         """
         validators.gt_zero_validate(width, "width", typ="int")
         validators.gt_zero_validate(height, "height", typ="int")
@@ -107,7 +109,7 @@ class Rectangle(Base):
         self.__y = value
 
     # magic methods
-    def __str__(self):
+    def __str__(self) -> str:
         """Creates a string representation of rectangle instance
 
         Returns: string format of Rectangle class suitable for printing
