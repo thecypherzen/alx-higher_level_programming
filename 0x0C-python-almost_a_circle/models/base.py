@@ -7,12 +7,16 @@ Class(s):
 """
 
 
+import json
+
+
 class Base:
     """Project's base class
 
     Attributes:
-        __nb_objects(:obj:int): number of class instances
-        __init__(:obj:method): instance init method
+        __nb_objects(int, private): number of class instances
+        __init__(method, private): instance init method
+        to_json_string(method, public): json_stringifyer of list
     """
     __nb_objects = 0
 
@@ -32,3 +36,18 @@ class Base:
             self.id = Base.__nb_objects
         else:
             self.id = id
+
+    def to_json_string(list_dictionaries:list) -> str:
+        """creates json_string representation of Square
+
+        Args:
+            list_dictionaries: list of dictionaries to
+                stringify
+
+        Returns: json_string form of `list_dictionaries`.
+        """
+        if not list_dictionaries or not len(list_dictionaries):
+            return "[]"
+        return json.dumps(list_dictionaries)
+
+
