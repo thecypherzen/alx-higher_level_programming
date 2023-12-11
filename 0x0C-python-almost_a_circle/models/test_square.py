@@ -60,12 +60,12 @@ class TestSquare(TestCase):
         # size and id given
         with self.subTest(msg="init-1"):
             sq = Square(3, id=2)
-            res = "[Square] (2) 0/0 - 3/3"
+            res = "[Square] (2) 0/0 - 3"
             self.assertEqual(str(sq), res)
         # all args given
         with self.subTest(msg="init-2"):
             sq = Square(3, 4, 5, 12)
-            res = "[Square] (12) 4/5 - 3/3"
+            res = "[Square] (12) 4/5 - 3"
             self.assertEqual(str(sq), res)
         # size == float
         with self.subTest(msg="init-3"):
@@ -109,13 +109,51 @@ class TestSquare(TestCase):
             with self.subTest(msg="sz-2(1)"):
                 self.assertEqual(self.sq.size, 5)
 
-            # check other sq values
+            # check other sq str
             with self.subTest(msg="sz-2(2)"):
-                res = "[Square] (1) 0/0 - 5/5"
+                res = "[Square] (1) 0/0 - 5"
                 self.assertEqual(str(self.sq), res)
 
+            # check other sq width
+            with self.subTest(msg="sz-2(3)"):
+                res = "[Square] (1) 0/0 - 5"
+                self.assertEqual(self.sq.width, 5)
 
+            # check other sq height
+            with self.subTest(msg="sz-2(4)"):
+                self.assertEqual(self.sq.height, 5)
 
+    def test_update(self):
+        # only args id
+        with self.subTest(msg="upd-1"):
+            self.sq.update(9)
+            res = "[Square] (9) 0/0 - 5"
+            self.assertEqual(str(self.sz), res)
+        # only args id, size
+        with self.subTest(msg="upd-1"):
+            self.sq.update(9)
+            res = "[Square] (9) 0/0 - 5"
+            self.assertEqual(str(self.sz), res)
+        # only args id, size, x
+        with self.subTest(msg="upd-1"):
+            self.sq.update(9)
+            res = "[Square] (9) 0/0 - 5"
+            self.assertEqual(str(self.sz), res)
+        # all args id, size, x, y
+        with self.subTest(msg="upd-1"):
+            self.sq.update(9)
+            res = "[Square] (9) 0/0 - 5"
+            self.assertEqual(str(self.sz), res)
+        # only kwargs size, y given
+        with self.subTest(msg="upd-1"):
+            self.sq.update(9)
+            res = "[Square] (9) 0/0 - 5"
+            self.assertEqual(str(self.sz), res)
+        # 2 args(id, size) and 2 kwargs
+        with self.subTest(msg="upd-1"):
+            self.sq.update(9)
+            res = "[Square] (9) 0/0 - 5"
+            self.assertEqual(str(self.sz), res)
 
 if __name__ == "__main__":
     main()

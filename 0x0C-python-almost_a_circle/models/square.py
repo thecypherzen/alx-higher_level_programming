@@ -73,29 +73,13 @@ class Square(Rectangle):
             - if `args` is not None and not empty, `kwargs` is skipped
             - args in `args` are in the order: id, size, x, y
         """
+        keys = ["id", "size", 'x', 'y']
         length = len(args)
+        max = length if length <= 4 else 4
+
         if args and length:
-            length = len(args)
-            if length == 1:
-                self.id = args[0]
-            elif length == 2:
-                self.id = args[0]
-                self.size = args[1]
-            elif length == 3:
-                self.id = args[0]
-                self.size = args[1]
-                self.x = args[2]
-            elif length == 4:
-                self.id = args[0]
-                self.size = args[1]
-                self.x = args[2]
-                self.y = args[3]
+            for i in range(max):
+                setattr(self, keys[i], args[i])
         else:
-            if "id" in kwargs:
-                self.id = kwargs["id"]
-            if "size" in kwargs:
-                self.size = kwargs["size"]
-            if 'x' in kwargs:
-                self.x = kwargs['x']
-            if 'y' in kwargs:
-                self.y = kwargs['y']
+            for key, val in kwargs:
+                setattr(self, key, val)
