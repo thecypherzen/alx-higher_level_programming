@@ -8,6 +8,7 @@ Class(s):
 
 
 import json
+import os
 
 
 class Base:
@@ -19,6 +20,8 @@ class Base:
         create (method, class): creates instance of obj
         from_json_string (method, static): creates a python list from
             a json_string
+        load_from_file (method, class): loads a json string from a file
+            and returns a list of instnaces of the calling class
         save_to_file (method, class): saves python list to json string
             in a file
         to_json_string(method, public): json_stringifyer of list
@@ -77,6 +80,30 @@ class Base:
             not len(json_string):
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def load_from_file(cls):
+        """loads json string from a file
+
+        Creates a list of instances from a the json string.
+
+        Returns:
+            the list created if the file `Class_name.json` exists
+            else an empty list
+
+        Note:
+            - must use the from_json_string and create methods
+        """
+        lst = []
+        fname = f"{cls.__name__}.json"
+        if os.path.exists(fname):
+            with open(fname, 'r') as f:
+                j_str = f.read()
+            l_string = cls.from_json_string(j_str)
+            for dic in l_string:
+                lst.append(cls.create(**dic))
+            return lst
+        return lst
 
     @classmethod
     def save_to_file(cls, list_objs:list) -> None:
