@@ -172,6 +172,8 @@ class Rectangle(Base):
 
         Returns: None
         """
+        keys = ["id", "width", "height", 'x', 'y']
+
         if args is not None and len(args):
             self.id = args[0]
             self.width = args[1]

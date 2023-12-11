@@ -74,10 +74,10 @@ class Square(Rectangle):
             - args in `args` are in the order: id, size, x, y
         """
         keys = ["id", "size", 'x', 'y']
-        length = len(args)
-        max = length if length <= 4 else 4
 
-        if args and length:
+        if args and len(args):
+            length = len(args)
+            max = length if length < 4 else 4
             for i in range(max):
                 setattr(self, keys[i], args[i])
         else:
