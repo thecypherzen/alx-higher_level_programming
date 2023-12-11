@@ -19,19 +19,20 @@ class Square(Rectangle):
     Attributes:
         __init__(method, private): class constructor
         __str__(method, private): square string constructor
+        size:(method, getter, setter): gets and sets `size` attribute
     """
-    def __init__(self, size, x=0, y=0, id=None):
+    def __init__(self, size:int, x:int=0, y:int=0, id:any=None) -> None:
         """Square class constructor
 
         Args:
-            size (`int`): width and height of square
-            x (`int`): x-axis offset
-            y (`int`): y-axis offset
-            id (`any`): square's id
+            size: width and height of square
+            x: x-axis offset
+            y: y-axis offset
+            id: square's id
         """
         Rectangle.__init__(self, size, size, x, y, id)
 
-    def __str__(self):
+    def __str__(self) -> str:
         """Creates a string representation of square's instance
 
         Returns: string format of Rectangle class suitable for printing
@@ -41,7 +42,17 @@ class Square(Rectangle):
             f"({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
         return rep
 
+    @property
+    def size(self) -> int:
+        """Getter method for `size` attribute
 
-s = Square(3)
-s.update(height=2)
-print(s.height)
+        @setter: size(value): sets `size` to value
+            - validates 'value' before assignment
+
+        Returns: value of square's `size`
+        """
+        return self.width
+
+    @size.setter
+    def size(self, value:int) -> None:
+        self.width = self.height = value
