@@ -40,7 +40,7 @@ class Square(Rectangle):
             format: [Square] (<id>) <x>/<y> - <width>/<height>
         """
         rep = "[Square] " + \
-            f"({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+            f"({self.id}) {self.x}/{self.y} - {self.size}"
         return rep
 
     # getters and setters
