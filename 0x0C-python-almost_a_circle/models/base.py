@@ -38,7 +38,7 @@ class Base:
             self.id = id
 
     @staticmethod
-    def to_json_string(list_dictionaries:list) -> str:
+    def to_json_string(list_dictionaries:list) -> json:
         """creates json_string representation of Square
 
         Args:
@@ -50,5 +50,40 @@ class Base:
         if not list_dictionaries or \
             type(list_dictionaries) is not list or \
                 not len(list_dictionaries):
-            return "[]"
+            return json.dumps([])
         return json.dumps(list_dictionaries)
+
+
+    @classmethod
+    def save_to_file(cls, list_objs:list) -> None:
+        """saves a jsonifyed list to a given file
+
+        It writes the JSON string reps of `list_objs`
+            to a file:
+
+        Args:
+            list_objs: a list of instances that inherit
+                from Base - eg: list of Rectangle instances or
+                list of Square instances
+
+        Returns: None
+
+        Notes:
+            - If list_objs is None, an empty list is saved
+            - The filename must be: <Class name>.json
+                - example: Rectangle.json
+            - must use the static method to_json_string
+                (created before)
+            - must overwrite the file if it already exists
+        """
+        f_obj = []
+        # add objs to list if of valid type
+        if list_objs and type(list_objs) is list and \
+            len(list_objs):
+            for obj in list_objs:
+                f_obj.append(obj.to_dictionary())
+
+        # jsonify list and write to file
+        f_str = cls.to_json_string(f_obj)
+        with open(f"{cls.__name__}.json", "w") as f:
+            f.write(f_str)

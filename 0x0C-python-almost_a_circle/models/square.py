@@ -11,6 +11,7 @@ Class(s):
 
 # Local Imports
 from rectangle import Rectangle
+from base import Base
 
 
 class Square(Rectangle):
