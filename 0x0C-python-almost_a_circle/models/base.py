@@ -37,7 +37,8 @@ class Base:
         else:
             self.id = id
 
-    def to_json_string(self, list_dictionaries:list) -> str:
+    @staticmethod
+    def to_json_string(list_dictionaries:list) -> str:
         """creates json_string representation of Square
 
         Args:
@@ -50,4 +51,10 @@ class Base:
             return "[]"
         return json.dumps(list_dictionaries)
 
+    def save_to_file(cls, list_objs):
+        """saves a jsonifyed list to a given file
+
+        par
+        """
+        pass
 

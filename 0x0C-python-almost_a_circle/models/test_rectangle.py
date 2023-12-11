@@ -540,10 +540,18 @@ class TestRect(TestCase):
     def test_tojson(self):
         dict_rep = self.rect1.to_dictionary()
         json_str = self.rect1.to_json_string([dict_rep])
+        # check return type is str
         with self.subTest(msg="json-1"):
             self.assertEqual(type(json_str), str)
+        # check 0bj being used is a dict
         with self.subTest(msg="json-2"):
             self.assertEqual(type(dict_rep), dict)
+        # check mthd is static
+        with self.subTest(msg="json-3"):
+            randic = {'a':24, 'b':1, 'c':13}
+            ranstr = Rectangle.to_json_string([randic])
+            self.assertEqual(type(ranstr), str)
+            self.assertEqual(ranstr, '[{"a": 24, "b": 1, "c": 13}]')
 
 
     # ******* width test cases *******
