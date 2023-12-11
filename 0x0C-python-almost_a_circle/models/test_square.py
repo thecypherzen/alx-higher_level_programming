@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
+
 """Unittest for square module
 """
 
@@ -123,29 +123,76 @@ class TestSquare(TestCase):
             with self.subTest(msg="sz-2(4)"):
                 self.assertEqual(self.sq.height, 5)
 
-    def to_dictionary(self):
-        pass
+    def test_to_dictionary(self):
+        with self.subTest(msg="dic-1"):
+            d1 = self.sq.to_dictionary()
+            # check type(d1) is dict
+            with self.subTest(msg="d1-a:type-chk"):
+                self.assertEqual(d1.__class__.__name__, "dict")
+
+            # check d1 has excatly 4 values
+            with self.subTest(msg="d1-b:size-chk"):
+                self.assertEqual(len(d1), 4)
+
+            keys = ["id", "size", 'x', 'y']
+            vals = [1, 5, 0, 0]
+
+            # check keys in d1 match expected attribute names
+            for key in keys:
+                with self.subTest(msg="d1-c:key2key-chk"):
+                    self.assertEqual(key in d1, True)
+
+            # check values of each key in d1 is as expected
+            for key in keys:
+                with self.subTest(msg="d1-d:key2val-chk"):
+                    self.assertEqual(d1[key], vals[keys.index(key)])
+
+        with self.subTest(msg="dic-2"):
+            self.sq.update(id=19, x=1, y=3, size=7)
+            d1 = self.sq.to_dictionary()
+
+            # check type(d1) is dict
+            with self.subTest(msg="d2-a:type-chk"):
+                self.assertEqual(d1.__class__.__name__, "dict")
+
+            # check d1 has excatly 4 values
+            with self.subTest(msg="d2-b:size-chk"):
+                self.assertEqual(len(d1), 4)
+
+            keys = ["id", "size", 'x', 'y']
+            vals = [19, 7, 1, 3]
+
+            # check keys in d1 match expected attribute names
+            for key in keys:
+                with self.subTest(msg="d2-c:key2key-chk"):
+                    self.assertEqual(key in d1, True)
+
+            # check values of each key in d1 is as expected
+            for key in keys:
+                with self.subTest(msg="d2-d:key2val-chk"):
+                    self.assertEqual(d1[key], vals[keys.index(key)])
+
 
     def test_update(self):
         # only args id
         with self.subTest(msg="upd-1"):
             self.sq.update(9)
-            res = "[Square] (9) 0/0 - 5"
+            res = "[Square] (9) 1/3 - 7"
             self.assertEqual(str(self.sq), res)
         # only args id, size
         with self.subTest(msg="upd-2"):
-            self.sq.update(12, 7)
-            res = "[Square] (12) 0/0 - 7"
+            self.sq.update(12, 13)
+            res = "[Square] (12) 1/3 - 13"
             self.assertEqual(str(self.sq), res)
         # only kwargs x
         with self.subTest(msg="upd-3"):
             self.sq.update(x=4)
-            res = "[Square] (12) 4/0 - 7"
+            res = "[Square] (12) 4/3 - 13"
             self.assertEqual(str(self.sq), res)
         # kwargs id, y
         with self.subTest(msg="upd-4"):
             self.sq.update(y=9, id=24)
-            res = "[Square] (24) 4/9 - 7"
+            res = "[Square] (24) 4/9 - 13"
             self.assertEqual(str(self.sq), res)
 
 if __name__ == "__main__":
