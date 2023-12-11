@@ -455,6 +455,7 @@ class TestRect(TestCase):
             res = str(self.rect4)
             self.assertEqual(res, "[Rectangle] (-2.2) 0/8 - 1/9")
 
+
     # ******* update test cases *******
     def test_update(self):
         new_rect = Rectangle(1, 4)
@@ -483,6 +484,57 @@ class TestRect(TestCase):
             new_rect.update(2, 3, 4, 5, 6)
             res = str(new_rect)
             self.assertEqual(res, "[Rectangle] (2) 5/6 - 3/4")
+
+    # ******* to_dictionary test cases *******
+    def test_todict(self):
+        # rect 1
+        with self.subTest(msg="dic-1"):
+            rect1_d = self.rect1.to_dictionary()
+            with self.subTest(msg="d1-a:chk-type"):
+                self.assertEqual(rect1_d.__class__.__name__, "dict")
+            keys = ["width", "height", 'x', 'y', "id"]
+            vals = [7, 5, 0, 0, 1]
+            for key in keys:
+                with self.subTest(msg="d1-b:key2key-match"):
+                    self.assertEqual(key in rect1_d, True)
+                with self.subTest(msg="d1-c:key2val-match"):
+                    self.assertEqual(rect1_d[key], vals[keys.index(key)])
+        # rect 2
+        with self.subTest(msg="dic-2"):
+            rect1_d = self.rect2.to_dictionary()
+            with self.subTest(msg="d2-a:chk-type"):
+                self.assertEqual(rect1_d.__class__.__name__, "dict")
+            keys = ["width", "height", 'x', 'y', "id"]
+            vals = [2, 10, 4, 3, 11]
+            for key in keys:
+                with self.subTest(msg="d2-b:key2key-match"):
+                    self.assertEqual(key in rect1_d, True)
+                with self.subTest(msg="d2-c:key2val-match"):
+                    self.assertEqual(rect1_d[key], vals[keys.index(key)])
+        # rect 3
+        with self.subTest(msg="dic-3"):
+            rect1_d = self.rect3.to_dictionary()
+            with self.subTest(msg="d3-a:chk-type"):
+                self.assertEqual(rect1_d.__class__.__name__, "dict")
+            keys = ["width", "height", 'x', 'y', "id"]
+            vals = [4, 3, 13, 0, 2]
+            for key in keys:
+                with self.subTest(msg="d3-b:key2key-match"):
+                    self.assertEqual(key in rect1_d, True)
+                with self.subTest(msg="d3-c:key2val-match"):
+                    self.assertEqual(rect1_d[key], vals[keys.index(key)])
+        # rect 4
+        with self.subTest(msg="dic-4"):
+            rect1_d = self.rect4.to_dictionary()
+            with self.subTest(msg="d4-a:chk-type"):
+                self.assertEqual(rect1_d.__class__.__name__, "dict")
+            keys = ["width", "height", 'x', 'y', "id"]
+            vals = [1, 9, 0, 8, -2.2]
+            for key in keys:
+                with self.subTest(msg="d4-b:key2key-match"):
+                    self.assertEqual(key in rect1_d, True)
+                with self.subTest(msg="d4-c:key2val-match"):
+                    self.assertEqual(rect1_d[key], vals[keys.index(key)])
 
 
     # ******* width test cases *******

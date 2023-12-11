@@ -167,7 +167,6 @@ class Rectangle(Base):
             rep[key] = getattr(self, key)
         return rep
 
-    # update method
     def update(self, *args, **kwargs) -> None:
         """Updates class attributes
 
@@ -191,3 +190,4 @@ class Rectangle(Base):
         else:
             for key, val in kwargs.items():
                 setattr(self, key, val)
+
