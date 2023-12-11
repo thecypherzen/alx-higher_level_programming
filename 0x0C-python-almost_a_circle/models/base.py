@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""0x0C. Python - Almost a circle - Task 1
+"""0x0C. Python - Almost a circle - Task 1, 15-19
 
 Class(s):
     Base: project's base/super class
@@ -32,4 +32,3 @@ class Base:
             self.id = Base.__nb_objects
         else:
             self.id = id
-	

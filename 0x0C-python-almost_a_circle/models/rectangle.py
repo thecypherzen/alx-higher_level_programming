@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""0x0C. Python - Almost a circle - Tasks 2-9
+"""0x0C. Python - Almost a circle - Tasks 2-9, 13
 
 This module implements incremental solutions to tasks 2 through 9
 of this project.
