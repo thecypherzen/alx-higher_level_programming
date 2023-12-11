@@ -20,6 +20,8 @@ class Square(Rectangle):
         __init__(method, private): class constructor
         __str__(method, private): square string constructor
         size (method, getter, setter): gets and sets `size` attribute
+        to_dictionary(method, public): returns the dictionary
+            representation of Square instance
         update (method, public): updates instance values
     """
     def __init__(self, size:int, x:int=0, y:int=0, id:any=None) -> None:
@@ -60,6 +62,15 @@ class Square(Rectangle):
         self.width = self.height = value
 
     # public methods
+    def to_dictionary(self):
+        """returns the dictionary representation of Square
+        """
+        rep = {}
+        keys = ["id", "size", 'x', 'y']
+        for key in keys:
+            rep[key] = getattr(self, key)
+        return rep
+
     def update(self, *args:tuple, **kwargs:dict) -> None:
         """Updates Square class values
 
@@ -83,5 +94,3 @@ class Square(Rectangle):
         else:
             for key, val in kwargs.items():
                 setattr(self, key, val)
-
-
