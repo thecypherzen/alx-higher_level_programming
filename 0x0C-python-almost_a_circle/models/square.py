@@ -61,6 +61,7 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, value: int) -> None:
+        """size setter method"""
         self.width = self.height = value
 
     # public methods
