@@ -38,6 +38,25 @@ class Base:
             self.id = id
 
     @staticmethod
+    def from_json_string(json_string:json) -> list:
+        """converts a json string to a list
+
+        Args:
+            json_string: a string representing a list of dictionaries
+
+        Returns: list from json_string
+
+        Notes:
+            If json_string is None or empty, return an empty list,
+                otherwise, return the list represented by json_string
+        """
+        if not json_string or type(json_string) is not str or \
+            not len(json_string):
+            return []
+        return json.loads(json_string)
+
+
+    @staticmethod
     def to_json_string(list_dictionaries:list) -> json:
         """creates json_string representation of Square
 
