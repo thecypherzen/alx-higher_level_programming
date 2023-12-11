@@ -28,7 +28,7 @@ class Base:
     """
     __nb_objects = 0
 
-    def __init__(self, id:any=None) -> None:
+    def __init__(self, id=None) -> None:
         """Initialises a class object
 
         If id is None, sets instance id to objects_count+1, else
@@ -46,7 +46,7 @@ class Base:
             self.id = id
 
     @classmethod
-    def create(cls, **dictionary:dict) -> object:
+    def create(cls, **dictionary: dict) -> object:
         """creates an instance of a class
 
         Args:
@@ -64,7 +64,7 @@ class Base:
         return new_obj
 
     @staticmethod
-    def from_json_string(json_string:json) -> list:
+    def from_json_string(json_string: json) -> list:
         """converts a json string to a list
 
         Args:
@@ -77,7 +77,7 @@ class Base:
                 otherwise, return the list represented by json_string
         """
         if not json_string or type(json_string) is not str or \
-            not len(json_string):
+                not len(json_string):
             return []
         return json.loads(json_string)
 
@@ -106,7 +106,7 @@ class Base:
         return lst
 
     @classmethod
-    def save_to_file(cls, list_objs:list) -> None:
+    def save_to_file(cls, list_objs: list) -> None:
         """saves a jsonified list to a given file
 
         It writes the JSON string reps of `list_objs`
@@ -130,7 +130,7 @@ class Base:
         f_obj = []
         # add objs to list if of valid type
         if list_objs and type(list_objs) is list and \
-            len(list_objs):
+                len(list_objs):
             for obj in list_objs:
                 f_obj.append(obj.to_dictionary())
 
@@ -140,7 +140,7 @@ class Base:
             f.write(f_str)
 
     @staticmethod
-    def to_json_string(list_dictionaries:list) -> json:
+    def to_json_string(list_dictionaries: list) -> json:
         """creates json_string representation of Square
 
         Args:
