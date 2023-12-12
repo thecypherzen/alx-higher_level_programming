@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """0x0C. Python - Almost a circle - Tasks 2-9, 13
 
 This module implements incremental solutions to tasks 2 through 9
@@ -9,9 +10,21 @@ Class(s):
 """
 
 
+# standard imports
+import os
+from importlib.machinery import SourceFileLoader as Loader
+
 # Local imports
-import validators
-from base import Base
+path = os.path.realpath("./base.py")
+if not os.path.exists(path):
+    path = os.path.realpath("../../models/base.py")
+base = Loader("base", path).load_module()
+Base = base.Base
+
+path = os.path.realpath("../validators.py")
+if not os.path.exists(path):
+    path = os.path.realpath("../../validators.py")
+validators = Loader("validators", path).load_module()
 
 
 class Rectangle(Base):
@@ -99,19 +112,22 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value) -> None:
-        """height setter method"""
+        """height setter method
+        """
         validators.gt_zero_validate(value, "height", typ="int")
         self.__height = value
 
     @x.setter
     def x(self, value) -> None:
-        """x setter method"""
+        """x setter method
+        """
         validators.pos_num_validate(value, 'x', typ="int")
         self.__x = value
 
     @y.setter
     def y(self, value) -> None:
-        """y setter method"""
+        """y setter method
+        """
         validators.pos_num_validate(value, 'y', typ="int")
         self.__y = value
 

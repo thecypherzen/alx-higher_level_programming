@@ -9,10 +9,17 @@ Class(s):
 """
 
 
-# Local Imports
-from rectangle import Rectangle
-from base import Base
+# Standard import
+from importlib.machinery import SourceFileLoader as Loader
+import os
 
+# Local Imports
+r_path = os.path.realpath("./rectangle.py")
+if not os.path.exists(r_path):
+    r_path = os.path.realpath("../../models/rectangle.py")
+rectangle = Loader("rectangle", r_path).load_module()
+
+Rectangle = rectangle.Rectangle
 
 class Square(Rectangle):
     """Defines a Square - inherits from Rectangle
@@ -97,3 +104,4 @@ class Square(Rectangle):
         else:
             for key, val in kwargs.items():
                 setattr(self, key, val)
+

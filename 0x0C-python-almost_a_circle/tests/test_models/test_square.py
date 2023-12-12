@@ -4,12 +4,16 @@
 """
 
 # Standard imports:
+from importlib.machinery import SourceFileLoader as Loader
 import os
 import sys
 from unittest import TestCase, main
 
 # Local imports
-from square import Square
+path = os.path.realpath("../../models/square.py")
+square = Loader("square", path).load_module()
+Square = square.Square
+
 
 class TestSquare(TestCase):
 
@@ -172,7 +176,6 @@ class TestSquare(TestCase):
                 with self.subTest(msg="d2-d:key2val-chk"):
                     self.assertEqual(d1[key], vals[keys.index(key)])
 
-
     def test_update(self):
         # only args id
         with self.subTest(msg="upd-1"):
@@ -194,6 +197,7 @@ class TestSquare(TestCase):
             self.sq.update(y=9, id=24)
             res = "[Square] (24) 4/9 - 13"
             self.assertEqual(str(self.sq), res)
+
 
 if __name__ == "__main__":
     main()

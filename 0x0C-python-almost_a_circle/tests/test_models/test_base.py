@@ -3,14 +3,18 @@
 """
 
 
-from importlib.machinery import SourceFileLoader
+from importlib.machinery import SourceFileLoader as Loader
+import os
 from unittest import TestCase, main
 
-base_module = SourceFileLoader("base", "../../models/base.py").load_module()
+path = os.path.realpath("../../models/base.py")
+base_module = Loader("base", path).load_module()
 Base = base_module.Base
 
 
 class TestBase(TestCase):
+    """Test case for base class
+    """
     @classmethod
     def setUpClass(cls):
         """set up class instance objects"""

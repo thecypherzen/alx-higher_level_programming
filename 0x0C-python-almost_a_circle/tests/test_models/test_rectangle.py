@@ -4,17 +4,23 @@
 
 
 # Standard imports
+from importlib.machinery import SourceFileLoader as Loader
 import json
 import os
 import sys
 from unittest import TestCase, main
 
 # Local imports
-from base import Base
-from rectangle import Rectangle
+base_path = os.path.realpath("../../models/base.py")
+rect_path = os.path.realpath("../../models/rectangle.py")
+base = Loader("base", base_path).load_module()
+rectangle = Loader("rectangle", rect_path).load_module()
+Base = base.Base
+Rectangle = rectangle.Rectangle
 
 
 class TestRect(TestCase):
+    ""
     # test rectangle inherits from Base
     @classmethod
     def setUpClass(cls) -> None:
@@ -224,7 +230,7 @@ class TestRect(TestCase):
             self.assertEqual(res, "(1, 2)")
 
         with self.subTest(msg="id is dict"):
-            obj = Rectangle(1, 2, 3, 4, {'a':1, 'b':2})
+            obj = Rectangle(1, 2, 3, 4, {'a': 1, 'b': 2})
             print(obj.id, end="", file=self.stream_w, flush=True)
             res = self.stream_r.read()
             self.assertEqual(res, "{'a': 1, 'b': 2}")
@@ -247,10 +253,8 @@ class TestRect(TestCase):
             res = self.stream_r.read()
             self.assertEqual(res, "True")
 
-
     # ******* height test cases *******
     # test height expected
-    #cls.rect4 = Rectangle(699, 1030, 3.3, 2.9, -2.2)
     def test_height_as_expected(self):
         with self.subTest(msg="height == 5"):
             print(self.rect1.height, end="", file=self.stream_w, flush=True)
@@ -275,14 +279,14 @@ class TestRect(TestCase):
             with self.assertRaises(AttributeError) as err:
                 print(self.rect1.__height)
             self.assertEqual(str(err.exception),
-                            "'Rectangle' object has no attribute" +
-                            " '_TestRect__height'")
+                             "'Rectangle' object has no attribute" +
+                             " '_TestRect__height'")
 
-    #test height is dict
+    # test height is dict
     def test_height_is_dict(self):
         with self.subTest(msg="height is dict"):
             with self.assertRaises(TypeError) as err:
-                _ = Rectangle(2, {2:3, 3:9}, 2, 3)
+                _ = Rectangle(2, {2: 3, 3: 9}, 2, 3)
             self.assertEqual(str(err.exception), "height must be an integer")
 
     # test height is float
@@ -398,7 +402,6 @@ class TestRect(TestCase):
             self.assertEqual(type(data), list)
             self.assertEqual(len(data), 0)
 
-
     # ******* setters test cases *******
     def test_setters(self):
         newrect = Rectangle(5, 8)
@@ -512,7 +515,6 @@ class TestRect(TestCase):
             res = str(self.rect4)
             self.assertEqual(res, "[Rectangle] (-2.2) 0/8 - 1/9")
 
-
     # ******* update test cases *******
     def test_update(self):
         new_rect = Rectangle(1, 4)
@@ -608,7 +610,7 @@ class TestRect(TestCase):
 
         # check mthd is static
         with self.subTest(msg="json-3"):
-            randic = {'a':24, 'b':1, 'c':13}
+            randic = {'a': 24, 'b': 1, 'c': 13}
             ranstr = Rectangle.to_json_string([randic])
             self.assertEqual(type(ranstr), str)
             self.assertEqual(ranstr, '[{"a": 24, "b": 1, "c": 13}]')
@@ -657,14 +659,14 @@ class TestRect(TestCase):
             with self.assertRaises(AttributeError) as err:
                 print(self.rect1.__width)
             self.assertEqual(str(err.exception),
-                            "'Rectangle' object has no attribute" +
-                            " '_TestRect__width'")
+                             "'Rectangle' object has no attribute" +
+                             " '_TestRect__width'")
 
-    #test width is dict
+    # test width is dict
     def test_width_is_dict(self):
         with self.subTest(msg="width is dict"):
             with self.assertRaises(TypeError) as err:
-                _ = Rectangle({2:3, 3:9}, 2, 2, 3)
+                _ = Rectangle({2: 3, 3: 9}, 2, 2, 3)
             self.assertEqual(str(err.exception), "width must be an integer")
 
     # test width is float
@@ -725,8 +727,6 @@ class TestRect(TestCase):
                 _ = Rectangle(0, 1, (2, 4), 4)
             self.assertEqual(str(err.exception), "width must be > 0")
 
-
-
     # ******* x test cases *******
     # test x as expected
     def test_x_as_expected(self):
@@ -751,7 +751,7 @@ class TestRect(TestCase):
     def test_x_is_dict(self):
         with self.subTest(msg="x is dict"):
             with self.assertRaises(TypeError) as err:
-                _ = Rectangle(2, 3, {1:2})
+                _ = Rectangle(2, 3, {1: 2})
             self.assertEqual(str(err.exception), "x must be an integer")
 
     # test x is Float
@@ -767,8 +767,8 @@ class TestRect(TestCase):
             with self.assertRaises(AttributeError) as err:
                 print(self.rect1.__x)
             self.assertEqual(str(err.exception),
-                            "'Rectangle' object has no attribute" +
-                            " '_TestRect__x'")
+                             "'Rectangle' object has no attribute" +
+                             " '_TestRect__x'")
 
     # test x is None
     def test_x_is_none(self):
@@ -798,7 +798,6 @@ class TestRect(TestCase):
                 _ = Rectangle(1, 2, -2, 4)
             self.assertEqual(str(err.exception), "x must be >= 0")
 
-
     # ******* y test cases *******
     # test y as expected
     def test_y_as_expected(self):
@@ -823,7 +822,7 @@ class TestRect(TestCase):
     def test_y_is_dict(self):
         with self.subTest(msg="y is dict"):
             with self.assertRaises(TypeError) as err:
-                _ = Rectangle(2, 3, 9, {1:2})
+                _ = Rectangle(2, 3, 9, {1: 2})
             self.assertEqual(str(err.exception), "y must be an integer")
 
     # test y is Float
@@ -839,8 +838,8 @@ class TestRect(TestCase):
             with self.assertRaises(AttributeError) as err:
                 print(self.rect1.__y)
             self.assertEqual(str(err.exception),
-                            "'Rectangle' object has no attribute" +
-                            " '_TestRect__y'")
+                             "'Rectangle' object has no attribute" +
+                             " '_TestRect__y'")
 
     # test y is None
     def test_y_is_none(self):
