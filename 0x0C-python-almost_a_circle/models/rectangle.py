@@ -18,13 +18,18 @@ from importlib.machinery import SourceFileLoader as Loader
 path = os.path.realpath("./base.py")
 if not os.path.exists(path):
     path = os.path.realpath("../../models/base.py")
-base = Loader("base", path).load_module()
-Base = base.Base
+if not os.path.exists(path):
+    path = os.path.realpath("models/base.py")
 
 path = os.path.realpath("../validators.py")
 if not os.path.exists(path):
     path = os.path.realpath("../../validators.py")
+if not os.path.exists(path):
+    path = os.path.realpath("validators.py")
+
 validators = Loader("validators", path).load_module()
+base = Loader("base", path).load_module()
+Base = base.Base
 
 
 class Rectangle(Base):

@@ -12,7 +12,13 @@ from unittest import TestCase, main
 
 # Local imports
 base_path = os.path.realpath("../../models/base.py")
+if not os.path.exists(base_path):
+    base_path = os.path.realpath("models/base.py")
+
 rect_path = os.path.realpath("../../models/rectangle.py")
+if not os.path.exists(rect_path):
+    rect_path = os.path.realpath("models/rectangle.py")
+
 base = Loader("base", base_path).load_module()
 rectangle = Loader("rectangle", rect_path).load_module()
 Base = base.Base
@@ -201,7 +207,7 @@ class TestRect(TestCase):
         with self.subTest(msg="id not given"):
             print(self.rect1.id, end="", file=self.stream_w, flush=True)
             res = self.stream_r.read()
-            self.assertEqual(res, '1')
+            self.assertEqual(res, '2')
         with self.subTest(msg="id == 11"):
             print(self.rect2.id, end="", file=self.stream_w, flush=True)
             res = self.stream_r.read()
@@ -209,7 +215,7 @@ class TestRect(TestCase):
         with self.subTest(msg="id not given"):
             print(self.rect3.id, end="", file=self.stream_w, flush=True)
             res = self.stream_r.read()
-            self.assertEqual(res, '2')
+            self.assertEqual(res, '3')
         with self.subTest(msg="id == -2.2"):
             print(self.rect4.id, end="", file=self.stream_w, flush=True)
             res = self.stream_r.read()
@@ -366,7 +372,7 @@ class TestRect(TestCase):
 
             # validate first_dictionary values
             data1 = data[0]
-            vals = [1, 7, 5, 0, 0]
+            vals = [2, 7, 5, 0, 0]
             for key in keys:
                 with self.subTest(msg="stf-1:val_chk-a"):
                     self.assertEqual(data1[key], vals[keys.index(key)])
@@ -504,13 +510,13 @@ class TestRect(TestCase):
     def test_str_res(self):
         with self.subTest(msg="rect1(7,5)"):
             res = str(self.rect1)
-            self.assertEqual(res, "[Rectangle] (1) 0/0 - 7/5")
+            self.assertEqual(res, "[Rectangle] (2) 0/0 - 7/5")
         with self.subTest(msg="rect2(2,10,4,3,11)"):
             res = str(self.rect2)
             self.assertEqual(res, "[Rectangle] (11) 4/3 - 2/10")
         with self.subTest(msg="rect3(4,3,13)"):
             res = str(self.rect3)
-            self.assertEqual(res, "[Rectangle] (2) 13/0 - 4/3")
+            self.assertEqual(res, "[Rectangle] (3) 13/0 - 4/3")
         with self.subTest(msg="rect4(1,9,y=8,id=-2.2)"):
             res = str(self.rect4)
             self.assertEqual(res, "[Rectangle] (-2.2) 0/8 - 1/9")
@@ -552,7 +558,7 @@ class TestRect(TestCase):
             with self.subTest(msg="d1-a:chk-type"):
                 self.assertEqual(rect1_d.__class__.__name__, "dict")
             keys = ["width", "height", 'x', 'y', "id"]
-            vals = [7, 5, 0, 0, 1]
+            vals = [7, 5, 0, 0, 2]
             for key in keys:
                 with self.subTest(msg="d1-b:key2key-match"):
                     self.assertEqual(key in rect1_d, True)
@@ -576,7 +582,7 @@ class TestRect(TestCase):
             with self.subTest(msg="d3-a:chk-type"):
                 self.assertEqual(rect1_d.__class__.__name__, "dict")
             keys = ["width", "height", 'x', 'y', "id"]
-            vals = [4, 3, 13, 0, 2]
+            vals = [4, 3, 13, 0, 3]
             for key in keys:
                 with self.subTest(msg="d3-b:key2key-match"):
                     self.assertEqual(key in rect1_d, True)

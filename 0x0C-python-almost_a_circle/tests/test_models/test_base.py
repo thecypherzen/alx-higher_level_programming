@@ -8,6 +8,9 @@ import os
 from unittest import TestCase, main
 
 path = os.path.realpath("../../models/base.py")
+if not os.path.exists(path):
+    path = os.path.realpath("models/base.py")
+
 base_module = Loader("base", path).load_module()
 Base = base_module.Base
 

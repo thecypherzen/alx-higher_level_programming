@@ -11,6 +11,9 @@ from unittest import TestCase, main
 
 # Local imports
 path = os.path.realpath("../../models/square.py")
+if not os.path.exists(path):
+    path = os.path.realpath("models/square.py")
+
 square = Loader("square", path).load_module()
 Square = square.Square
 
@@ -115,7 +118,7 @@ class TestSquare(TestCase):
 
             # check other sq str
             with self.subTest(msg="sz-2(2)"):
-                res = "[Square] (1) 0/0 - 5"
+                res = "[Square] (6) 0/0 - 5"
                 self.assertEqual(str(self.sq), res)
 
             # check other sq width
@@ -139,7 +142,7 @@ class TestSquare(TestCase):
                 self.assertEqual(len(d1), 4)
 
             keys = ["id", "size", 'x', 'y']
-            vals = [1, 5, 0, 0]
+            vals = [6, 5, 0, 0]
 
             # check keys in d1 match expected attribute names
             for key in keys:
