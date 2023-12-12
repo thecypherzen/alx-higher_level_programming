@@ -3,7 +3,8 @@
 """
 
 
-from importlib.machinery import SourceFileLoader as Loader
+# from importlib.machinery import SourceFileLoader as Loader
+import importlib.util as Util
 import os
 from unittest import TestCase, main
 
@@ -11,8 +12,11 @@ path = os.path.realpath("../../models/base.py")
 if not os.path.exists(path):
     path = os.path.realpath("models/base.py")
 
-base_module = Loader("base", path).load_module()
-Base = base_module.Base
+# base_module = Loader("base", path).load_module()
+spec = Util.spec_from_file_location("base", path)
+base = Util.module_from_spec(spec)
+spec.loader.exec_module(base)
+Base = base.Base
 
 
 class TestBase(TestCase):

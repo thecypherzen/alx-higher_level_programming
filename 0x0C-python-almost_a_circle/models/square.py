@@ -10,17 +10,23 @@ Class(s):
 
 
 # Standard import
-from importlib.machinery import SourceFileLoader as Loader
+import importlib.util as Util
 import os
 
 # Local Imports
+# get path to rectangle module
 r_path = os.path.realpath("./rectangle.py")
 if not os.path.exists(r_path):
     r_path = os.path.realpath("../../models/rectangle.py")
 if not os.path.exists(r_path):
     r_path = os.path.realpath("models/rectangle.py")
 
-rectangle = Loader("rectangle", r_path).load_module()
+# import rectangle module from path
+spec = Util.spec_from_file_location("rectangle", r_path)
+rectangle = Util.module_from_spec(spec)
+spec.loader.exec_module(rectangle)
+
+# get class from module
 Rectangle = rectangle.Rectangle
 
 

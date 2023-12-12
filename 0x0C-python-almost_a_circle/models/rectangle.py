@@ -11,8 +11,8 @@ Class(s):
 
 
 # standard imports
+import importlib.util as Util
 import os
-from importlib.machinery import SourceFileLoader as Loader
 
 # Local imports
 path = os.path.realpath("./base.py")
@@ -20,14 +20,18 @@ if not os.path.exists(path):
     path = os.path.realpath("../../models/base.py")
 if not os.path.exists(path):
     path = os.path.realpath("models/base.py")
-base = Loader("base", path).load_module()
+spec = Util.spec_from_file_location("base", path)
+base = Util.module_from_spec(spec)
+spec.loader.exec_module(base)
 
 path = os.path.realpath("../validators.py")
 if not os.path.exists(path):
     path = os.path.realpath("../../validators.py")
 if not os.path.exists(path):
     path = os.path.realpath("validators.py")
-validators = Loader("validators", path).load_module()
+spec = Util.spec_from_file_location("validators", path)
+validators = Util.module_from_spec(spec)
+spec.loader.exec_module(validators)
 
 Base = base.Base
 
