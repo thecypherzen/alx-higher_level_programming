@@ -20,15 +20,15 @@ if not os.path.exists(path):
     path = os.path.realpath("../../models/base.py")
 if not os.path.exists(path):
     path = os.path.realpath("models/base.py")
+base = Loader("base", path).load_module()
 
 path = os.path.realpath("../validators.py")
 if not os.path.exists(path):
     path = os.path.realpath("../../validators.py")
 if not os.path.exists(path):
     path = os.path.realpath("validators.py")
-
 validators = Loader("validators", path).load_module()
-base = Loader("base", path).load_module()
+
 Base = base.Base
 
 
@@ -66,6 +66,7 @@ class Rectangle(Base):
         validators.pos_num_validate(x, 'x', typ="int")
         validators.pos_num_validate(y, 'y', typ="int")
         Base.__init__(self, id)
+        """initialise base class"""
         self.__width = width
         self.__height = height
         self.__x = x
