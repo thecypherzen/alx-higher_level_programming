@@ -11,7 +11,7 @@ import json
 import os
 
 
-class Base:
+class Base():
     """Project's base class
 
     Attributes:

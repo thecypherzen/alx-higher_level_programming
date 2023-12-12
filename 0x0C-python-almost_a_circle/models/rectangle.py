@@ -66,7 +66,6 @@ class Rectangle(Base):
         validators.pos_num_validate(x, 'x', typ="int")
         validators.pos_num_validate(y, 'y', typ="int")
         Base.__init__(self, id)
-        """initialise base class"""
         self.__width = width
         self.__height = height
         self.__x = x
@@ -188,6 +187,8 @@ class Rectangle(Base):
 
     def to_dictionary(self) -> dict:
         """Makes a dict representation of Rectangle
+
+        Returns: a dictionary of class
         """
         keys = ["id", "width", "height", 'x', 'y']
         rep = {}
