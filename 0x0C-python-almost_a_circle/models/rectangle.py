@@ -12,9 +12,12 @@ Class(s):
 
 # standard imports
 import importlib.util as Util
+from importlib import import_module
 import os
 
+
 # Local imports
+
 path = os.path.realpath("./base.py")
 if not os.path.exists(path):
     path = os.path.realpath("../../models/base.py")
@@ -23,6 +26,8 @@ if not os.path.exists(path):
 spec = Util.spec_from_file_location("base", path)
 base = Util.module_from_spec(spec)
 spec.loader.exec_module(base)
+
+
 
 path = os.path.realpath("../validators.py")
 if not os.path.exists(path):
@@ -34,7 +39,6 @@ validators = Util.module_from_spec(spec)
 spec.loader.exec_module(validators)
 
 Base = base.Base
-
 
 class Rectangle(Base):
     """Defines a rectangle - inherits from Base
@@ -223,3 +227,7 @@ class Rectangle(Base):
         else:
             for key, val in kwargs.items():
                 setattr(self, key, val)
+
+
+#r = Rectangle(1,2)
+#print(type(r).__bases__)

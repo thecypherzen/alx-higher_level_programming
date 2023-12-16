@@ -15,18 +15,17 @@ rect_path = os.path.realpath("../../models/rectangle.py")
 if not os.path.exists(rect_path):
     rect_path = os.path.realpath("models/rectangle.py")
 
+
 # import rectangle class
 spec = Util.spec_from_file_location("rectangle", rect_path)
 rect = Util.module_from_spec(spec)
 spec.loader.exec_module(rect)
 
-
 Rectangle = rect.Rectangle
 
 
 class TestRect(TestCase):
-    ""
-    # test rectangle inherits from Base
+    """Test cases for Rectangle class"""
     @classmethod
     def setUpClass(cls) -> None:
         """Set up default test objects"""
@@ -352,6 +351,10 @@ class TestRect(TestCase):
                 _ = Rectangle(1, 0, (2, 4), 4)
             self.assertEqual(str(err.exception), "height must be > 0")
 
+    # ******* test inheritance ******
+    #def test_inheritance(self):
+    #    with self.subTest(mst="subclass-1"):
+    #        self.assertTrue(issubclass(type(self.rect1), Base))
     # ******* save_to_file test case *******
     def test_save_to_file(self):
         # 1 - two rectangles passed
