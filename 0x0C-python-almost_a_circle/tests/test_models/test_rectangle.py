@@ -4,24 +4,31 @@
 
 
 # Standard imports
-import importlib.util as Util
+import importlib
 import json
 import os
+from pathlib import Path
 import sys
 from unittest import TestCase, main
 
+
 # Local imports
-rect_path = os.path.realpath("../../models/rectangle.py")
-if not os.path.exists(rect_path):
-    rect_path = os.path.realpath("models/rectangle.py")
+rect_path = Path("../../models/rectangle.py").resolve()
+if not rect_path.exists():
+    rect_path = Path("rectangle.py").resolve()
+    if not rect_path.exists():
+        rect_path = Path("models/rectangle.py").resolve()
+rect_path = str(rect_path.parents[0])
+if rect_path not in sys.path:
+    sys.path.insert(0, rect_path)
 
 
 # import rectangle class
-spec = Util.spec_from_file_location("rectangle", rect_path)
-rect = Util.module_from_spec(spec)
-spec.loader.exec_module(rect)
+rectangle = importlib.import_module("rectangle")
+base = importlib.import_module("base")
 
-Rectangle = rect.Rectangle
+Rectangle = getattr(rectangle, "Rectangle")
+Base = getattr(base, "Base")
 
 
 class TestRect(TestCase):
@@ -352,10 +359,13 @@ class TestRect(TestCase):
             self.assertEqual(str(err.exception), "height must be > 0")
 
     # ******* test inheritance ******
-    #def test_inheritance(self):
-    #    with self.subTest(mst="subclass-1"):
-    #        self.assertTrue(issubclass(type(self.rect1), Base))
+    def test_inheritance(self):
+        with self.subTest(mst="subclass-1"):
+            print(type(self.rect1))
+            print(type(self.rect1).__bases__)
+            self.assertTrue(issubclass(type(self.rect1), Base))
     # ******* save_to_file test case *******
+
     def test_save_to_file(self):
         # 1 - two rectangles passed
         with self.subTest(msg="stf-1"):

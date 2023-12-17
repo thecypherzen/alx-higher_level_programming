@@ -3,20 +3,22 @@
 """
 
 
-# from importlib.machinery import SourceFileLoader as Loader
-import importlib.util as Util
-import os
+import importlib
+from pathlib import Path
+import sys
 from unittest import TestCase, main
 
-path = os.path.realpath("../../models/base.py")
-if not os.path.exists(path):
-    path = os.path.realpath("models/base.py")
+path = Path("../../models/base.py").resolve()
+if not path.exists():
+    path = Path("models/base.py").resolve()
+    if not path.exists():
+        path = Path("base.py").resolve()
+path = str(path.parents[0])
+if path not in sys.path:
+    sys.path.insert(0, path)
 
-# base_module = Loader("base", path).load_module()
-spec = Util.spec_from_file_location("base", path)
-base = Util.module_from_spec(spec)
-spec.loader.exec_module(base)
-Base = base.Base
+base = importlib.import_module("base")
+Base = getattr(base, "Base")
 
 
 class TestBase(TestCase):

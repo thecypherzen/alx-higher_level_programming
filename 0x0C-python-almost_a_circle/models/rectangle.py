@@ -10,36 +10,32 @@ Class(s):
 """
 
 
-# standard imports
-import importlib.util as Util
-from importlib import import_module
-import os
+# Standard imports
+import importlib
+from pathlib import Path
+import sys
 
 
-# Local imports
+# Add modules dir and project dir to PATH
+path = Path("models/base.py").resolve()
+if not path.exists():
+    path = Path("base.py").resolve()
+    if not path.exists():
+        path = Path("../../models/base.py").resolve()
+modules_path = str(path.parents[0])
+project_path = str(path.parents[1])
+if modules_path not in sys.path:
+    sys.path.insert(0, modules_path)
+if project_path not in sys.path:
+    sys.path.insert(0, project_path)
 
-path = os.path.realpath("./base.py")
-if not os.path.exists(path):
-    path = os.path.realpath("../../models/base.py")
-if not os.path.exists(path):
-    path = os.path.realpath("models/base.py")
-spec = Util.spec_from_file_location("base", path)
-base = Util.module_from_spec(spec)
-spec.loader.exec_module(base)
+# Import needed libraries from PATH
+validators = importlib.import_module("validators")
+base = importlib.import_module("base")
+Base = getattr(base, "Base")
 
 
-
-path = os.path.realpath("../validators.py")
-if not os.path.exists(path):
-    path = os.path.realpath("../../validators.py")
-if not os.path.exists(path):
-    path = os.path.realpath("validators.py")
-spec = Util.spec_from_file_location("validators", path)
-validators = Util.module_from_spec(spec)
-spec.loader.exec_module(validators)
-
-Base = base.Base
-
+# class definition
 class Rectangle(Base):
     """Defines a rectangle - inherits from Base
 
@@ -227,7 +223,3 @@ class Rectangle(Base):
         else:
             for key, val in kwargs.items():
                 setattr(self, key, val)
-
-
-#r = Rectangle(1,2)
-#print(type(r).__bases__)
