@@ -30,7 +30,6 @@ spec.loader.exec_module(rectangle)
 Rectangle = rectangle.Rectangle
 
 
-
 class Square(Rectangle):
     """Defines a Square - inherits from Rectangle
 
