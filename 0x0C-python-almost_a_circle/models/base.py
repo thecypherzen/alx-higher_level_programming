@@ -59,7 +59,11 @@ class Base():
             - **dictionary must be used as **kwargs of the method update
             - use of `eval` not allowed
         """
-        new_obj = cls(**dictionary)
+        if len(dictionary) < 2:
+            new_obj = cls(1)
+        else:
+            new_obj = cls(1, 1)
+        new_obj.update(**dictionary)
         return new_obj
 
     @staticmethod

@@ -1,16 +1,47 @@
 #!/usr/bin/python3
-
-
-""" 1-main """
+""" Check """
+from models.square import Square
 from models.rectangle import Rectangle
+from models.base import Base
+import json
+import uuid
+import random
 
-if __name__ == "__main__":
+list_dictionaries = []
+map_dictionaries = {}
+for i in range(0, 5):
+    r = Rectangle(random.randrange(1, 100, 2), random.randrange(1, 100, 2), random.randrange(1, 100, 2), random.randrange(1, 100, 2))
+    rd = r.to_dictionary()
+    list_dictionaries.append(rd)
+    map_dictionaries[r.id] = rd
 
-    r1 = Rectangle(10, 2)
-    print(super(type(r1)))
+    s = Square(random.randrange(1, 100, 2), random.randrange(1, 100, 2), random.randrange(1, 100, 2))
+    sd = s.to_dictionary()
+    list_dictionaries.append(sd)
+    map_dictionaries[s.id] = sd
 
-    r2 = Rectangle(2, 10)
-    print(r2.id)
+for i in range(0, 5):
+    rd = { 'id': (len(list_dictionaries) + 10), 'name': str(uuid.uuid4()) }
+    list_dictionaries.append(rd)
+    map_dictionaries[rd.get('id')] = rd
 
-    r3 = Rectangle(10, 2, 0, 0, 12)
-    print(r3.id)
+
+rjson = Base.to_json_string(list_dictionaries)
+output_list = json.loads(rjson)
+
+for output in output_list:
+    id_output = output.get('id')
+    if id_output is None:
+        break
+    dict_output = map_dictionaries.get(id_output)
+    if dict_output is None:
+        break
+    if dict_output != output:
+        break
+    del map_dictionaries[id_output]
+
+if len(map_dictionaries) != 0:
+    print("to_json_string doesn't correctly serialize {}: {}".format(list_dictionaries, rjson))
+    exit(1)
+print(map_dictionaries)
+print("OK", end="")
