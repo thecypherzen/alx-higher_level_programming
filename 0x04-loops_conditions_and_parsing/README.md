@@ -56,6 +56,13 @@ The **Loops, conditions and parsing** project introduces very important devops c
 
 | SN | File | Description                                   |
 |----|------|-----------------------------------------------|
+<<<<<<< HEAD
 | 1. | [0-RSA_public_key.pub](https.//github.com/thecypherzen/0x04-loops_conditions_and_parsing/0-RSA_public_key.pub) | A public key for future uses. |
 | 2. | | |
 >>>>>>> 71d8d22... docs(0x04): create directory and readme
+=======
+| 1. | [0-RSA_public_key.pub](https://github.com/thecypherzen/alx-system_engineering-devops/blob/main/0x04-loops_conditions_and_parsing/0-RSA_public_key.pub) | A public key for future uses. |
+| 2. | [1-for_best_school](https://github.com/thecypherzen/alx-system_engineering-devops/blob/main/0x04-loops_conditions_and_parsing/1-for_best_school)| A script that displays *Best School* 10 times.<ul><li>must use the for loop (while and until are forbidden).</li></ul>|
+| 3. | [2-while_best_school](https://github.com/thecypherzen/alx-system_engineering-devops/blob/main/0x04-loops_conditions_and_parsing/2-while_best_school)| A script that displays *Best School* 10 times.<ul><li>must use the *while loop* (for and until are forbidden).</li></ul>|
+
+>>>>>>> b6e4aa8... docs(readme): update readme
