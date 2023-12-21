@@ -18,10 +18,15 @@ The **Loops, conditions and parsing** project introduces very important devops c
   - **Duration:** 1 days.
   - **Month** 4, **Week** 3, **Day** 4.
 
-## Directories ###
-- *Directories listed in order of project release*
+# Technologies #
+- All shell scripts written in GNU bash 5.0.17(1)-release (x86_64-pc-linux-gnu).
+- Code tested on Ubuntu 20.04 LTS.
+
+
+## Files ###
+- *Here is a detailed list of all files in the repo and their description*.
 
 | SN | File | Description                                   |
 |----|------|-----------------------------------------------|
-| 1. |  |  |
+| 1. | [0-RSA_public_key.pub](https.//github.com/thecypherzen/0x04-loops_conditions_and_parsing/0-RSA_public_key.pub) | A public key for future uses. |
 | 2. | | |
