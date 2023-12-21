@@ -19,6 +19,9 @@ The **Loops, conditions and parsing** project introduces very important devops c
   - **Month** 4, **Week** 3, **Day** 4.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a492029... docs(0x04): update readme
 # Technologies #
 - All shell scripts written in GNU bash 5.0.17(1)-release (x86_64-pc-linux-gnu).
 - Code tested on Ubuntu 20.04 LTS.
@@ -26,6 +29,7 @@ The **Loops, conditions and parsing** project introduces very important devops c
 
 ## Files ###
 - *Here is a detailed list of all files in the repo and their description*.
+<<<<<<< HEAD
 
 | SN | File | Description                                   |
 |----|------|-----------------------------------------------|
@@ -47,9 +51,11 @@ The **Loops, conditions and parsing** project introduces very important devops c
 =======
 ## Directories ###
 - *Directories listed in order of project release*
+=======
+>>>>>>> a492029... docs(0x04): update readme
 
 | SN | File | Description                                   |
 |----|------|-----------------------------------------------|
-| 1. |  |  |
+| 1. | [0-RSA_public_key.pub](https.//github.com/thecypherzen/0x04-loops_conditions_and_parsing/0-RSA_public_key.pub) | A public key for future uses. |
 | 2. | | |
 >>>>>>> 71d8d22... docs(0x04): create directory and readme
