@@ -18,6 +18,7 @@ The **Loops, conditions and parsing** project introduces very important devops c
   - **Duration:** 1 days.
   - **Month** 4, **Week** 3, **Day** 4.
 
+<<<<<<< HEAD
 # Technologies #
 - All shell scripts written in GNU bash 5.0.17(1)-release (x86_64-pc-linux-gnu).
 - Code tested on Ubuntu 20.04 LTS.
@@ -43,3 +44,12 @@ The **Loops, conditions and parsing** project introduces very important devops c
 | 13. | [101-tell_the_story_of_passwd](https://github.com/thecypherzen/alx-system_engineering-devops/blob/main/0x04-loops_conditions_and_parsing/101-tell_the_story_of_passwd)| A Bash script that script that displays the content of the file /etc/passwd, using the **while loop + IFS**.</br></br>Format:</br>```The user USERNAME is part of the GROUP_ID gang, lives in HOME_DIRECTORY and rides COMMAND/SHELL. USER ID's place is protected by the passcode PASSWORD, more info about the user here: USER ID INFO```</br></br>Requirements:<ul><li>must use the while loop (for and until are forbidden)</li></ul>|
 | 14. | [102-lets_parse_apache_logs](https://github.com/thecypherzen/alx-system_engineering-devops/blob/main/0x04-loops_conditions_and_parsing/102-lets_parse_apache_logs)| A Bash script that script that displays the *visitor IP* along with the *HTTP status code* from the Apache log file.</br></br>Format:</br>`<ip_address> <status_code>`</br></br>Requirements:<ul><li>display is to be in *list* format *(one line at a time)*</li><li>must use the `awk` command</li><li>use of *while*, *for*, *until* and *cut* commands not allowed.</li><li>The file to be used is [apache-access.log file](https://github.com/thecypherzen/alx-system_engineering-devops/blob/main/0x04-loops_conditions_and_parsing/apache-access.log)</li></ul>|
 | 15. | [103-dig_the-data](https://github.com/thecypherzen/alx-system_engineering-devops/blob/main/0x04-loops_conditions_and_parsing/103-dig_the-data)| A Bash script that script that groups visitors by IP and HTTP status code, and displays this data..</br></br>Format:</br>`<occurence_count> <ip_address> <status_code>`</br></br>Requirements:<ul><li></li>sort entries according to `<occurence_count`, in descending order.<li>display is to be in *list* format *(one line at a time)*</li><li>must use the `awk` command</li><li>use of `while`, `for`, `until` and `cut` commands not allowed.</li><li>The file to be used is [apache-access.log file](https://github.com/thecypherzen/alx-system_engineering-devops/blob/main/0x04-loops_conditions_and_parsing/apache-access.log)</li></ul>|
+=======
+## Directories ###
+- *Directories listed in order of project release*
+
+| SN | File | Description                                   |
+|----|------|-----------------------------------------------|
+| 1. |  |  |
+| 2. | | |
+>>>>>>> 71d8d22... docs(0x04): create directory and readme
