@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
+<<<<<<< HEAD
 # displays 'Best School' 10 times using 'for' loop
+=======
+# displays 'Best School' 10 times
+>>>>>>> 1dd862f... build(0x04): submit task 1-forr_best_school
 
 for _ in {1..10}; do
 	echo "Best School"
