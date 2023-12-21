@@ -1,0 +1,17 @@
+#!/bin/bash
+script=$1
+
+if [ ! $script ]; then
+    echo "hey at least one argument is need."
+    exit 1
+else
+    echo "#!/bin/bash" > $script
+    chmod 744 $script
+    echo "Script created"
+
+    sleep .5
+
+    read -p "Open with what editor: " editor
+
+    $editor $script
+fi

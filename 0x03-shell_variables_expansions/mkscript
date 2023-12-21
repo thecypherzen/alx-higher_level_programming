@@ -5,7 +5,8 @@ nof=$#
 
 #Check if file name is provided.
 #If at least one file is provided, create it with shebang and set x permission.
-#If no default editor, prompt user to set 
+#If no default editor, prompt user to set
+
 if [[ ! $1 ]]; then
     echo "Sorry, at least 1 filename needed. Try again."
     exit 1

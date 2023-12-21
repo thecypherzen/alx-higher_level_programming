@@ -1,2 +1,0 @@
-#!/bin/bash
-finD . -Type -d ! -name '.' | wc -l
