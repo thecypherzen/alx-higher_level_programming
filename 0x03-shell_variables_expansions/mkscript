@@ -12,6 +12,7 @@ nof=$#
 #If no default editor, prompt user to set
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 if [[ ! $1 ]]; then
     echo "Sorry, at least 1 filename needed. Try again."
     exit 1
@@ -88,6 +89,8 @@ nof=$#
 #Check if file name is provided.
 #If at least one file is provided, create it with shebang and set x permission.
 #If no default editor, prompt user to set 
+=======
+>>>>>>> d03ba35... docs(sys/devops): update repo
 if [[ ! $1 ]]; then
     echo "Sorry, at least 1 filename needed. Try again."
     exit 1
