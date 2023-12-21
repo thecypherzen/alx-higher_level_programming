@@ -9,6 +9,7 @@ while (( hours <= 12 )); do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	echo "Hour: $hours"
 =======
 	echo "Hour $hours"
@@ -19,6 +20,9 @@ while (( hours <= 12 )); do
 =======
 	echo "Hour: $hours"
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
+=======
+	echo "Hour $hours"
+>>>>>>> 1bddad6... build(0x04): create '7-clock' script
 	mins=1
 	while (( mins <= 59 )); do
 		echo $mins
