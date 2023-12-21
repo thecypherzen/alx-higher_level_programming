@@ -6,7 +6,11 @@
 
 hours=0
 while (( hours <= 12 )); do
+<<<<<<< HEAD
 	echo "Hour: $hours"
+=======
+	echo "Hour $hours"
+>>>>>>> 1bddad6... build(0x04): create '7-clock' script
 	mins=1
 	while (( mins <= 59 )); do
 		echo $mins
