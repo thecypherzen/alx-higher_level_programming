@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 <<<<<<< HEAD
+<<<<<<< HEAD
 # displays 'Best School' 10 times using 'for' loop
 =======
 # displays 'Best School' 10 times
 >>>>>>> 1dd862f... build(0x04): submit task 1-forr_best_school
+=======
+# displays 'Best School' 10 times using 'for' loop
+>>>>>>> 31d39f8... build(0x04): create 4-if_9_say_hi script
 
 for _ in {1..10}; do
 	echo "Best School"
