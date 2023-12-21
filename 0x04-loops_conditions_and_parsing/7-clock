@@ -7,10 +7,14 @@
 hours=0
 while (( hours <= 12 )); do
 <<<<<<< HEAD
+<<<<<<< HEAD
 	echo "Hour: $hours"
 =======
 	echo "Hour $hours"
 >>>>>>> 1bddad6... build(0x04): create '7-clock' script
+=======
+	echo "Hour: $hours"
+>>>>>>> 533a5be... fix(7-clock): add ':' to Hours display
 	mins=1
 	while (( mins <= 59 )); do
 		echo $mins
