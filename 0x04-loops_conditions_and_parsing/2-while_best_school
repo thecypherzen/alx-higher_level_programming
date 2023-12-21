@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # prints 'Best School' 10 times using 'while'
 =======
 # prints 'Best School' 10 times
@@ -16,6 +17,9 @@
 =======
 # prints 'Best School' 10 times
 >>>>>>> 8dd3e77... build(0x04): create 2-while_best_school script
+=======
+# prints 'Best School' 10 times using 'while'
+>>>>>>> bb6707c... build(0x04): create 3-until_best_school script
 
 count=10
 while (( count > 0)); do
