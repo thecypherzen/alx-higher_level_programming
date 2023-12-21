@@ -21,6 +21,7 @@ The **Loops, conditions and parsing** project introduces very important devops c
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a492029... docs(0x04): update readme
 =======
@@ -127,3 +128,12 @@ The **Loops, conditions and parsing** project introduces very important devops c
 >>>>>>> 254cb69... docs(readme): make random adjustments
 =======
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
+=======
+## Directories ###
+- *Directories listed in order of project release*
+
+| SN | File | Description                                   |
+|----|------|-----------------------------------------------|
+| 1. |  |  |
+| 2. | | |
+>>>>>>> 71d8d22... docs(0x04): create directory and readme
