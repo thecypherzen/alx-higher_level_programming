@@ -6,7 +6,7 @@
 
 hours=0
 while (( hours <= 12 )); do
-	echo "Hour $hours"
+	echo "Hour: $hours"
 	mins=1
 	while (( mins <= 59 )); do
 		echo $mins
