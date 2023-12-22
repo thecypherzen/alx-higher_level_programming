@@ -29,6 +29,7 @@ The **Processes and signals** project delves into process management using signa
 | SN | File | Description                                   |
 |----|------|-----------------------------------------------|
 <<<<<<< HEAD
+<<<<<<< HEAD
 | 1. | [0-what-is-my-pid](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/0-what-is-my-pid) | A Bash script that displays its own `PID`. |
 | 2. | [1-list_your_processes](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/1-list_your_processes) | A Bash script that displays a list of currently running processes.</br></br>Requirements<ul><li>Must show all processes, for all users, including those which might not have a `TTY`;</li><li>Must display in a user-oriented format; and</li><li>Must show process hierarchy</li></ul>|
 | 3. | [2-show_your_bash_pid](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/2-show_your_bash_pid) | A Bash script that displays lines containing the word `bash`, thus allowing us to easily get the `PID` of our Bash process.</br></br>Requirements<ul><li>Must not use pgrep;</li><li>The third line of the script must be `# shellcheck disable=SC2009` (find more info about ignoring shellcheck error [here](https://github.com/koalaman/shellcheck/wiki/Ignore)). As for what the shellcheck code `SC2009` represents, check [here](https://github.com/koalaman/shellcheck/wiki/SC2009)</li></ul>|
@@ -56,3 +57,6 @@ int infinite_while(void)
 =======
 | 1. | [0-what-is-my-pid](https://github.com/thecypherzen/alx-system_engineering-devops/blob/main/0x04-loops_conditions_and_parsing/0-RSA_public_key.pub) | A public key for future uses. |
 >>>>>>> 496a800... build(0x05): create directory and readme
+=======
+| 1. | [0-what-is-my-pid](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/0-what-is-my-pid) | A Bash script that displays its own PID. |
+>>>>>>> 8c3278f... docs(readme): add doc for '0-what-is-my-pid'
