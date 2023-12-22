@@ -85,4 +85,12 @@ The **Loops, conditions and parsing** project introduces very important devops c
 >>>>>>> c70b9b2... docs(readme): add docs for scripts 8-9
 =======
 | 10. | [9-to_file_or_not_to_file](https://github.com/thecypherzen/alx-system_engineering-devops/blob/main/0x04-loops_conditions_and_parsing/9-to_file_or_not_to_file)| A Bash  script that gives information about the *school* file.</br> Requirements:<ul><li>must use if and, else (case is forbidden).<li>the script checks if the file exists and prints:<ul><li>if the file exists: *school file exists*</li><li>if the file does not exist: *school file does not exist*.</li></ul></li><li>If the file exists, it prints: <ul><li>if the file is empty: *school file is empty*</li><li>if the file is not empty: *school file is not empty*</li><li>if the file is a regular file: *school is a regular file*</li><li>if the file is not a regular file, prints nothing.</li></ul></li></ul>|
+<<<<<<< HEAD
 >>>>>>> 922d5e2... docs(readme) fix typos
+=======
+| 11. | [10-fizzbuzz](https://github.com/thecypherzen/alx-system_engineering-devops/blob/main/0x04-loops_conditions_and_parsing/10-fizzbuzz)| A Bash script that displays numbers from 1 to 100.Requirements:<ul><li>Displays *FizzBuzz* when the number is a **multiple of 3 and 5**<li>Displays *Fizz* when the number is a **multiple of 3**</li><li>Displays *Buzz* when the number is a **multiple of 5**</li><li>Otherwise displays the number</li><li>prints in a list format *(one number per line)*</li></ul>|
+| 12. | [100-read_and_cut](https://github.com/thecypherzen/alx-system_engineering-devops/blob/main/0x04-loops_conditions_and_parsing/100-read_and_cut)| A Bash script that script that displays the content of the **/etc/passwd** file.<ul><li>prints only the *<username>, <user_id>* and *<home directory path of user>*only</li></ul>Requirements:<ul><li>must use the while loop (for and until are forbidden)</li></ul>|
+| 13. | [101-tell_the_story_of_passwd](https://github.com/thecypherzen/alx-system_engineering-devops/blob/main/0x04-loops_conditions_and_parsing/101-tell_the_story_of_passwd)| A Bash script that script that displays the content of the file /etc/passwd, using the **while loop + IFS**.</br>Format:</br>```The user USERNAME is part of the GROUP_ID gang, lives in HOME_DIRECTORY and rides COMMAND/SHELL. USER ID's place is protected by the passcode PASSWORD, more info about the user here: USER ID INFO
+```<ul>Requirements:<ul><li>must use the while loop (for and until are forbidden)</li></ul>|
+
+>>>>>>> 92c535d... docs(readme): update new scripts
