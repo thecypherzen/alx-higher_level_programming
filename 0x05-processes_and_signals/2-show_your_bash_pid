@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # displays processes containing the bash word.
 # shellcheck disable=SC2009
 ps u -eH | grep "bash"
@@ -19,3 +20,7 @@ ps u -eH | grep "bash"
 # shellcheck disable=SC2009
 ps u -eH | grep "bash"
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
+=======
+ps u -eH | grep "bash"
+# shellcheck disable=SC2009
+>>>>>>> b872fc6... build(0x05): add script 2-show_your_bash_pid'
