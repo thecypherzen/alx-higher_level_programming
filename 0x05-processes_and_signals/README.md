@@ -28,4 +28,4 @@ The **Processes and signals** project delves into process management using signa
 
 | SN | File | Description                                   |
 |----|------|-----------------------------------------------|
-| 1. | [0-what-is-my-pid](https://github.com/thecypherzen/alx-system_engineering-devops/blob/main/0x04-loops_conditions_and_parsing/0-RSA_public_key.pub) | A public key for future uses. |
+| 1. | [0-what-is-my-pid](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/0-what-is-my-pid) | A Bash script that displays its own PID. |
