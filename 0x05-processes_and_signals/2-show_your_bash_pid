@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # displays processes containing the bash word.
 # shellcheck disable=SC2009
 ps u -eH | grep "bash"
@@ -24,3 +25,8 @@ ps u -eH | grep "bash"
 ps u -eH | grep "bash"
 # shellcheck disable=SC2009
 >>>>>>> b872fc6... build(0x05): add script 2-show_your_bash_pid'
+=======
+# displays processes containing the bash word.
+# shellcheck disable=SC2009
+ps u -eH | grep "bash"
+>>>>>>> 8f4e6dd... fix(2_show...): clean up for shellcheck
