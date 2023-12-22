@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 # kills "4-to_infinity_and_beyond"
 
+<<<<<<< HEAD
 pgrep -lf "4-to_infinity_and_beyond" | cut -d " " -f1 | \
+=======
+pgrep -l -f "4-to_infinity_and_beyond" | cut -d " " -f1 | \
+>>>>>>> 912fe62... build(devops-0x05): add script 5
 	while read -r pid; do kill "$pid"; done
