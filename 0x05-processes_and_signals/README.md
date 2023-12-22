@@ -32,6 +32,7 @@ The **Processes and signals** project delves into process management using signa
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
 | 1. | [0-what-is-my-pid](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/0-what-is-my-pid) | A Bash script that displays its own `PID`. |
@@ -125,3 +126,6 @@ int infinite_while(void)
 }
 ```
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
+=======
+| 1. | [0-what-is-my-pid](https://github.com/thecypherzen/alx-system_engineering-devops/blob/main/0x04-loops_conditions_and_parsing/0-RSA_public_key.pub) | A public key for future uses. |
+>>>>>>> 496a800... build(0x05): create directory and readme
