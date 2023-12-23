@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 trap "echo I am invincible!!!" SIGTERM
 =======
 trap "echo I am invincible!!!" SIGINT
@@ -14,6 +15,9 @@ trap "echo I am invincible!!!" SIGTERM
 =======
 trap "echo I am invincible!!!" SIGTERM
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
+=======
+trap "echo I am invincible!!!" SIGINT
+>>>>>>> 31f6244... build(devops-0x05): add scripts 7 and 67
 while ( true ); do
 	echo "To infinity and beyond"
 	sleep 2
