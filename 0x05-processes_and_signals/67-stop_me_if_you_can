@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 pkill -f "7-highlander"
 =======
 pkill -INT -f "7-highlander"
@@ -18,3 +19,6 @@ pkill -f "7-highlander"
 =======
 pkill -INT -f "7-highlander"
 >>>>>>> 31f6244... build(devops-0x05): add scripts 7 and 67
+=======
+pkill -f "7-highlander"
+>>>>>>> 1420237... fix(devops-0x05): change signals in '67' and '7'

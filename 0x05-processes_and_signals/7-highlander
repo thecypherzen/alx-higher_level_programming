@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 trap "echo I am invincible!!!" SIGTERM
 =======
 trap "echo I am invincible!!!" SIGINT
@@ -18,6 +19,9 @@ trap "echo I am invincible!!!" SIGTERM
 =======
 trap "echo I am invincible!!!" SIGINT
 >>>>>>> 31f6244... build(devops-0x05): add scripts 7 and 67
+=======
+trap "echo I am invincible!!!" SIGTERM
+>>>>>>> 1420237... fix(devops-0x05): change signals in '67' and '7'
 while ( true ); do
 	echo "To infinity and beyond"
 	sleep 2
