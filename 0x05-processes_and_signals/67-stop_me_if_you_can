@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
 # kills a process without using`kill` or `killall`
 
+<<<<<<< HEAD
 pkill -f "7-highlander"
+=======
+pkill -INT -f "7-highlander"
+>>>>>>> 31f6244... build(devops-0x05): add scripts 7 and 67

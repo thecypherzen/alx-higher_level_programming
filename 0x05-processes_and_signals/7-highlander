@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 # prints a messaghe when `sigterm` is received
 
+<<<<<<< HEAD
 trap "echo I am invincible!!!" SIGTERM
+=======
+trap "echo I am invincible!!!" SIGINT
+>>>>>>> 31f6244... build(devops-0x05): add scripts 7 and 67
 while ( true ); do
 	echo "To infinity and beyond"
 	sleep 2
