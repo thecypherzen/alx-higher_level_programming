@@ -63,6 +63,7 @@ stop_process()
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 526e199... build(devops-0x05): add script 101
 =======
@@ -83,10 +84,13 @@ stop_process()
 
 
 >>>>>>> 526e199... build(devops-0x05): add script 101
+=======
+>>>>>>> 991a5b7... fix(101): remove restart func message
 restart_process()
 {
 	stop_process
 	start_process
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -101,6 +105,8 @@ restart_process()
 =======
 	echo "manage_my_process restarted"
 >>>>>>> 526e199... build(devops-0x05): add script 101
+=======
+>>>>>>> 991a5b7... fix(101): remove restart func message
 }
 
 case $1 in
@@ -153,9 +159,12 @@ case $1 in
 		echo "manage_my_process stopped"
 		;;
 	"restart")
-		echo "manage_my_process restarted"
 		restart_process
+<<<<<<< HEAD
 >>>>>>> 526e199... build(devops-0x05): add script 101
+=======
+		echo "manage_my_process restarted"
+>>>>>>> 991a5b7... fix(101): remove restart func message
 		;;
 	*)
 		echo "Usage: manage_my_process {start|stop|restart}"
