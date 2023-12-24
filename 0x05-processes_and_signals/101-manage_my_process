@@ -15,12 +15,10 @@ stop_process()
 	rm -f /var/run/my_process.pid
 }
 
-
 restart_process()
 {
 	stop_process
 	start_process
-	echo "manage_my_process restarted"
 }
 
 case $1 in
@@ -33,8 +31,8 @@ case $1 in
 		echo "manage_my_process stopped"
 		;;
 	"restart")
-		echo "manage_my_process restarted"
 		restart_process
+		echo "manage_my_process restarted"
 		;;
 	*)
 		echo "Usage: manage_my_process {start|stop|restart}"
