@@ -4,16 +4,16 @@
 start_process()
 {
 	./manage_my_process &
-	echo "$!" > "my_process.pid"
+	echo "$!" > "/var/run/my_process.pid"
 	echo "manage_my_process started"
 }
 
 
 stop_process()
 {
-	pid=$(head -1 < my_process.pid)
+	pid=$(head -1 < /var/run/my_process.pid)
 	kill -KILL "$pid" 2>/dev/null
-	rm -f my_process.pid
+	rm -f /var/run/my_process.pid
 	echo "manage_my_process stopped"
 }
 
