@@ -4,26 +4,46 @@
 start_process()
 {
 	./manage_my_process &
+<<<<<<< HEAD
 	echo "$!" > "/var/run/my_process.pid"
+=======
+	echo "$!" > "my_process.pid"
+	echo "manage_my_process started"
+>>>>>>> 526e199... build(devops-0x05): add script 101
 }
 
 
 stop_process()
 {
+<<<<<<< HEAD
 	pid=$(head -1 < /var/run/my_process.pid)
 	kill -KILL "$pid" 2>/dev/null
 	rm -f /var/run/my_process.pid
 }
 
+=======
+	pid=$(head -1 < my_process.pid)
+	kill -KILL "$pid" 2>/dev/null
+	rm -f my_process.pid
+	echo "manage_my_process stopped"
+}
+
+
+>>>>>>> 526e199... build(devops-0x05): add script 101
 restart_process()
 {
 	stop_process
 	start_process
+<<<<<<< HEAD
+=======
+	echo "manage_my_process restarted"
+>>>>>>> 526e199... build(devops-0x05): add script 101
 }
 
 case $1 in
 	"start")
 		start_process
+<<<<<<< HEAD
 		echo "manage_my_process started"
 		;;
 	"stop")
@@ -33,6 +53,14 @@ case $1 in
 	"restart")
 		restart_process
 		echo "manage_my_process restarted"
+=======
+		;;
+	"stop")
+		stop_process
+		;;
+	"restart")
+		restart_process
+>>>>>>> 526e199... build(devops-0x05): add script 101
 		;;
 	*)
 		echo "Usage: manage_my_process {start|stop|restart}"
