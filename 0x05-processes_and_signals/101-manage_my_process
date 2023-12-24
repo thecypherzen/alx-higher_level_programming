@@ -7,6 +7,7 @@ start_process()
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	echo "$!" > "/var/run/my_process.pid"
 <<<<<<< HEAD
 =======
@@ -21,11 +22,16 @@ start_process()
 =======
 	echo "$!" > "/var/run/my_process.pid"
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
+=======
+	echo "$!" > "my_process.pid"
+	echo "manage_my_process started"
+>>>>>>> 526e199... build(devops-0x05): add script 101
 }
 
 
 stop_process()
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -54,10 +60,20 @@ stop_process()
 >>>>>>> 991a5b7... fix(101): remove restart func message
 =======
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
+=======
+	pid=$(head -1 < my_process.pid)
+	kill -KILL "$pid" 2>/dev/null
+	rm -f my_process.pid
+	echo "manage_my_process stopped"
+}
+
+
+>>>>>>> 526e199... build(devops-0x05): add script 101
 restart_process()
 {
 	stop_process
 	start_process
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -68,11 +84,15 @@ restart_process()
 >>>>>>> 991a5b7... fix(101): remove restart func message
 =======
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
+=======
+	echo "manage_my_process restarted"
+>>>>>>> 526e199... build(devops-0x05): add script 101
 }
 
 case $1 in
 	"start")
 		start_process
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -108,6 +128,14 @@ case $1 in
 =======
 		echo "manage_my_process restarted"
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
+=======
+		;;
+	"stop")
+		stop_process
+		;;
+	"restart")
+		restart_process
+>>>>>>> 526e199... build(devops-0x05): add script 101
 		;;
 	*)
 		echo "Usage: manage_my_process {start|stop|restart}"
