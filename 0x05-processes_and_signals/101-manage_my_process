@@ -8,10 +8,14 @@ start_process()
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	echo "$!" > "/var/run/my_process.pid"
 <<<<<<< HEAD
 =======
 	echo "$!" > "my_process.pid"
+=======
+	echo "$!" > "/var/run/my_process.pid"
+>>>>>>> 0e732fc... fix(101-manage..): change to correct filename
 =======
 	echo "$!" > "/var/run/my_process.pid"
 >>>>>>> 0e732fc... fix(101-manage..): change to correct filename
@@ -31,6 +35,7 @@ start_process()
 
 stop_process()
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -62,8 +67,11 @@ stop_process()
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
 =======
 	pid=$(head -1 < my_process.pid)
+=======
+	pid=$(head -1 < /var/run/my_process.pid)
+>>>>>>> 0e732fc... fix(101-manage..): change to correct filename
 	kill -KILL "$pid" 2>/dev/null
-	rm -f my_process.pid
+	rm -f /var/run/my_process.pid
 	echo "manage_my_process stopped"
 }
 
