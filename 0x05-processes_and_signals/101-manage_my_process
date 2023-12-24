@@ -5,9 +5,13 @@ start_process()
 {
 	./manage_my_process &
 <<<<<<< HEAD
+<<<<<<< HEAD
 	echo "$!" > "/var/run/my_process.pid"
 =======
 	echo "$!" > "my_process.pid"
+=======
+	echo "$!" > "/var/run/my_process.pid"
+>>>>>>> 0e732fc... fix(101-manage..): change to correct filename
 	echo "manage_my_process started"
 >>>>>>> 526e199... build(devops-0x05): add script 101
 }
@@ -16,6 +20,7 @@ start_process()
 stop_process()
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	pid=$(head -1 < /var/run/my_process.pid)
 	kill -KILL "$pid" 2>/dev/null
 	rm -f /var/run/my_process.pid
@@ -23,8 +28,11 @@ stop_process()
 
 =======
 	pid=$(head -1 < my_process.pid)
+=======
+	pid=$(head -1 < /var/run/my_process.pid)
+>>>>>>> 0e732fc... fix(101-manage..): change to correct filename
 	kill -KILL "$pid" 2>/dev/null
-	rm -f my_process.pid
+	rm -f /var/run/my_process.pid
 	echo "manage_my_process stopped"
 }
 
