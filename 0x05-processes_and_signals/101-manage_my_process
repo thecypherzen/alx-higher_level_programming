@@ -5,7 +5,6 @@ start_process()
 {
 	./manage_my_process &
 	echo "$!" > "/var/run/my_process.pid"
-	echo "manage_my_process started"
 }
 
 
@@ -14,7 +13,6 @@ stop_process()
 	pid=$(head -1 < /var/run/my_process.pid)
 	kill -KILL "$pid" 2>/dev/null
 	rm -f /var/run/my_process.pid
-	echo "manage_my_process stopped"
 }
 
 
@@ -28,11 +26,14 @@ restart_process()
 case $1 in
 	"start")
 		start_process
+		echo "manage_my_process started"
 		;;
 	"stop")
 		stop_process
+		echo "manage_my_process stopped"
 		;;
 	"restart")
+		echo "manage_my_process restarted"
 		restart_process
 		;;
 	*)
