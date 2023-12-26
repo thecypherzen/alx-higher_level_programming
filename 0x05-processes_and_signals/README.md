@@ -114,6 +114,7 @@ int infinite_while(void)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 ```
 =======
@@ -155,5 +156,9 @@ int infinite_while(void)
 >>>>>>> a4056e0... docs(devops-0x05): update readme
 =======
 }```
+=======
+}
+```
+>>>>>>> e98b6d1... docs(0x05-readme): fix typo
 </li></ul>|
 >>>>>>> 68fb88b... docs(devops-0x05): update readme
