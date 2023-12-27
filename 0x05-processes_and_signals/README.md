@@ -87,6 +87,7 @@ The **Processes and signals** project delves into process management using signa
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 | 14. | [102-zombie.c](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/102-zombie.c) | A C program that creates 5 zombie processes.</br></br>Requirements<ul><li>For every zombie process created, it displays `Zombie process created, PID: ZOMBIE_PID`;</li><li>code must use the **Betty style**. It will be checked using `betty-style.pl` and `betty-doc.pl`; and</li><li>When it is done creating the parent process and the zombies, call the function bellow:
 >>>>>>> 68fb88b... docs(devops-0x05): update readme
 =======
@@ -106,6 +107,9 @@ The **Processes and signals** project delves into process management using signa
 =======
 | 14. | [102-zombie.c](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/102-zombie.c) | A C program that creates 5 zombie processes.</br></br>Requirements<ul><li>For every zombie process created, it displays `Zombie process created, PID: ZOMBIE_PID`;</li><li>code must use the **Betty style**. It will be checked using `betty-style.pl` and `betty-doc.pl`; and</li><li>When it is done creating the parent process and the zombies, call the function below:
 >>>>>>> 769c950... docs(0x05-readme): adjust blockquote
+=======
+| 14. | [102-zombie.c](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/102-zombie.c) | A C program that creates 5 zombie processes.</br></br>Requirements<ul><li>For every zombie process created, it displays `Zombie process created, PID: ZOMBIE_PID`;</li><li>code must use the **Betty style**. It will be checked using `betty-style.pl` and `betty-doc.pl`; and</li><li>When it is done creating the parent process and the zombies, call the function below: </li></ul>|
+>>>>>>> fc07b5a... docs(0x05-readme): adjust table ending
 ```
 int infinite_while(void)
 {
@@ -164,9 +168,12 @@ int infinite_while(void)
 }
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> e98b6d1... docs(0x05-readme): fix typo
 </li></ul>|
 >>>>>>> 68fb88b... docs(devops-0x05): update readme
 =======
         </li></ul>|
 >>>>>>> 769c950... docs(0x05-readme): adjust blockquote
+=======
+>>>>>>> fc07b5a... docs(0x05-readme): adjust table ending
