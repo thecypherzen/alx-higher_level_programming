@@ -63,8 +63,12 @@ The **Processes and signals** project delves into process management using signa
 | 14. | [102-zombie.c](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/102-zombie.c) | A C program that creates 5 zombie processes.</br></br>Requirements<ul><li>For every zombie process created, it displays `Zombie process created, PID: ZOMBIE_PID`;</li><li>code must use the **Betty style**. It will be checked using `betty-style.pl` and `betty-doc.pl`; and</li><li>When it is done creating the parent process and the zombies, call the function below: </li></ul>|
 =======
 | 13. | [101-manage_my_process](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/101-manage_my_process) | A Bash script that manages [manage_my_process](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/manage_my_process) above.</br></br>Requirements<ul><li>When passing the argument `start`:<ul><li>starts `manage_my_process`;</li><li>creates the file `/var/run/my_process.pid` containing its PID; and</li><li>displays `manage_my_process started`.</li></ul></li><li>When passing the argument `stop`:<ul><li>stops `manage_my_process`;</li><li>deletes the file `/var/run/my_process.pid` containing; and</li><li>displays `manage_my_process stopped`.</li></ul></li><li>When passing the argument `restart`:<ul><li>stops `manage_my_process`;</li><li>deletes the file `/var/run/my_process.pid` containing its PID;</li><li>starts `manage_my_process`;</li><li>creates the file `/var/run/my_process.pid` containing its PID; and</li><li>Displays `manage_my_process restarted`.</li></ul></li><li>displays `Usage: manage_my_process {start\|stop\|restart}`if any other argument or no argument is passed.</li></ul></br>*Note that this init script is far from being perfect (but good enough for the sake of manipulating process and PID file), for example we do not handle the case where we check if a process is already running. When doing `./101-manage_my_process start`, in our case it will simply create a new process instead of saying that it is already started/running.*|
+<<<<<<< HEAD
 | 14. | [102-zombie.c](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/102-zombie.c) | A C program that creates 5 zombie processes.</br></br>Requirements<ul><li>For every zombie process created, it displays `Zombie process created, PID: ZOMBIE_PID`;</li><li>code must use the **Betty style**. It will be checked using `betty-style.pl` and `betty-doc.pl`; and</li><li>When it is done creating the parent process and the zombies, call the function bellow:
 >>>>>>> 68fb88b... docs(devops-0x05): update readme
+=======
+| 14. | [102-zombie.c](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/102-zombie.c) | A C program that creates 5 zombie processes.</br></br>Requirements<ul><li>For every zombie process created, it displays `Zombie process created, PID: ZOMBIE_PID`;</li><li>code must use the **Betty style**. It will be checked using `betty-style.pl` and `betty-doc.pl`; and</li><li>When it is done creating the parent process and the zombies, call the function below:
+>>>>>>> 769c950... docs(0x05-readme): adjust blockquote
 ```
 int infinite_while(void)
 {
@@ -91,6 +95,10 @@ int infinite_while(void)
 =======
 }
 ```
+<<<<<<< HEAD
 >>>>>>> e98b6d1... docs(0x05-readme): fix typo
 </li></ul>|
 >>>>>>> 68fb88b... docs(devops-0x05): update readme
+=======
+        </li></ul>|
+>>>>>>> 769c950... docs(0x05-readme): adjust blockquote
