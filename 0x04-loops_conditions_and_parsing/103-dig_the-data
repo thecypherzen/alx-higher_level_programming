@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-# parses content of file using `awk` in sorted order
-#+ with extra information.
-
-awk '{print $1, $9}' "apache-access.log" \
-| sort -k1 | uniq -c | sort -rn
