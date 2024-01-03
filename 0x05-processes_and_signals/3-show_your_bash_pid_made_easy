@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-# displays pid and name of processes that match "bash"
-#+	cannot use `ps` command
-
-pgrep -l "bash"
