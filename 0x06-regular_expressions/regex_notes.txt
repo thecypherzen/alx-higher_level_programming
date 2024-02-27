@@ -1,0 +1,16 @@
+Character Tokens:
+
+Token/Regex	MATCHES					Example
+^		Matches start of line			^ah
+$		End of line				th$
+\A		Start of string				\Fa
+d\		End of string				ed\
+[^tx]		chars not in charset			[^abc]
+[a-[b]]		chars in a but not in b			[0-9-[24]]
+\d		Any digit				\d{1,9}
+\w		Any alphanum char			\w{2,4}
+\W		Opposite of alphanum chars		\W+
+.		Any one char except $			th.$
+?		0 or 1 char  	    			a?st
++		1 or more chars				sa+s+
+*		0 or more chars				si*g
