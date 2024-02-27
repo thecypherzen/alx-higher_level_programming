@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 pgrep -lf "4-to_infinity_and_beyond" | cut -d " " -f1 | \
 =======
 pgrep -l -f "4-to_infinity_and_beyond" | cut -d " " -f1 | \
@@ -22,4 +23,7 @@ pgrep -l -f "4-to_infinity_and_beyond" | cut -d " " -f1 | \
 =======
 pgrep -lf "4-to_infinity_and_beyond" | cut -d " " -f1 | \
 >>>>>>> ec780af... build(devops-0x05): add script 6
+=======
+pgrep -lf "4-to_infinity_and_beyond" | cut -d " " -f1 | \
+>>>>>>> d1f75cf... fs(ased:root): restore deleted repos
 	while read -r pid; do kill "$pid"; done

@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f3dc335... build(alx_devops): add example.rb
 #puts ARGV[0].scan(/(\w+).*\1/).join
@@ -23,3 +24,6 @@ puts ARGV[0].scan(/127.0.0.[0-9]/).join
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
 =======
 >>>>>>> f3dc335... build(alx_devops): add example.rb
+=======
+puts ARGV[0].scan(/127.0.0.[0-9]/).join
+>>>>>>> d1f75cf... fs(ased:root): restore deleted repos

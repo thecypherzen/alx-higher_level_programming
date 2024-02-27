@@ -16,6 +16,7 @@ d\		End of string				ed\
 *		0 or more chars				si*g
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 7edfe4e... build(alx_devops): add two new files
 \1		uid of a preceeding group		(\w+).*\1
@@ -32,3 +33,5 @@ An atomic group only has the advantage of avoiding needless backtracking
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
 =======
 >>>>>>> 7edfe4e... build(alx_devops): add two new files
+=======
+>>>>>>> d1f75cf... fs(ased:root): restore deleted repos
