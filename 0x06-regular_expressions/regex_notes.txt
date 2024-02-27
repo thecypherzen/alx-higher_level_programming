@@ -14,6 +14,7 @@ d\		End of string				ed\
 ?		0 or 1 char  	    			a?st
 +		1 or more chars				sa+s+
 *		0 or more chars				si*g
+<<<<<<< HEAD
 \1		uid of a preceeding group		(\w+).*\1
 ?<name>		defines a group name			(?<word>\w+)
 \k<name>	def a ref for a group			(?<nm>\w+) \k<nm>/
@@ -23,3 +24,5 @@ d\		End of string				ed\
 A non-capturing group identifies the 'group of chars' but doesn't return the
 matched group of characters.
 An atomic group only has the advantage of avoiding needless backtracking
+=======
+>>>>>>> d1f75cf... fs(ased:root): restore deleted repos

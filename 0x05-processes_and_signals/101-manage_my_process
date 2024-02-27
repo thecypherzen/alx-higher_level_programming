@@ -6,6 +6,7 @@ start_process()
 	./manage_my_process &
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	echo "$!" > "/var/run/my_process.pid"
 <<<<<<< HEAD
 =======
@@ -17,11 +18,15 @@ start_process()
 >>>>>>> 526e199... build(devops-0x05): add script 101
 =======
 >>>>>>> 4a206b6... fix(101): add msg for "restart" option
+=======
+	echo "$!" > "/var/run/my_process.pid"
+>>>>>>> d1f75cf... fs(ased:root): restore deleted repos
 }
 
 
 stop_process()
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 	pid=$(head -1 < /var/run/my_process.pid)
@@ -34,19 +39,26 @@ stop_process()
 =======
 	pid=$(head -1 < /var/run/my_process.pid)
 >>>>>>> 0e732fc... fix(101-manage..): change to correct filename
+=======
+	pid=$(head -1 < /var/run/my_process.pid)
+>>>>>>> d1f75cf... fs(ased:root): restore deleted repos
 	kill -KILL "$pid" 2>/dev/null
 	rm -f /var/run/my_process.pid
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 526e199... build(devops-0x05): add script 101
 =======
 >>>>>>> 991a5b7... fix(101): remove restart func message
+=======
+>>>>>>> d1f75cf... fs(ased:root): restore deleted repos
 restart_process()
 {
 	stop_process
 	start_process
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -54,11 +66,14 @@ restart_process()
 >>>>>>> 526e199... build(devops-0x05): add script 101
 =======
 >>>>>>> 991a5b7... fix(101): remove restart func message
+=======
+>>>>>>> d1f75cf... fs(ased:root): restore deleted repos
 }
 
 case $1 in
 	"start")
 		start_process
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 		echo "manage_my_process started"
@@ -74,6 +89,9 @@ case $1 in
 =======
 		echo "manage_my_process started"
 >>>>>>> 4a206b6... fix(101): add msg for "restart" option
+=======
+		echo "manage_my_process started"
+>>>>>>> d1f75cf... fs(ased:root): restore deleted repos
 		;;
 	"stop")
 		stop_process
@@ -82,10 +100,14 @@ case $1 in
 	"restart")
 		restart_process
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 526e199... build(devops-0x05): add script 101
 =======
 		echo "manage_my_process restarted"
 >>>>>>> 991a5b7... fix(101): remove restart func message
+=======
+		echo "manage_my_process restarted"
+>>>>>>> d1f75cf... fs(ased:root): restore deleted repos
 		;;
 	*)
 		echo "Usage: manage_my_process {start|stop|restart}"

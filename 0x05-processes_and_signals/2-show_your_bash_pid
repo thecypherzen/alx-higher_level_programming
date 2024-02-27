@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # displays processes containing the bash word.
 # shellcheck disable=SC2009
 ps u -eH | grep "bash"
@@ -13,3 +14,8 @@ ps u -eH | grep "bash"
 # shellcheck disable=SC2009
 ps u -eH | grep "bash"
 >>>>>>> 8f4e6dd... fix(2_show...): clean up for shellcheck
+=======
+# displays processes containing the bash word.
+# shellcheck disable=SC2009
+ps u -eH | grep "bash"
+>>>>>>> d1f75cf... fs(ased:root): restore deleted repos

@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # displays 'Best School' 10 times using 'for' loop
 =======
 # displays 'Best School' 10 times
@@ -8,6 +9,9 @@
 =======
 # displays 'Best School' 10 times using 'for' loop
 >>>>>>> 31d39f8... build(0x04): create 4-if_9_say_hi script
+=======
+# displays 'Best School' 10 times using 'for' loop
+>>>>>>> d1f75cf... fs(ased:root): restore deleted repos
 
 for _ in {1..10}; do
 	echo "Best School"

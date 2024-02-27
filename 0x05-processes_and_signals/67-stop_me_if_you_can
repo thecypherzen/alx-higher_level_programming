@@ -3,6 +3,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 pkill -f "7-highlander"
 =======
 pkill -INT -f "7-highlander"
@@ -10,3 +11,6 @@ pkill -INT -f "7-highlander"
 =======
 pkill -f "7-highlander"
 >>>>>>> 1420237... fix(devops-0x05): change signals in '67' and '7'
+=======
+pkill -f "7-highlander"
+>>>>>>> d1f75cf... fs(ased:root): restore deleted repos
