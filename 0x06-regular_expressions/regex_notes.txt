@@ -17,6 +17,9 @@ d\		End of string				ed\
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7edfe4e... build(alx_devops): add two new files
 =======
 >>>>>>> 7edfe4e... build(alx_devops): add two new files
 \1		uid of a preceeding group		(\w+).*\1
@@ -29,9 +32,12 @@ A non-capturing group identifies the 'group of chars' but doesn't return the
 matched group of characters.
 An atomic group only has the advantage of avoiding needless backtracking
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
 =======
 >>>>>>> 7edfe4e... build(alx_devops): add two new files
 =======
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
+=======
+>>>>>>> 7edfe4e... build(alx_devops): add two new files
