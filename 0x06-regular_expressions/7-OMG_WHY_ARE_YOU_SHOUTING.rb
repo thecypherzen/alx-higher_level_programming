@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 puts ARGV[0].scan(/([A-Z]++)/).join
 =======
@@ -10,6 +11,9 @@ puts ARGV[0].scan(/[A-Z]+/).join
 =======
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> 3d3c7fd... build(a_devops:0x06): add task7 solution file
 str = ARGV[0]
 regex = /(?>from:(?<sndr>\+?\w+))|(?>to:(?<rcvr>\+?\w+))|(flags:(?<flgs>(:?\-?[0-9])+))/
 matches = str.scan(regex)
@@ -28,6 +32,7 @@ if matches
   end
 end
 puts res
+<<<<<<< HEAD
 >>>>>>> 3d3c7fd... build(a_devops:0x06): add task7 solution file
 =======
 puts ARGV[0].scan(/([A-Z]++)/).join
@@ -35,3 +40,5 @@ puts ARGV[0].scan(/([A-Z]++)/).join
 =======
 puts ARGV[0].scan(/[A-Z]+/).join
 >>>>>>> 93ed88b... build(a_devops:0x06): add task7 solution file
+=======
+>>>>>>> 3d3c7fd... build(a_devops:0x06): add task7 solution file
