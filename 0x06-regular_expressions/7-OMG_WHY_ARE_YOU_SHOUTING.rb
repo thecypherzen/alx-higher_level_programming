@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 puts ARGV[0].scan(/([A-Z]++)/).join
 =======
@@ -31,3 +32,6 @@ puts res
 =======
 puts ARGV[0].scan(/([A-Z]++)/).join
 >>>>>>> fb0560f... fix(a_devops:0x06): revert task7 file to original
+=======
+puts ARGV[0].scan(/[A-Z]+/).join
+>>>>>>> 93ed88b... build(a_devops:0x06): add task7 solution file
