@@ -49,6 +49,7 @@ the project objectives are to understand the following:
 |----|------|-----------------------------------------------|
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 | 1. | [0-OSI_model](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/) | A regular file containing responses to **Task0** Questions |
 =======
 | 1. | [0-OSI_model](https://github.com/thecypherzen/alx-system_engineering\
@@ -58,3 +59,8 @@ Questions |
 =======
 | 1. | [0-OSI_model](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/) | A regular file containing responses to **Task0** Questions |
 >>>>>>> fb23bc0... docs(a_devops:0x08): fix readme error"
+=======
+| 1. | [0-OSI_model](https://github.com/thecypherzen/alx-system_engineering\
+-devops/tree/main/) | A regular file containing responses to **Task0** \
+Questions |
+>>>>>>> 17509f2... build(se_devops): create 0x07 dir & add readme
