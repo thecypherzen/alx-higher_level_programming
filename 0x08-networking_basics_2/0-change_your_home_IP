@@ -39,4 +39,5 @@ for host in "${!hosts_arr[@]}"; do
 done
 
 # place hosts file back to the /hosts dir
-mv -f "$vfile" /etc/hosts
+cp -f "$vfile" /etc/hosts
+rm "$vfile"
