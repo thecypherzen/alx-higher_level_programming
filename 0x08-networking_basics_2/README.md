@@ -29,9 +29,4 @@ objectives are to understand the following:
 
 | SN | File | Description                                   |
 |----|------|-----------------------------------------------|
-| 1. | [0-change_your_home_IP](https://github.com/thecypherzen/alx-system_\
-engineering/0-change_your_home_IP-devops/tree/main/0-change_your_home_IP) | \
-A Bash script that configures an Ubuntu server with the below requirements:<ul>\
-<li>localhost resolves to 127.0.0.2</li><li>facebook.com resolves to 8.8.8.8.\
-</li><li>Execute in consideration of [this](https://intranet.alxswe.com\
-/rltoken/XSXhQPoDu3QecXs3j9XgPQ)</li></ul>|
+| 1. | [0-change_your_home_IP](https://github.com/thecypherzen/alx-system_engineering/0-change_your_home_IP-devops/tree/main/0-change_your_home_IP) | A Bash script that configures an Ubuntu server with the below requirements:<ul><li>localhost resolves to 127.0.0.2</li><li>facebook.com resolves to 8.8.8.8.</li><li>Execute in consideration of [this](https://intranet.alxswe.com/rltoken/XSXhQPoDu3QecXs3j9XgPQ)</li></ul>|
