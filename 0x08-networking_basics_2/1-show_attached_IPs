@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 while read -r line; do
 =======
 while read line; do
@@ -15,5 +16,8 @@ while read -r line; do
 =======
 while read line; do
 >>>>>>> dc00458... feat(a_devops:0x08): add task_1 file
+=======
+while read -r line; do
+>>>>>>> dd5e21d... fix(a_devops:0x08): fix shellcheck err"
     echo "$line" | cut -d ' ' -f2
 done < <(ifconfig | sed -En '/inet\s+/p')
