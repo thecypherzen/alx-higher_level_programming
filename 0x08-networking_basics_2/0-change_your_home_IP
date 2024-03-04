@@ -5,7 +5,7 @@
 
 # create and poulate array of hosts and set variables.
 declare -A hosts_arr
-hosts_arr["facebook"]="8.8.8.8"
+hosts_arr["facebook.com"]="8.8.8.8"
 hosts_arr["localhost"]="127.0.0.2"
 vfile="./hosts.temp"
 vhosts_bak="/etc/hosts.bak"
