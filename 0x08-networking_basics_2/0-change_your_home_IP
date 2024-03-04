@@ -31,4 +31,4 @@ for host in "${!hosts_arr[@]}"; do
 done
 
 # place hosts file back to the /hosts dir
-sudo mv "$vfile" /etc/hosts
+sudo mv -f "$vfile" /etc/hosts
