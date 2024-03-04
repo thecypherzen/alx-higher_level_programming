@@ -47,6 +47,4 @@ the project objectives are to understand the following:
 
 | SN | File | Description                                   |
 |----|------|-----------------------------------------------|
-| 1. | [0-OSI_model](https://github.com/thecypherzen/alx-system_engineering\
--devops/tree/main/) | A regular file containing responses to **Task0** \
-Questions |
+| 1. | [0-OSI_model](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/) | A regular file containing responses to **Task0** Questions |
