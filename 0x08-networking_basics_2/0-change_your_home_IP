@@ -15,17 +15,16 @@ vhosts_bak="/etc/hosts.bak"
 if [[ -f "$hosts_file" ]]; then
     cp "$hosts_file" "$vfile"
 
+    # avoid existing *.bak host file overwrite
     while [[ -f "$vhosts_bak" ]]; do
 	vhosts_bak+=".bak"
     done
 
-    #mv /etc/hosts "$vhosts_bak"
+    # mv /etc/hosts "$vhosts_bak"
     mv "$hosts_file" "$vhosts_bak"
 else
     touch "$vfile"
 fi
-
-
 
 # edit host file(copy) as required
 for host in "${!hosts_arr[@]}"; do
