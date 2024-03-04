@@ -58,8 +58,12 @@ done
 
 # place hosts file back to the /hosts dir
 <<<<<<< HEAD
+<<<<<<< HEAD
 cp -f "$vfile" /etc/hosts
 rm "$vfile"
 =======
 sudo mv "$vfile" /etc/hosts
 >>>>>>> 111ceef... feat(a_devops): add task_0 solution file
+=======
+sudo mv -f "$vfile" /etc/hosts
+>>>>>>> 1807f53... fix(a_devops:0x08): force final mv cmd
