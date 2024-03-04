@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 The **Networking basics_2** project pushes further the introduction to the \
 =======
 The **Networking basics_1** project pushes further the introduction to the \
@@ -13,6 +14,9 @@ The **Networking basics_2** project pushes further the introduction to the \
 =======
 The **Networking basics_1** project pushes further the introduction to the \
 >>>>>>> f7deb4a... build(a_devops:0x08): create folder & readme
+=======
+The **Networking basics_2** project pushes further the introduction to the \
+>>>>>>> e39ff61... docs(a_devops:0x08): fix readme error"
 basics of networking. It is a sequel to the Networking basics_0,  the project \
 objectives are to understand the following:
 - What is localhost/127.0.0.1
