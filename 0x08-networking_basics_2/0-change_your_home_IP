@@ -78,6 +78,7 @@ done
 #cp /etc/hosts "$vhosts_bak"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 sudo mv /etc/hosts "$vhosts_bak"
 >>>>>>> 111ceef... feat(a_devops): add task_0 solution file
 =======
@@ -93,6 +94,9 @@ mv /etc/hosts "$vhosts_bak"
 >>>>>>> 18dcc25... style(a_devops:0x08): rm unused spaces and add comments
 =======
 sudo mv /etc/hosts "$vhosts_bak"
+=======
+mv /etc/hosts "$vhosts_bak"
+>>>>>>> 08368be... style(a_devops:0x08): remove sudo cmd
 
 >>>>>>> 111ceef... feat(a_devops): add task_0 solution file
 # edit host file(copy) as required
@@ -107,6 +111,7 @@ for host in "${!hosts_arr[@]}"; do
 done
 
 # place hosts file back to the /hosts dir
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -134,3 +139,6 @@ sudo mv "$vfile" /etc/hosts
 =======
 sudo mv -f "$vfile" /etc/hosts
 >>>>>>> 1807f53... fix(a_devops:0x08): force final mv cmd
+=======
+mv -f "$vfile" /etc/hosts
+>>>>>>> 08368be... style(a_devops:0x08): remove sudo cmd
