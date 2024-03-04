@@ -13,6 +13,7 @@ hosts_arr["facebook.com"]="8.8.8.8"
 hosts_arr["localhost"]="127.0.0.2"
 hosts_file="/etc/hosts"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 hosts_arr["facebook"]="8.8.8.8"
 =======
@@ -29,10 +30,13 @@ hosts_arr["facebook.com"]="8.8.8.8"
 >>>>>>> b19bebc... fix(a_devops:0x08): change facebook hostname
 hosts_arr["localhost"]="127.0.0.2"
 >>>>>>> 111ceef... feat(a_devops): add task_0 solution file
+=======
+>>>>>>> 89a9d00... fix(a_devops:0x08): change codeflow of file 0_xyz
 vfile="./hosts.temp"
 vhosts_bak="/etc/hosts.bak"
 
 # backup hosts file and copy to current location
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -49,10 +53,16 @@ if [[ -f "$hosts_file" ]]; then
 =======
     # avoid existing *.bak host file overwrite
 >>>>>>> 18dcc25... style(a_devops:0x08): rm unused spaces and add comments
+=======
+if [[ -f "$hosts_file" ]]; then
+    cp "$hosts_file" "$vfile"
+
+>>>>>>> 89a9d00... fix(a_devops:0x08): change codeflow of file 0_xyz
     while [[ -f "$vhosts_bak" ]]; do
 	vhosts_bak+=".bak"
     done
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     # mv /etc/hosts "$vhosts_bak"
@@ -62,10 +72,14 @@ if [[ -f "$hosts_file" ]]; then
 =======
     # mv /etc/hosts "$vhosts_bak"
 >>>>>>> 18dcc25... style(a_devops:0x08): rm unused spaces and add comments
+=======
+    #mv /etc/hosts "$vhosts_bak"
+>>>>>>> 89a9d00... fix(a_devops:0x08): change codeflow of file 0_xyz
     mv "$hosts_file" "$vhosts_bak"
 else
     touch "$vfile"
 fi
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -97,12 +111,16 @@ sudo mv /etc/hosts "$vhosts_bak"
 =======
 mv /etc/hosts "$vhosts_bak"
 >>>>>>> 08368be... style(a_devops:0x08): remove sudo cmd
+=======
+
+
+>>>>>>> 89a9d00... fix(a_devops:0x08): change codeflow of file 0_xyz
 
 >>>>>>> 111ceef... feat(a_devops): add task_0 solution file
 # edit host file(copy) as required
 for host in "${!hosts_arr[@]}"; do
     host_line="$(sed -En "/$host$/p" $vfile)"
-    new_host_line="$(echo -e ${hosts_arr[$host]}$'\t'$host)"
+    new_host_line="$(echo ${hosts_arr[$host]}$'\t'$host)"
     if (( "${#host_line}" )); then
 	sed -Ei "s/$host_line/$new_host_line/" "$vfile"
     else
