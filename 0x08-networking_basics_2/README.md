@@ -1,6 +1,6 @@
 # Overview #
 
-The **Networking basics_1** project pushes further the introduction to the \
+The **Networking basics_2** project pushes further the introduction to the \
 basics of networking. It is a sequel to the Networking basics_0,  the project \
 objectives are to understand the following:
 - What is localhost/127.0.0.1
