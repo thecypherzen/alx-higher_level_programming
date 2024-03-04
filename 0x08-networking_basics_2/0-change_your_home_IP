@@ -82,6 +82,7 @@ done
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 cp -f "$vfile" /etc/hosts
 rm "$vfile"
 =======
@@ -93,3 +94,7 @@ sudo mv -f "$vfile" /etc/hosts
 =======
 mv -f "$vfile" /etc/hosts
 >>>>>>> 08368be... style(a_devops:0x08): remove sudo cmd
+=======
+cp -f "$vfile" /etc/hosts
+rm "$vfile"
+>>>>>>> 9cd87ca... refactor(a_devops:0x08): change last mv cmd
