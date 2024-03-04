@@ -7,22 +7,30 @@
 declare -A hosts_arr
 hosts_arr["facebook.com"]="8.8.8.8"
 hosts_arr["localhost"]="127.0.0.2"
+hosts_file="/etc/hosts"
 vfile="./hosts.temp"
 vhosts_bak="/etc/hosts.bak"
 
 # backup hosts file and copy to current location
-cp /etc/hosts "$vfile"
-while [[ -f "$vhosts_bak" ]]; do
-    vhosts_bak+=".bak"
-done
+if [[ -f "$hosts_file" ]]; then
+    cp "$hosts_file" "$vfile"
 
-#cp /etc/hosts "$vhosts_bak"
-mv /etc/hosts "$vhosts_bak"
+    while [[ -f "$vhosts_bak" ]]; do
+	vhosts_bak+=".bak"
+    done
+
+    #mv /etc/hosts "$vhosts_bak"
+    mv "$hosts_file" "$vhosts_bak"
+else
+    touch "$vfile"
+fi
+
+
 
 # edit host file(copy) as required
 for host in "${!hosts_arr[@]}"; do
     host_line="$(sed -En "/$host$/p" $vfile)"
-    new_host_line="$(echo -e ${hosts_arr[$host]}$'\t'$host)"
+    new_host_line="$(echo ${hosts_arr[$host]}$'\t'$host)"
     if (( "${#host_line}" )); then
 	sed -Ei "s/$host_line/$new_host_line/" "$vfile"
     else
