@@ -30,7 +30,7 @@ fi
 # edit host file(copy) as required
 for host in "${!hosts_arr[@]}"; do
     host_line="$(sed -En "/$host$/p" $vfile)"
-    new_host_line="$(echo ${hosts_arr[$host]}$'\t'$host)"
+    new_host_line="$(echo -e ${hosts_arr[$host]}$'\t'$host)"
     if (( "${#host_line}" )); then
 	sed -Ei "s/$host_line/$new_host_line/" "$vfile"
     else
