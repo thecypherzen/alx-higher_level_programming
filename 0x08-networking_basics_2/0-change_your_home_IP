@@ -8,6 +8,7 @@ declare -A hosts_arr
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 hosts_arr["facebook.com"]="8.8.8.8"
 hosts_arr["localhost"]="127.0.0.2"
 hosts_file="/etc/hosts"
@@ -23,6 +24,9 @@ hosts_arr["localhost"]="127.0.0.2"
 >>>>>>> 89a9d00... fix(a_devops:0x08): change codeflow of file 0_xyz
 =======
 hosts_arr["facebook"]="8.8.8.8"
+=======
+hosts_arr["facebook.com"]="8.8.8.8"
+>>>>>>> b19bebc... fix(a_devops:0x08): change facebook hostname
 hosts_arr["localhost"]="127.0.0.2"
 >>>>>>> 111ceef... feat(a_devops): add task_0 solution file
 vfile="./hosts.temp"
