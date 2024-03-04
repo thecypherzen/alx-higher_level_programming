@@ -17,7 +17,7 @@ while [[ -f "$vhosts_bak" ]]; do
 done
 
 #cp /etc/hosts "$vhosts_bak"
-sudo mv /etc/hosts "$vhosts_bak"
+mv /etc/hosts "$vhosts_bak"
 
 # edit host file(copy) as required
 for host in "${!hosts_arr[@]}"; do
@@ -31,4 +31,4 @@ for host in "${!hosts_arr[@]}"; do
 done
 
 # place hosts file back to the /hosts dir
-sudo mv -f "$vfile" /etc/hosts
+mv -f "$vfile" /etc/hosts
