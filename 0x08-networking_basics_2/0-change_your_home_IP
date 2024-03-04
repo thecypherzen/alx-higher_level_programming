@@ -57,11 +57,16 @@ if [[ -f "$hosts_file" ]]; then
 if [[ -f "$hosts_file" ]]; then
     cp "$hosts_file" "$vfile"
 
+<<<<<<< HEAD
 >>>>>>> 89a9d00... fix(a_devops:0x08): change codeflow of file 0_xyz
+=======
+    # avoid existing *.bak host file overwrite
+>>>>>>> 18dcc25... style(a_devops:0x08): rm unused spaces and add comments
     while [[ -f "$vhosts_bak" ]]; do
 	vhosts_bak+=".bak"
     done
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -75,6 +80,9 @@ if [[ -f "$hosts_file" ]]; then
 =======
     #mv /etc/hosts "$vhosts_bak"
 >>>>>>> 89a9d00... fix(a_devops:0x08): change codeflow of file 0_xyz
+=======
+    # mv /etc/hosts "$vhosts_bak"
+>>>>>>> 18dcc25... style(a_devops:0x08): rm unused spaces and add comments
     mv "$hosts_file" "$vhosts_bak"
 else
     touch "$vfile"
@@ -104,6 +112,7 @@ mv /etc/hosts "$vhosts_bak"
 
 >>>>>>> 89a9d00... fix(a_devops:0x08): change codeflow of file 0_xyz
 
+<<<<<<< HEAD
 =======
 >>>>>>> 18dcc25... style(a_devops:0x08): rm unused spaces and add comments
 =======
@@ -117,6 +126,8 @@ mv /etc/hosts "$vhosts_bak"
 >>>>>>> 89a9d00... fix(a_devops:0x08): change codeflow of file 0_xyz
 
 >>>>>>> 111ceef... feat(a_devops): add task_0 solution file
+=======
+>>>>>>> 18dcc25... style(a_devops:0x08): rm unused spaces and add comments
 # edit host file(copy) as required
 for host in "${!hosts_arr[@]}"; do
     host_line="$(sed -En "/$host$/p" $vfile)"
