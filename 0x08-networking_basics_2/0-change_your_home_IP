@@ -7,6 +7,7 @@
 declare -A hosts_arr
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 hosts_arr["facebook.com"]="8.8.8.8"
 hosts_arr["localhost"]="127.0.0.2"
 hosts_file="/etc/hosts"
@@ -20,10 +21,15 @@ hosts_arr["localhost"]="127.0.0.2"
 >>>>>>> 111ceef... feat(a_devops): add task_0 solution file
 =======
 >>>>>>> 89a9d00... fix(a_devops:0x08): change codeflow of file 0_xyz
+=======
+hosts_arr["facebook"]="8.8.8.8"
+hosts_arr["localhost"]="127.0.0.2"
+>>>>>>> 111ceef... feat(a_devops): add task_0 solution file
 vfile="./hosts.temp"
 vhosts_bak="/etc/hosts.bak"
 
 # backup hosts file and copy to current location
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 if [[ -f "$hosts_file" ]]; then
@@ -58,12 +64,15 @@ else
 fi
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 111ceef... feat(a_devops): add task_0 solution file
 cp /etc/hosts "$vfile"
 while [[ -f "$vhosts_bak" ]]; do
     vhosts_bak+=".bak"
 done
 
 #cp /etc/hosts "$vhosts_bak"
+<<<<<<< HEAD
 <<<<<<< HEAD
 sudo mv /etc/hosts "$vhosts_bak"
 >>>>>>> 111ceef... feat(a_devops): add task_0 solution file
@@ -78,6 +87,10 @@ mv /etc/hosts "$vhosts_bak"
 
 =======
 >>>>>>> 18dcc25... style(a_devops:0x08): rm unused spaces and add comments
+=======
+sudo mv /etc/hosts "$vhosts_bak"
+
+>>>>>>> 111ceef... feat(a_devops): add task_0 solution file
 # edit host file(copy) as required
 for host in "${!hosts_arr[@]}"; do
     host_line="$(sed -En "/$host$/p" $vfile)"
@@ -90,6 +103,7 @@ for host in "${!hosts_arr[@]}"; do
 done
 
 # place hosts file back to the /hosts dir
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -109,3 +123,6 @@ mv -f "$vfile" /etc/hosts
 cp -f "$vfile" /etc/hosts
 rm "$vfile"
 >>>>>>> 9cd87ca... refactor(a_devops:0x08): change last mv cmd
+=======
+sudo mv "$vfile" /etc/hosts
+>>>>>>> 111ceef... feat(a_devops): add task_0 solution file
