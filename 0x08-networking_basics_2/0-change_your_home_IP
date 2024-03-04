@@ -5,13 +5,19 @@
 
 # create and poulate array of hosts and set variables.
 declare -A hosts_arr
+<<<<<<< HEAD
 hosts_arr["facebook.com"]="8.8.8.8"
 hosts_arr["localhost"]="127.0.0.2"
 hosts_file="/etc/hosts"
+=======
+hosts_arr["facebook"]="8.8.8.8"
+hosts_arr["localhost"]="127.0.0.2"
+>>>>>>> 111ceef... feat(a_devops): add task_0 solution file
 vfile="./hosts.temp"
 vhosts_bak="/etc/hosts.bak"
 
 # backup hosts file and copy to current location
+<<<<<<< HEAD
 if [[ -f "$hosts_file" ]]; then
     cp "$hosts_file" "$vfile"
 
@@ -25,6 +31,15 @@ if [[ -f "$hosts_file" ]]; then
 else
     touch "$vfile"
 fi
+=======
+cp /etc/hosts "$vfile"
+while [[ -f "$vhosts_bak" ]]; do
+    vhosts_bak+=".bak"
+done
+
+#cp /etc/hosts "$vhosts_bak"
+sudo mv /etc/hosts "$vhosts_bak"
+>>>>>>> 111ceef... feat(a_devops): add task_0 solution file
 
 # edit host file(copy) as required
 for host in "${!hosts_arr[@]}"; do
@@ -38,5 +53,9 @@ for host in "${!hosts_arr[@]}"; do
 done
 
 # place hosts file back to the /hosts dir
+<<<<<<< HEAD
 cp -f "$vfile" /etc/hosts
 rm "$vfile"
+=======
+sudo mv "$vfile" /etc/hosts
+>>>>>>> 111ceef... feat(a_devops): add task_0 solution file
