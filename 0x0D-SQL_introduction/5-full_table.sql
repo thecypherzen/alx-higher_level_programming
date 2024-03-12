@@ -2,4 +2,4 @@
 -- database hbtn_0c_0 in your MySQL server.
 -- Not allowed to use the `DESCRIBE` or `EXPLAIN` statements
 
-SHOW COLUMNS FROM hbtn_0c_0
+SHOW COLUMNS FROM first_table
