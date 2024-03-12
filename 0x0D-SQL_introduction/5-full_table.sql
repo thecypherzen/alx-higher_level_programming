@@ -2,4 +2,4 @@
 -- database hbtn_0c_0 in your MySQL server.
 -- Not allowed to use the `DESCRIBE` or `EXPLAIN` statements
 
-DESC first_table
+SHOW CREATE TABLE first_table
