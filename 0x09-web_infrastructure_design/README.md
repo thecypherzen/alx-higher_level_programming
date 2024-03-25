@@ -33,4 +33,4 @@ The specific objectives of the project include:
 
 | SN | File | Description                                   |
 |----|------|-----------------------------------------------|
-| 1. | [0-simple_web_stack]() | |
+| 1. | [task_related_responses.txt]() | contains a link to all responses that to task-specific questions. Reviewer should use this please. |
