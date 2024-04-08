@@ -20,6 +20,18 @@ It focuses on the following concepts:
 - Some of these are for references and CANNOT be mastered at one go.
 - The resource linked to by ***Module patterns*** was somewhat confusing, as at writing this, but I'll grasp it in due course.
 
+### Dependencies ###
+1. To successfuly execute js codes in the terminal, node.js ais required. To install, simply copy and paste these in your terminal:
+```
+$ curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+$ sudo apt-get install -y nodejs
+```
+	***As at the time of doing this project, node 14.x is deprecated and so I installed node20.x for the project. I don't think there would be any compatibility issues.***
+2. It's also are requirement that all codes should be ***semistandard*** compliant, which could also be installed using this:
+```
+$ sudo npm install semistandard -g
+
+```
 ### Project Timeline Details ###
 - **Released:** Mon 8 Apr. 2024 - 6am.
 - **1st Deadline:** Tue 9 Apr. 2024 - 6am.
