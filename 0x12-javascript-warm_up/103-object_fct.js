@@ -12,10 +12,11 @@ const myObject = {
 };
 console.log(myObject);
 
-myObject.incr = () => {
+myObject.incr = function(){
   this.value += 1;
 };
-
+console.log(Object.getOwnPropertyNames(myObject.__proto__));
+console.log(myObject);
 myObject.incr();
 console.log(myObject);
 myObject.incr();
