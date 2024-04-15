@@ -16,7 +16,7 @@ It focuses on the following concepts:
 - [Flask SQLAlchemy](https://www.youtube.com/playlist?list=PLXmMXHVSvS-BlLA5beNJojJLlpE0PJgCW)
 - [10 common stumbling blocks for SQLAlchemy newbies](https://alextechrants.blogspot.com/2013/11/10-common-stumbling-blocks-for.html)
 - [Python SQLAlchemy Cheatsheet](https://www.pythonsheets.com/notes/python-sqlalchemy.html)
-- [SQLAlchemy ORM Tutorial for Python Developers](https://auth0.com/blog/sqlalchemy-orm-tutorial-for-python-developers/) *** (Warning: This tutorial is with PostgreSQL, but the concept of SQLAlchemy is the same with MySQL) ***
+- [SQLAlchemy ORM Tutorial for Python Developers](https://auth0.com/blog/sqlalchemy-orm-tutorial-for-python-developers/) ***(Warning: This tutorial is with PostgreSQL, but the concept of SQLAlchemy is the same with MySQL)***
 - [SQLAlchemy Tutorial](https://overiq.com/sqlalchemy-101/)
 - [Python Virtual Environments: A primer](https://realpython.com/python-virtual-environments-a-primer/)
 
@@ -77,5 +77,10 @@ $ python3
 Files on the project are task based and are as follows:
 | SN | File | Description |
 |----|------|-------------|
-| 1. |[0-select_states.py](https://github.com/thecypherzen)  | A script that lists all states from the database hbtn_0e_0_usa: <br/><ul><li>The script should take 3 arguments: mysql username, mysql password and database name (no argument validation needed)</li><li>must use the module MySQLdb (import MySQLdb)</li><li>The script should connect to a MySQL server running on localhost at port 3306</li><li>Results must be sorted in ascending order by states.id</li><li>Results must be displayed as below: ```$./0-select_states.py root root hbtn_0e_0_usa<br/>(1, 'California')<br/>(2, 'Arizona')<br/>(3, 'Texas')</br>(4, 'New York')<br/>(5, 'Nevada')```</li><li>The code should not be executed when imported</li></ul>|
+| 1. |[0-select_states.py](https://github.com/thecypherzen)  | A script that lists all states from the database hbtn_0e_0_usa: <br/><ul><li>The script should take 3 arguments: mysql username, mysql password and database name (no argument validation needed)</li><li>must use the module MySQLdb (import MySQLdb)</li><li>The script should connect to a MySQL server running on localhost at port 3306</li><li>Results must be sorted in ascending order by states.id</li><li>Results must be displayed as below:</br> ```
+$./0-select_states.py root root hbtn_0e_0_usa
+(1, 'California')<br/>(2, 'Arizona')
+(3, 'Texas')</br>(4, 'New York')
+(5, 'Nevada')```
+</li><li>The code should not be executed when imported</li></ul>|
 | 2. | Pending |      |
