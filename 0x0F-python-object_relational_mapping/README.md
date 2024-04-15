@@ -77,10 +77,17 @@ $ python3
 Files on the project are task based and are as follows:
 | SN | File | Description |
 |----|------|-------------|
-| 1. |[0-select_states.py](https://github.com/thecypherzen)  | A script that lists all states from the database hbtn_0e_0_usa: <br/><ul><li>The script should take 3 arguments: mysql username, mysql password and database name (no argument validation needed)</li><li>must use the module MySQLdb (import MySQLdb)</li><li>The script should connect to a MySQL server running on localhost at port 3306</li><li>Results must be sorted in ascending order by states.id</li><li>Results must be displayed as below:</br> ```
-$./0-select_states.py root root hbtn_0e_0_usa
-(1, 'California')<br/>(2, 'Arizona')
-(3, 'Texas')</br>(4, 'New York')
-(5, 'Nevada')```
-</li><li>The code should not be executed when imported</li></ul>|
+| 1. |[0-select_states.py](https://github.com/thecypherzen)  | A script that lists all states from the database hbtn_0e_0_usa: <br/><ul><li>The script should take 3 arguments: mysql username, mysql password and database name (no argument validation needed)</li><li>must use the module MySQLdb (import MySQLdb)</li><li>The script should connect to a MySQL server running on localhost at port 3306</li><li>Results must be sorted in ascending order by states.id</li><li>Results must be displayed as in <strong>Example 1</strong> below.</li><li>The code should not be executed when imported</li></ul>|
 | 2. | Pending |      |
+
+
+### Example 1 ###
+```
+$ ./0-select_states.py root root hbtn_0e_0_usa
+(1, 'California')
+(2, 'Arizona')
+(3, 'Texas')
+(4, 'New York')
+(5, 'Nevada')
+
+```
