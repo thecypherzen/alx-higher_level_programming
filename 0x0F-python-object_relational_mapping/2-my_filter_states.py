@@ -29,10 +29,10 @@ if __name__ == "__main__":
     query = """
     SELECT id, name
         FROM states
-    WHERE name = %s
+    WHERE name = '{}'
     ORDER BY states.id
-    """
-    cursor.execute(query, (sys.argv[4],))
+    """.format(sys.argv[4])
+    cursor.execute(query)
 
     res = cursor.fetchall()
     for row in res:
