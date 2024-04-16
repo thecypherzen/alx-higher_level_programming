@@ -29,7 +29,7 @@ if __name__ == "__main__":
     query = """
     SELECT id, name
         FROM states
-    WHERE name = '{}'
+    WHERE name COLLATE utf8mb4_bin = '{}'
     ORDER BY states.id
     """.format(sys.argv[4])
     cursor.execute(query)
