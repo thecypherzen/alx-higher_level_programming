@@ -6,6 +6,16 @@ As the days go by, we're getting close to specilization and this **0x0A. Configu
 
 <hr/>
 
+<<<<<<< HEAD
+=======
+## Reference Resources
+- (Intro to Configuration Management)[https://www.digitalocean.com/community/tutorials/an-introduction-to-configuration-management]
+- (Puppet resource type: file)[https://www.puppet.com/docs/puppet/5.5/types/file.html] **(check “Resource types” for all manifest types in the left menu)**
+- (Puppet’s Declarative Language: Modeling Instead of Scripting)[https://www.puppet.com/blog]
+- (Puppet lint)[http://puppet-lint.com/]
+- (Puppet emacs mode)[https://github.com/voxpupuli/puppet-mode]
+
+>>>>>>> 7bce759... ci(asd): create 0x0A-config folder and readme
 ## Folder Details ###
 - **Date Created:** Fri 19 Apr. 2024.
 - **Author:** [William Inyam](https.//github.com/thecypherzen).
@@ -15,6 +25,7 @@ As the days go by, we're getting close to specilization and this **0x0A. Configu
   - **Duration:** 24 hrs.
   - **Month** 6, **Week** 2, **Day** 5.
 
+<<<<<<< HEAD
 
 
 ## Dependencies ##
@@ -43,18 +54,27 @@ $ gem install puppet-lint
 - [Puppet emacs mode](https://github.com/voxpupuli/puppet-mode)
 
 
+=======
+>>>>>>> 7bce759... ci(asd): create 0x0A-config folder and readme
 ## Technologies ##
 - All shell scripts written in GNU bash 5.0.17(1)-release (x86_64-pc-linux-gnu).
 - File types can be identified by their extensions
 - Code tested on Ubuntu 20.04 LTS.
 
+<<<<<<< HEAD
 ## File Tree ##
 Pending
 
+=======
+>>>>>>> 7bce759... ci(asd): create 0x0A-config folder and readme
 
 ## Files ###
 - *Here is a detailed list of all files in the repo and their description*.
 
 | SN | File | Description                                   |
 |----|------|-----------------------------------------------|
+<<<<<<< HEAD
 | 1. | [Coming soon](https://www.github.com) |  |
+=======
+| 1. | ()[] |  |
+>>>>>>> 7bce759... ci(asd): create 0x0A-config folder and readme
