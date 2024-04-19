@@ -69,6 +69,7 @@ $ gem install puppet-lint
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Intro to Configuration Management](https://www.digitalocean.com/community/tutorials/an-introduction-to-configuration-management)
 - [Puppet resource type: file](https://www.puppet.com/docs/puppet/5.5/types/file.html) **(check “Resource types” for all manifest types in the left menu)**
 - [Puppet’s Declarative Language: Modeling Instead of Scripting](https://www.puppet.com/blog)
@@ -95,6 +96,13 @@ $ gem install puppet-lint
 - [Puppet emacs mode](https://github.com/voxpupuli/puppet-mode)
 >>>>>>> fc647bc... docs(asd) update readme links
 
+=======
+- [Intro to Configuration Management](https://www.digitalocean.com/community/tutorials/an-introduction-to-configuration-management)
+- [Puppet resource type: file](https://www.puppet.com/docs/puppet/5.5/types/file.html] **(check “Resource types” for all manifest types in the left menu)**
+- [Puppet’s Declarative Language: Modeling Instead of Scripting](https://www.puppet.com/blog)
+- [Puppet lint](http://puppet-lint.com/)
+- [Puppet emacs mode](https://github.com/voxpupuli/puppet-mode)
+>>>>>>> fc647bc... docs(asd) update readme links
 
 >>>>>>> 0c94af3... docs(asd): update readme
 =======
@@ -138,6 +146,7 @@ Pending
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 | 1. | [Coming soon](https://www.github.com) |  |
 =======
 | 1. | ()[] |  |
@@ -148,3 +157,6 @@ Pending
 =======
 | 1. | ()[] |  |
 >>>>>>> 7bce759... ci(asd): create 0x0A-config folder and readme
+=======
+| 1. | [Coming soon](https://www.github.com) |  |
+>>>>>>> fc647bc... docs(asd) update readme links
