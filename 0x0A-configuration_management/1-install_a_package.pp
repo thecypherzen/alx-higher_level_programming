@@ -4,7 +4,7 @@ package{'python3':
   ensure  => installed,
 }
 
-package{'pip3':
+package{'python3-pip':
   ensure => installed,
 }
 
