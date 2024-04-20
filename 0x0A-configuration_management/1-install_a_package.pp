@@ -9,6 +9,7 @@ package{'python3':
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 $packages = ['jinja2','werkzeug','itsdangerous','importlib-metadata','click', 'flask']
 each($packages) | $pkg | {
   exec{"pip3_remove ${pkg}":
@@ -29,6 +30,9 @@ exec{'install_flask':
 }
 =======
 package{'pip3':
+=======
+package{'python3-pip':
+>>>>>>> bef1aad... fix(asd:0x0A): fix package name error in task 1
   ensure => installed,
 }
 
