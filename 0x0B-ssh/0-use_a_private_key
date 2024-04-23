@@ -10,6 +10,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ssh -i ~/.ssh/school ubuntu@100.25.200.149
 =======
 =======
@@ -43,3 +44,6 @@ ssh -i '~/.ssh/school' ubuntu@100.25.200.149
 =======
 ssh -i ~/.ssh/school ubuntu@100.25.200.149
 >>>>>>> 47d803d... Revert "rebase(asd:0x0B): trying something diff on task0"
+=======
+ssh -i "~/.ssh/school" ubuntu@100.25.200.149
+>>>>>>> bde68bc... build(asd:0x0B): add task 0 solution
