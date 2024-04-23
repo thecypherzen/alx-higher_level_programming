@@ -3,7 +3,11 @@
 # key ~/.ssh/school with the user ubuntu
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ssh -i ~/.ssh/school ubuntu@100.25.200.149
 =======
+=======
+key="$(cp server.key ~/.ssh/school)"
+>>>>>>> e33531c... fix(asd:0x0B): create login key
 ssh -i "~/.ssh/school" ubuntu@100.25.200.149
 >>>>>>> bde68bc... build(asd:0x0B): add task 0 solution
