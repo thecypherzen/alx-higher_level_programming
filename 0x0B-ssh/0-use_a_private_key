@@ -2,4 +2,8 @@
 # a script that uses ssh to connect to your server using the private
 # key ~/.ssh/school with the user ubuntu
 
+<<<<<<< HEAD
 ssh -i ~/.ssh/school ubuntu@100.25.200.149
+=======
+ssh -i "~/.ssh/school" ubuntu@100.25.200.149
+>>>>>>> bde68bc... build(asd:0x0B): add task 0 solution
