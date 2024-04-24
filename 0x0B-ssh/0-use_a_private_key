@@ -13,6 +13,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ssh -i ~/.ssh/school ubuntu@100.25.200.149
 =======
 =======
@@ -62,3 +63,6 @@ ssh -i "$key_f" ubuntu@100.25.200.149
 =======
 ssh -i "~/.ssh/school" ubuntu@100.25.200.149
 >>>>>>> 26c84eb... fix(asd:0x0B): attempt task 0 fail resolve
+=======
+ssh -i ~/.ssh/school ubuntu@100.25.200.149
+>>>>>>> 4e76b4c... fix(asd:0x0B): try to fix task 0 checker 5
