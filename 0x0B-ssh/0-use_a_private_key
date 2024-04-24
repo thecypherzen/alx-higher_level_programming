@@ -14,6 +14,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ssh -i ~/.ssh/school ubuntu@100.25.200.149
 =======
 =======
@@ -66,3 +67,6 @@ ssh -i "~/.ssh/school" ubuntu@100.25.200.149
 =======
 ssh -i ~/.ssh/school ubuntu@100.25.200.149
 >>>>>>> 4e76b4c... fix(asd:0x0B): try to fix task 0 checker 5
+=======
+ssh -i '~/.ssh/school' ubuntu@100.25.200.149
+>>>>>>> fdc4541... rebase(asd:0x0B): trying something diff on task0
