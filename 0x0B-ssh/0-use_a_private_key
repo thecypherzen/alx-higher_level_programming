@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ssh -i ~/.ssh/school ubuntu@100.25.200.149
 =======
 =======
@@ -31,3 +32,6 @@ ssh -i ~/.ssh/school ubuntu@100.25.200.149
 =======
 ssh -i '~/.ssh/school' ubuntu@100.25.200.149
 >>>>>>> fdc4541... rebase(asd:0x0B): trying something diff on task0
+=======
+ssh -i ~/.ssh/school ubuntu@100.25.200.149
+>>>>>>> 7556c9e... reverting to former status
