@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ssh -i ~/.ssh/school ubuntu@100.25.200.149
 =======
 =======
@@ -35,3 +36,6 @@ ssh -i '~/.ssh/school' ubuntu@100.25.200.149
 =======
 ssh -i ~/.ssh/school ubuntu@100.25.200.149
 >>>>>>> 7556c9e... reverting to former status
+=======
+ssh -i '~/.ssh/school' ubuntu@100.25.200.149
+>>>>>>> 7f5ce8f... Revert "reverting to former status"
