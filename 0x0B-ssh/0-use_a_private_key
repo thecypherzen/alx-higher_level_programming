@@ -17,5 +17,9 @@ ssh -i "~/.ssh/school" ubuntu@100.25.200.149
 key_f="$(realpath ~/.ssh/school)"
 pub_key="$(ssh-keygen -y -f $key_f)"
 ssh -i ".ubuntu_user" ubuntu@100.25.200.149 "echo $pub_key >> ~/.ssh/authorized_keys"
+<<<<<<< HEAD
 ssh -i "$key_f" ubuntu@100.25.200.149
 >>>>>>> eaea92b... fix(asd:0x0B): attempt to fix task 0 fail
+=======
+ssh -i "~/.ssh/school" ubuntu@100.25.200.149
+>>>>>>> 26c84eb... fix(asd:0x0B): attempt task 0 fail resolve
