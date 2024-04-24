@@ -9,6 +9,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ssh -i ~/.ssh/school ubuntu@100.25.200.149
 =======
 =======
@@ -39,3 +40,6 @@ ssh -i ~/.ssh/school ubuntu@100.25.200.149
 =======
 ssh -i '~/.ssh/school' ubuntu@100.25.200.149
 >>>>>>> 7f5ce8f... Revert "reverting to former status"
+=======
+ssh -i ~/.ssh/school ubuntu@100.25.200.149
+>>>>>>> 47d803d... Revert "rebase(asd:0x0B): trying something diff on task0"
