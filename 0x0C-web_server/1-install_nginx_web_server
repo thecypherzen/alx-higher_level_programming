@@ -3,14 +3,18 @@
 # content of the string is 'hello world'
 
 function install_nginx(){
-    sudo apt-update
-    sudo apt-get install nginx -y
-    sudo ufw enable
-    sudo ufw allow 'Nginx HTTP'
+    check_ufw="$(which ufw)"
+    apt-update
+    apt-get install nginx -y
+
+    if [[ -z "$check_ufw" ]]; then
+	apt-get install ufw -y
+    fi
+    ufw enable
+    ufw allow 'Nginx HTTP'
 }
 
 function set_default_ip(){
-    user="$USER"
     default_f="/etc/nginx/sites-available/default"
     ip6_reg="listen \[::\]:[0-9]*]* default_server;"
     ip6_rep="listen [::]:80 default_server;"
@@ -25,8 +29,10 @@ check="$(which nginx)"
 
 if [[ -z "$check" ]]; then
     install_nginx
+    check="$(which nginx)"
+    "$check"
 fi
 
 set_default_ip
 echo "Hello World!" > "./index.html"
-sudo mv "./index.html" "/var/www/html/"
+mv "./index.html" "/var/www/html/"
