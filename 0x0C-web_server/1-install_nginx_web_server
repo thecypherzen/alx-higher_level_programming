@@ -52,6 +52,6 @@ mv "./index.html" "/var/www/html/"
 fi
 
 set_default_ip
-echo "hello world" > "./index.html"
+echo "Hello World!" > "./index.html"
 sudo mv "./index.html" "/var/www/html/"
 >>>>>>> b9a888f... build(asd:0x0C): add task 1 solution
