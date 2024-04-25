@@ -28,5 +28,5 @@ if [[ -z "$check" ]]; then
 fi
 
 set_default_ip
-echo "hello world" > "./index.html"
+echo "Hello World!" > "./index.html"
 sudo mv "./index.html" "/var/www/html/"
