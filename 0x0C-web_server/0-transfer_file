@@ -25,7 +25,11 @@ else
 fi
 
 vsource="$1"
+<<<<<<< HEAD
 vdest="~/"
+=======
+vdest="~/iscaba"
+>>>>>>> 459a6e3... ci(asd): create 0x0C web server dir and readme
 vuser="$3"
 vip="$2"
 
