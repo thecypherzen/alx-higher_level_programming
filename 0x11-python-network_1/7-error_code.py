@@ -12,10 +12,8 @@ if __name__ == "__main__":
     import sys
 
     url = sys.argv[1]
-    response = requests.get(url).__dict__
-    status_code = response.get("status_code")
-    if status_code and status_code >= 400:
+    response = requests.get(url)
+    if response.status_code >= 400:
         print("Error code: ", status_code)
     else:
-        message = str(response.get('_content'), encoding='utf-8')
-        print(message)
+        print(response.text)
