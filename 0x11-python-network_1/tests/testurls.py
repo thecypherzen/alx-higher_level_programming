@@ -15,9 +15,13 @@ with open("searchresults.html", 'w') as f:
 
 # Working with requests
 import requests
-
+'''
 url = "http://www.ridgesolid.tech"
 res = requests.get(url)
 
 mtest = "testutil"
 print(bytes(mtest, encoding='utf-8'))
+'''
+mytup = ('a', 2)
+mytup.get('a', -1)
+print(val)
