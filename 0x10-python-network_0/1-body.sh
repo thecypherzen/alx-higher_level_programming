@@ -1,3 +1,6 @@
 #!/bin/bash
 # sends a get request to a server
-echo -n "$(curl -sf $1 -m 10)"
+res="$(curl -Is $1 |head -1|cut -d ' ' -f2)"
+if [[ "$res" -eq 200 ]]; then
+    curl -s "$1";
+fi
