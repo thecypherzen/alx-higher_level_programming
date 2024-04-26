@@ -12,8 +12,9 @@ if __name__ == "__main__":
     from urllib.request import urlopen
 
     url = "https://alx-intranet.hbtn.io/status"
-    content = urlopen(url).read()
-    msg = f"Body Response\n\t- type: {type(content)}" +\
-        f"\n\t- content: {content}" + \
-        f"\n\t- utf8 content: {str(content, encoding='utf-8')}"
+    with urlopen(url) as response:
+        content = response.read()
+        msg = f"Body Response\n\t- type: {type(content)}" +\
+            f"\n\t- content: {content}" + \
+            f"\n\t- utf8 content: {str(content, encoding='utf-8')}"
     print(msg)
