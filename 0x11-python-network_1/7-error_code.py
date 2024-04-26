@@ -13,8 +13,8 @@ if __name__ == "__main__":
 
     url = sys.argv[1]
     response = requests.get(url).__dict__
-    status_code = response.get("status_code", 999)
-    if status_code >= 400:
+    status_code = response.get("status_code")
+    if status_code and status_code >= 400:
         print("Error code: ", status_code)
     else:
         print(str(response.get("_content"), encoding="ascii"))
