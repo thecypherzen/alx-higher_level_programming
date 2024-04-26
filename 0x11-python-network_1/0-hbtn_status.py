@@ -14,7 +14,9 @@ if __name__ == "__main__":
     url = "https://alx-intranet.hbtn.io/status"
     with urlopen(url) as response:
         content = response.read()
-        msg = f"Body response\n\t- type: {type(content)}" +\
-            f"\n\t- content: {content}" + \
-            f"\n\t- utf8 content: {str(content, encoding='utf-8')}"
+        msg = (
+            f"Body response\n    - type: {type(content)}"
+            + f"\n    - content: {content}"
+            + f"\n    - utf8 content: {str(content, encoding='utf-8')}"
+        )
     print(msg)
