@@ -17,4 +17,5 @@ if __name__ == "__main__":
     if status_code and status_code >= 400:
         print("Error code: ", status_code)
     else:
-        print(str(response.get("_content"), encoding="ascii"))
+        message = str(response.get('_content'), encoding='utf-8')
+        print(message)
