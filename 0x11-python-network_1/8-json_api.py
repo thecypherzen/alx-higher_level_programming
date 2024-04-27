@@ -28,7 +28,6 @@ if __name__ == "__main__":
         if not json_res:
             print("No result")
         else:
-            print(json_res)
             print(f"[{json_res.get('id')}] {json_res.get('name')}")
     except jsonError:
         print("Not a valid JSON")
