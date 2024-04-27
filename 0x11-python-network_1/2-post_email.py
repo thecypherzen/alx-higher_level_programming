@@ -14,12 +14,12 @@ if __name__ == "__main__":
 
     # create request
     url = sys.argv[1]
-    data = {'email': sys.argv[2]}
+    data = {"email": sys.argv[2]}
     data = urlencode(data)
-    data = data.encode('utf-8')
+    data = data.encode("utf-8")
     request = Request(url, data)
 
     # make request and extract info
     with urlopen(request) as response:
         message = response.read()
-    print(str(message, encoding='ascii'))
+    print(str(message, encoding="ascii"))
