@@ -15,4 +15,5 @@ if __name__ == "__main__":
         with urlopen(url) as response:
             headers = response.headers._headers
         value = [tup for tup in headers if tup[0] == "X-Request-Id"]
-        print(value[0][1])
+        if value:
+            print(value[0][1])
