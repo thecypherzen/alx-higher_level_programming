@@ -12,7 +12,6 @@
 """
 if __name__ == "__main__":
     import requests
-    from requests.exceptions import JSONDecodeError as jsonError
     import sys
 
     if len(sys.argv) < 2:
@@ -29,5 +28,5 @@ if __name__ == "__main__":
             print("No result")
         else:
             print(f"[{json_res.get('id')}] {json_res.get('name')}")
-    except jsonError:
+    except Exception:
         print("Not a valid JSON")
