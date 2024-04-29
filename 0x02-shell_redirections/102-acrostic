@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 cat $1 | cut -c1 | paste -sd ''
 =======
 cat $1 | cut -c1 | paste -d '' - - - - - - - - -
@@ -16,3 +17,6 @@ cat $1 | cut -c1 | paste -d '' - - - - - - - - -
 =======
 cat $1 | cut -c1 | paste -sd ''
 >>>>>>> 8af4d89... Update scripts 24(101) and 25(102)
+=======
+cat $1 | cut -c1 | paste -sd ''
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12

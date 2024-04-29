@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 cat /etc/passwd | tail
 =======
 ls /etc/passwd | tail
@@ -16,3 +17,6 @@ ls /etc/passwd | tail
 =======
 cat /etc/passwd | tail
 >>>>>>> 61b692e... 0x02-shell-redirections corrections
+=======
+cat /etc/passwd | tail
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12

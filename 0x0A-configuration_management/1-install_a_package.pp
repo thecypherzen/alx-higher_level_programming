@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # first uninstalls all dependencies if they exist already
 =======
 >>>>>>> a32828b... build(asd:0x0A): add task 1 solution
@@ -14,11 +15,15 @@
 =======
 # first uninstalls all dependencies if they exist already
 >>>>>>> 014f41f... fix(asd:0x0A): resolve task 1 import err
+=======
+# first uninstalls all dependencies if they exist already
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 
 package{'python3':
   ensure  => installed,
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -101,6 +106,8 @@ exec{'install_flask':
 =======
 >>>>>>> a32828b... build(asd:0x0A): add task 1 solution
 =======
+=======
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 $packages = ['jinja2','werkzeug','itsdangerous','importlib-metadata','click', 'flask']
 each($packages) | $pkg | {
   exec{"pip3_remove ${pkg}":
@@ -117,6 +124,7 @@ each($packages) | $pkg | {
 
 exec{'install_flask':
 <<<<<<< HEAD
+<<<<<<< HEAD
    command => 'pip3 install flask==2.1.0 werkzeug==2.1.1',
    path    => ['/usr/bin', '/bin'],
 }
@@ -126,3 +134,8 @@ exec{'install_flask':
   path    => ['/usr/bin', '/bin'],
 }
 >>>>>>> 8c05ea9... style(asd:0x0A): pylintyfy task 1 file
+=======
+  command => 'pip3 install flask==2.1.0 werkzeug==2.1.1',
+  path    => ['/usr/bin', '/bin'],
+}
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12

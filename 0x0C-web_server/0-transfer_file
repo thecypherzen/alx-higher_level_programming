@@ -29,6 +29,7 @@ vsource="$1"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 vdest="~/"
 =======
 vdest="~/iscaba"
@@ -42,6 +43,9 @@ vdest="~/iscaba"
 =======
 vdest="~/"
 >>>>>>> 34586e0... fix(asd:0x0C): change remote destination of file
+=======
+vdest="~/"
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 vuser="$3"
 vip="$2"
 

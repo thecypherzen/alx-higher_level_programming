@@ -3,6 +3,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 files=$@
 editor=$EDITOR
 nof=$#
@@ -13,6 +16,9 @@ nof=$#
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 if [[ ! $1 ]]; then
     echo "Sorry, at least 1 filename needed. Try again."
     exit 1
@@ -37,6 +43,7 @@ else
 	editor=$EDITOR
     fi
         $editor $1
+<<<<<<< HEAD
 =======
 file=$1
 =======
@@ -119,4 +126,6 @@ else
 =======
         $editor $1
 >>>>>>> 301b3ba... Update mkscript to set default editor
+=======
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 fi

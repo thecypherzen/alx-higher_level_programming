@@ -3,10 +3,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f3dc335... build(alx_devops): add example.rb
 =======
 >>>>>>> f3dc335... build(alx_devops): add example.rb
+=======
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 #puts ARGV[0].scan(/(\w+).*\1/).join
 #mystr = "I code with java mostly, and javascript always. I know Typescript" +\
 #        "Other times, I use C++, C or Python"
@@ -23,6 +26,7 @@ else
 end
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 puts ARGV[0].scan(/127.0.0.[0-9]/).join
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
@@ -33,3 +37,5 @@ puts ARGV[0].scan(/127.0.0.[0-9]/).join
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
 =======
 >>>>>>> f3dc335... build(alx_devops): add example.rb
+=======
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12

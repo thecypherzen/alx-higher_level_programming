@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # displays 'Best School' 10 times using 'for' loop
 =======
 # displays 'Best School' 10 times
@@ -24,6 +25,9 @@
 =======
 # displays 'Best School' 10 times using 'for' loop
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
+=======
+# displays 'Best School' 10 times using 'for' loop
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 
 for _ in {1..10}; do
 	echo "Best School"

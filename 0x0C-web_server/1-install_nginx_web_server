@@ -7,10 +7,13 @@ function install_nginx(){
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> dd4ee45... fix(asd:0x0C): start server after insallation in file 1
 =======
 >>>>>>> dd4ee45... fix(asd:0x0C): start server after insallation in file 1
+=======
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
     check_ufw="$(which ufw)"
     apt-update
     apt-get install nginx -y
@@ -20,6 +23,7 @@ function install_nginx(){
     fi
     ufw enable
     ufw allow 'Nginx HTTP'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -50,6 +54,11 @@ function set_default_ip(){
 
 function set_default_ip(){
 >>>>>>> dd4ee45... fix(asd:0x0C): start server after insallation in file 1
+=======
+}
+
+function set_default_ip(){
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
     default_f="/etc/nginx/sites-available/default"
     ip6_reg="listen \[::\]:[0-9]*]* default_server;"
     ip6_rep="listen [::]:80 default_server;"
@@ -68,6 +77,7 @@ if [[ -z "$check" ]]; then
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     check="$(which nginx)"
     "$check"
 fi
@@ -95,13 +105,21 @@ mv "./index.html" "/var/www/html/"
     check="$(which nginx)"
     "$check"
 >>>>>>> dd4ee45... fix(asd:0x0C): start server after insallation in file 1
+=======
+    check="$(which nginx)"
+    "$check"
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 fi
 
 set_default_ip
 echo "Hello World!" > "./index.html"
+<<<<<<< HEAD
 <<<<<<< HEAD
 sudo mv "./index.html" "/var/www/html/"
 >>>>>>> b9a888f... build(asd:0x0C): add task 1 solution
 =======
 mv "./index.html" "/var/www/html/"
 >>>>>>> dd4ee45... fix(asd:0x0C): start server after insallation in file 1
+=======
+mv "./index.html" "/var/www/html/"
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12

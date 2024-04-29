@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # prints 'Best School' 10 times using 'while'
 =======
 # prints 'Best School' 10 times
@@ -24,6 +25,9 @@
 =======
 # prints 'Best School' 10 times using 'while'
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
+=======
+# prints 'Best School' 10 times using 'while'
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 
 count=10
 while (( count > 0)); do

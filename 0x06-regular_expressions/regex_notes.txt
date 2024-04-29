@@ -18,10 +18,13 @@ d\		End of string				ed\
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 7edfe4e... build(alx_devops): add two new files
 =======
 >>>>>>> 7edfe4e... build(alx_devops): add two new files
+=======
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 \1		uid of a preceeding group		(\w+).*\1
 ?<name>		defines a group name			(?<word>\w+)
 \k<name>	def a ref for a group			(?<nm>\w+) \k<nm>/
@@ -33,6 +36,7 @@ matched group of characters.
 An atomic group only has the advantage of avoiding needless backtracking
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
 =======
@@ -41,3 +45,5 @@ An atomic group only has the advantage of avoiding needless backtracking
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
 =======
 >>>>>>> 7edfe4e... build(alx_devops): add two new files
+=======
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12

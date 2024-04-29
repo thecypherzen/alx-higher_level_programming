@@ -36,15 +36,19 @@ The **Processes and signals** project delves into process management using signa
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
 =======
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
+=======
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 | 1. | [0-what-is-my-pid](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/0-what-is-my-pid) | A Bash script that displays its own `PID`. |
 | 2. | [1-list_your_processes](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/1-list_your_processes) | A Bash script that displays a list of currently running processes.</br></br>Requirements<ul><li>Must show all processes, for all users, including those which might not have a `TTY`;</li><li>Must display in a user-oriented format; and</li><li>Must show process hierarchy</li></ul>|
 | 3. | [2-show_your_bash_pid](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/2-show_your_bash_pid) | A Bash script that displays lines containing the word `bash`, thus allowing us to easily get the `PID` of our Bash process.</br></br>Requirements<ul><li>Must not use pgrep;</li><li>The third line of the script must be `# shellcheck disable=SC2009` (find more info about ignoring shellcheck error [here](https://github.com/koalaman/shellcheck/wiki/Ignore)). As for what the shellcheck code `SC2009` represents, check [here](https://github.com/koalaman/shellcheck/wiki/SC2009)</li></ul>|
 | 4. | [3-show_your_bash_pid_made_easy](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/3-show_your_bash_pid_made_easy) | A Bash script that displays the PID, along with the process name, of processes whose name contain the word `bash`.</br></br>Requirements<ul><li>Cannot use the `ps` command.</li></ul>|
 | 5. | [4-to_infinity_and_beyond](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/4-to_infinity_and_beyond) | A Bash script that displays `To infinity and beyond` indefinitely.</br></br>Requirements<ul><li>In between each iteration of the loop, add a `sleep 2` command.</li></ul>|
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -74,6 +78,8 @@ The **Processes and signals** project delves into process management using signa
 >>>>>>> 68fb88b... docs(devops-0x05): update readme
 =======
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
+=======
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 | 6. | [5-dont_stop_me_now](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/5-dont_stop_me_now) | A Bash script that terminates the process [4-to_infinity_and_beyond](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/4-to_infinity_and_beyond) using the `kill` command.|
 | 7. | [6-stop_me_if_you_can](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/6-stop_me_if_you_can) | A Bash script that terminates the process [4-to_infinity_and_beyond](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/4-to_infinity_and_beyond) without having to use the `kill` or `killall` commands. |
 | 8. | [7-highlander](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/7-highlander) | A Bash script that:<ul><li>displays `To infinity and beyond` indefinitely with a `sleep 2` between each iteration;</li><li>displays `I am invincible!!!` when receiving a `SIGTERM` signal.</li></ul>|
@@ -87,6 +93,7 @@ The **Processes and signals** project delves into process management using signa
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 | 13. | [101-manage_my_process](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/101-manage_my_process) | A Bash script that manages [manage_my_process](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/manage_my_process) above.</br></br>Requirements<ul><li>When passing the argument `start`:<ul><li>starts `manage_my_process`;</li><li>creates the file `/var/run/my_process.pid` containing its PID; and</li><li>displays `manage_my_process started`.</li></ul></li><li>When passing the argument `stop`:<ul><li>stops `manage_my_process`;</li><li>deletes the file `/var/run/my_process.pid` containing; and</li><li>displays `manage_my_process stopped`.</li></ul></li><li>When passing the argument `restart`:<ul><li>stops `manage_my_process`;</li><li>deletes the file `/var/run/my_process.pid` containing its PID;</li><li>starts `manage_my_process`;</li><li>creates the file `/var/run/my_process.pid` containing its PID; and</li><li>Displays `manage_my_process restarted`.</li></ul></li><li>displays `Usage: manage_my_process {start\|stop\|restart}`if any other argument or no argument is passed.</li></ul></br>*Note that this init script is far from being perfect (but good enough for the sake of manipulating process and PID file), for example we do not handle the case where we check if a process is already running. When doing `./101-manage_my_process start`, in our case it will simply create a new process instead of saying that it is already started/running.*|
 | 14. | [102-zombie.c](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/102-zombie.c) | A C program that creates 5 zombie processes.</br></br>Requirements<ul><li>For every zombie process created, it displays `Zombie process created, PID: ZOMBIE_PID`;</li><li>code must use the **Betty style**. It will be checked using `betty-style.pl` and `betty-doc.pl`; and</li><li>When it is done creating the parent process and the zombies, call the function below: </li></ul>|
 =======
@@ -121,6 +128,10 @@ The **Processes and signals** project delves into process management using signa
 | 13. | [101-manage_my_process](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/101-manage_my_process) | A Bash script that manages [manage_my_process](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/manage_my_process) above.</br></br>Requirements<ul><li>When passing the argument `start`:<ul><li>starts `manage_my_process`;</li><li>creates the file `/var/run/my_process.pid` containing its PID; and</li><li>displays `manage_my_process started`.</li></ul></li><li>When passing the argument `stop`:<ul><li>stops `manage_my_process`;</li><li>deletes the file `/var/run/my_process.pid` containing; and</li><li>displays `manage_my_process stopped`.</li></ul></li><li>When passing the argument `restart`:<ul><li>stops `manage_my_process`;</li><li>deletes the file `/var/run/my_process.pid` containing its PID;</li><li>starts `manage_my_process`;</li><li>creates the file `/var/run/my_process.pid` containing its PID; and</li><li>Displays `manage_my_process restarted`.</li></ul></li><li>displays `Usage: manage_my_process {start\|stop\|restart}`if any other argument or no argument is passed.</li></ul></br>*Note that this init script is far from being perfect (but good enough for the sake of manipulating process and PID file), for example we do not handle the case where we check if a process is already running. When doing `./101-manage_my_process start`, in our case it will simply create a new process instead of saying that it is already started/running.*|
 | 14. | [102-zombie.c](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/102-zombie.c) | A C program that creates 5 zombie processes.</br></br>Requirements<ul><li>For every zombie process created, it displays `Zombie process created, PID: ZOMBIE_PID`;</li><li>code must use the **Betty style**. It will be checked using `betty-style.pl` and `betty-doc.pl`; and</li><li>When it is done creating the parent process and the zombies, call the function below: </li></ul>|
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
+=======
+| 13. | [101-manage_my_process](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/101-manage_my_process) | A Bash script that manages [manage_my_process](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/manage_my_process) above.</br></br>Requirements<ul><li>When passing the argument `start`:<ul><li>starts `manage_my_process`;</li><li>creates the file `/var/run/my_process.pid` containing its PID; and</li><li>displays `manage_my_process started`.</li></ul></li><li>When passing the argument `stop`:<ul><li>stops `manage_my_process`;</li><li>deletes the file `/var/run/my_process.pid` containing; and</li><li>displays `manage_my_process stopped`.</li></ul></li><li>When passing the argument `restart`:<ul><li>stops `manage_my_process`;</li><li>deletes the file `/var/run/my_process.pid` containing its PID;</li><li>starts `manage_my_process`;</li><li>creates the file `/var/run/my_process.pid` containing its PID; and</li><li>Displays `manage_my_process restarted`.</li></ul></li><li>displays `Usage: manage_my_process {start\|stop\|restart}`if any other argument or no argument is passed.</li></ul></br>*Note that this init script is far from being perfect (but good enough for the sake of manipulating process and PID file), for example we do not handle the case where we check if a process is already running. When doing `./101-manage_my_process start`, in our case it will simply create a new process instead of saying that it is already started/running.*|
+| 14. | [102-zombie.c](https://github.com/thecypherzen/alx-system_engineering-devops/tree/main/0x05-processes_and_signals/102-zombie.c) | A C program that creates 5 zombie processes.</br></br>Requirements<ul><li>For every zombie process created, it displays `Zombie process created, PID: ZOMBIE_PID`;</li><li>code must use the **Betty style**. It will be checked using `betty-style.pl` and `betty-doc.pl`; and</li><li>When it is done creating the parent process and the zombies, call the function below: </li></ul>|
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 ```
 int infinite_while(void)
 {
@@ -135,6 +146,7 @@ int infinite_while(void)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 ```
 =======
@@ -193,3 +205,7 @@ int infinite_while(void)
 }
 ```
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
+=======
+}
+```
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12

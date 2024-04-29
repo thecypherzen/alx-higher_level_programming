@@ -10,6 +10,7 @@ As the days go by, we're getting close to specilization and this **0x0A. Configu
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 7bce759... ci(asd): create 0x0A-config folder and readme
@@ -28,6 +29,8 @@ As the days go by, we're getting close to specilization and this **0x0A. Configu
 >>>>>>> 7bce759... ci(asd): create 0x0A-config folder and readme
 =======
 >>>>>>> 0c94af3... docs(asd): update readme
+=======
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 ## Folder Details ###
 - **Date Created:** Fri 19 Apr. 2024.
 - **Author:** [William Inyam](https.//github.com/thecypherzen).
@@ -41,10 +44,13 @@ As the days go by, we're getting close to specilization and this **0x0A. Configu
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0c94af3... docs(asd): update readme
 =======
 >>>>>>> 0c94af3... docs(asd): update readme
+=======
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 
 
 ## Dependencies ##
@@ -70,6 +76,9 @@ $ gem install puppet-lint
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 - [Intro to Configuration Management](https://www.digitalocean.com/community/tutorials/an-introduction-to-configuration-management)
 - [Puppet resource type: file](https://www.puppet.com/docs/puppet/5.5/types/file.html) **(check “Resource types” for all manifest types in the left menu)**
 - [Puppet’s Declarative Language: Modeling Instead of Scripting](https://www.puppet.com/blog)
@@ -77,6 +86,7 @@ $ gem install puppet-lint
 - [Puppet emacs mode](https://github.com/voxpupuli/puppet-mode)
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 7bce759... ci(asd): create 0x0A-config folder and readme
 =======
@@ -111,6 +121,8 @@ $ gem install puppet-lint
 
 
 >>>>>>> 0c94af3... docs(asd): update readme
+=======
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 ## Technologies ##
 - All shell scripts written in GNU bash 5.0.17(1)-release (x86_64-pc-linux-gnu).
 - File types can be identified by their extensions
@@ -120,6 +132,7 @@ $ gem install puppet-lint
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## File Tree ##
 Pending
 
@@ -137,6 +150,11 @@ Pending
 Pending
 
 >>>>>>> 0c94af3... docs(asd): update readme
+=======
+## File Tree ##
+Pending
+
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 
 ## Files ###
 - *Here is a detailed list of all files in the repo and their description*.
@@ -147,6 +165,7 @@ Pending
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 | 1. | [Coming soon](https://www.github.com) |  |
 =======
 | 1. | ()[] |  |
@@ -160,3 +179,6 @@ Pending
 =======
 | 1. | [Coming soon](https://www.github.com) |  |
 >>>>>>> fc647bc... docs(asd) update readme links
+=======
+| 1. | [Coming soon](https://www.github.com) |  |
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12

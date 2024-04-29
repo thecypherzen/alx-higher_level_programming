@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 paste -d "*" - - | cut -d "*" -f1
 =======
 paste -d "*" - - | cut -d "*" -f2
@@ -16,3 +17,6 @@ paste -d "*" - - | cut -d "*" -f2
 =======
 paste -d "*" - - | cut -d "*" -f1
 >>>>>>> 3a89a40... Update script 16(102-odd)
+=======
+paste -d "*" - - | cut -d "*" -f1
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12

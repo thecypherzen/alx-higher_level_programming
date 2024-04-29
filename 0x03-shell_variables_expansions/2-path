@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export PATH=$PATH:/action
 =======
 export PATH=$PATH://action
@@ -16,3 +17,6 @@ export PATH=$PATH://action
 =======
 export PATH=$PATH:/action
 >>>>>>> b2b71c3... Update script 2, add scripts 3 and 16
+=======
+export PATH=$PATH:/action
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 mv [A-Z]* /tmp/su
 =======
 mv [[:upper:]]* /tmp/u
@@ -16,3 +17,6 @@ mv [[:upper:]]* /tmp/u
 =======
 mv [A-Z]* /tmp/su
 >>>>>>> 29bb7f9... 0x02-shell-redirections project
+=======
+mv [A-Z]* /tmp/su
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12

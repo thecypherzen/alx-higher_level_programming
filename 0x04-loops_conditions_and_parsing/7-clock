@@ -12,6 +12,7 @@ while (( hours <= 12 )); do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	echo "Hour: $hours"
 =======
 	echo "Hour $hours"
@@ -31,6 +32,9 @@ while (( hours <= 12 )); do
 =======
 	echo "Hour: $hours"
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
+=======
+	echo "Hour: $hours"
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 	mins=1
 	while (( mins <= 59 )); do
 		echo $mins

@@ -11,6 +11,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 cat $1 | tail -n +2 | cut -f1 | sort | uniq -c | sort -g -k1 -r | tr -s ' '| cut -d " " -f 3 | head -11
 =======
 cat $1 | cut -f1 | sort | uniq -c | sort -nk1r | tr -s ' '  \
@@ -50,3 +51,6 @@ tail -n +2 | sort | cut -f1 | uniq -c | sort -g -r | head -11 | tr -s " " | cut 
 =======
 cat $1 | tail -n +2 | cut -f1 | sort | uniq -c | sort -g -k1 -r | tr -s ' '| cut -d " " -f 3 | head -11
 >>>>>>> 2594b3b... Testing script 26 again
+=======
+cat $1 | tail -n +2 | cut -f1 | sort | uniq -c | sort -g -k1 -r | tr -s ' '| cut -d " " -f 3 | head -11
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12

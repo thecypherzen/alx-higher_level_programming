@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 while read -r line; do
 =======
 while read line; do
@@ -19,5 +20,8 @@ while read line; do
 =======
 while read -r line; do
 >>>>>>> dd5e21d... fix(a_devops:0x08): fix shellcheck err"
+=======
+while read -r line; do
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
     echo "$line" | cut -d ' ' -f2
 done < <(ifconfig | sed -En '/inet\s+/p')

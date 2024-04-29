@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 puts ARGV[0].scan(/([A-Z]++)/).join
 <<<<<<< HEAD
@@ -45,3 +46,7 @@ puts ARGV[0].scan(/[A-Z]+/).join
 >>>>>>> 3d3c7fd... build(a_devops:0x06): add task7 solution file
 =======
 >>>>>>> fb0560f... fix(a_devops:0x06): revert task7 file to original
+=======
+
+puts ARGV[0].scan(/([A-Z]++)/).join
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12

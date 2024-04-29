@@ -4,12 +4,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d03ba35... docs(sys/devops): update repo
 =======
 >>>>>>> d03ba35... docs(sys/devops): update repo
 =======
 >>>>>>> d03ba35... docs(sys/devops): update repo
+=======
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 # Overview #
 
 Finally, I made it through the gates of shell into sprint 2 and here is the beginning of high level programming! The repo contains all directories which are based on each project required in this module/sprint.
@@ -28,6 +31,7 @@ Finally, I made it through the gates of shell into sprint 2 and here is the begi
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ## More Coming Soon ##
 >>>>>>> 437d351... 0x00-shell_basics project tasks submission
@@ -43,3 +47,5 @@ Finally, I made it through the gates of shell into sprint 2 and here is the begi
 >>>>>>> 437d351... 0x00-shell_basics project tasks submission
 =======
 >>>>>>> d03ba35... docs(sys/devops): update repo
+=======
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12

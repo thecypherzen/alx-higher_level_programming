@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/bin/bash
 =======
 !/bin/bash
@@ -15,4 +16,7 @@
 =======
 #!/bin/bash
 >>>>>>> 1fb379f... Update scripts 0, 1 and 13
+=======
+#!/bin/bash
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 whoami

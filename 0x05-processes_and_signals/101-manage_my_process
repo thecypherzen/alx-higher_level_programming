@@ -10,6 +10,7 @@ start_process()
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	echo "$!" > "/var/run/my_process.pid"
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -37,11 +38,15 @@ start_process()
 =======
 	echo "$!" > "/var/run/my_process.pid"
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
+=======
+	echo "$!" > "/var/run/my_process.pid"
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 }
 
 
 stop_process()
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -97,6 +102,13 @@ stop_process()
 >>>>>>> 991a5b7... fix(101): remove restart func message
 =======
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
+=======
+	pid=$(head -1 < /var/run/my_process.pid)
+	kill -KILL "$pid" 2>/dev/null
+	rm -f /var/run/my_process.pid
+}
+
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 restart_process()
 {
 	stop_process
@@ -107,6 +119,7 @@ restart_process()
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	echo "manage_my_process restarted"
 >>>>>>> 526e199... build(devops-0x05): add script 101
@@ -121,6 +134,8 @@ restart_process()
 >>>>>>> 991a5b7... fix(101): remove restart func message
 =======
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
+=======
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 }
 
 case $1 in
@@ -132,6 +147,7 @@ case $1 in
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		echo "manage_my_process started"
 		;;
 	"stop")
@@ -171,6 +187,9 @@ case $1 in
 =======
 		echo "manage_my_process started"
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
+=======
+		echo "manage_my_process started"
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 		;;
 	"stop")
 		stop_process
@@ -180,6 +199,7 @@ case $1 in
 		restart_process
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 526e199... build(devops-0x05): add script 101
 =======
 		echo "manage_my_process restarted"
@@ -187,6 +207,9 @@ case $1 in
 =======
 		echo "manage_my_process restarted"
 >>>>>>> d1f75cf... fs(ased:root): restore deleted repos
+=======
+		echo "manage_my_process restarted"
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 		;;
 	*)
 		echo "Usage: manage_my_process {start|stop|restart}"

@@ -9,6 +9,7 @@ declare -A hosts_arr
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 hosts_arr["facebook.com"]="8.8.8.8"
 hosts_arr["localhost"]="127.0.0.2"
 hosts_file="/etc/hosts"
@@ -32,6 +33,11 @@ hosts_arr["localhost"]="127.0.0.2"
 >>>>>>> 111ceef... feat(a_devops): add task_0 solution file
 =======
 >>>>>>> 89a9d00... fix(a_devops:0x08): change codeflow of file 0_xyz
+=======
+hosts_arr["facebook.com"]="8.8.8.8"
+hosts_arr["localhost"]="127.0.0.2"
+hosts_file="/etc/hosts"
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 vfile="./hosts.temp"
 vhosts_bak="/etc/hosts.bak"
 
@@ -40,10 +46,14 @@ vhosts_bak="/etc/hosts.bak"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 if [[ -f "$hosts_file" ]]; then
     cp "$hosts_file" "$vfile"
 
     # avoid existing *.bak host file overwrite
+<<<<<<< HEAD
 =======
 if [[ -f "$hosts_file" ]]; then
     cp "$hosts_file" "$vfile"
@@ -62,6 +72,8 @@ if [[ -f "$hosts_file" ]]; then
 =======
     # avoid existing *.bak host file overwrite
 >>>>>>> 18dcc25... style(a_devops:0x08): rm unused spaces and add comments
+=======
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
     while [[ -f "$vhosts_bak" ]]; do
 	vhosts_bak+=".bak"
     done
@@ -70,6 +82,7 @@ if [[ -f "$hosts_file" ]]; then
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     # mv /etc/hosts "$vhosts_bak"
 =======
     #mv /etc/hosts "$vhosts_bak"
@@ -83,10 +96,14 @@ if [[ -f "$hosts_file" ]]; then
 =======
     # mv /etc/hosts "$vhosts_bak"
 >>>>>>> 18dcc25... style(a_devops:0x08): rm unused spaces and add comments
+=======
+    # mv /etc/hosts "$vhosts_bak"
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
     mv "$hosts_file" "$vhosts_bak"
 else
     touch "$vfile"
 fi
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -128,6 +145,9 @@ mv /etc/hosts "$vhosts_bak"
 >>>>>>> 111ceef... feat(a_devops): add task_0 solution file
 =======
 >>>>>>> 18dcc25... style(a_devops:0x08): rm unused spaces and add comments
+=======
+
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
 # edit host file(copy) as required
 for host in "${!hosts_arr[@]}"; do
     host_line="$(sed -En "/$host$/p" $vfile)"
@@ -148,6 +168,7 @@ done
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 cp -f "$vfile" /etc/hosts
 rm "$vfile"
 =======
@@ -176,3 +197,7 @@ mv -f "$vfile" /etc/hosts
 cp -f "$vfile" /etc/hosts
 rm "$vfile"
 >>>>>>> 9cd87ca... refactor(a_devops:0x08): change last mv cmd
+=======
+cp -f "$vfile" /etc/hosts
+rm "$vfile"
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12

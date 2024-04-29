@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 find . -type d ! -name "." | wc -l
 =======
 find . -type -d ! -name '.'
@@ -24,3 +25,6 @@ find . -type -d ! -name '.' | wc -l
 =======
 find . -type d ! -name "." | wc -l
 >>>>>>> 4624b79... update script 11
+=======
+find . -type d ! -name "." | wc -l
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12

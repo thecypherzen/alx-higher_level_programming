@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 su betty
 =======
 sudo su - betty
@@ -16,3 +17,6 @@ sudo su - betty
 =======
 su betty
 >>>>>>> 1fb379f... Update scripts 0, 1 and 13
+=======
+su betty
+>>>>>>> ae08487284ffd0509af205190b88888858c22b12
