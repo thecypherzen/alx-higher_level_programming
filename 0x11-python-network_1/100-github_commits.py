@@ -9,13 +9,11 @@ if __name__ == "__main__":
     import requests
     import sys
 
-    _token = "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"
     _owner = sys.argv[2]
     _repo = sys.argv[1]
     url = f"https://api.github.com/repos/{_owner}/{_repo}/commits"
     headers = {
         "Accept": "application/vnd.github+json",
-        "Authorization": f"Bearer {_token}",
         "X-GitHub-Api-Version": "2022-11-28",
     }
     params = {"per_page": 20}
