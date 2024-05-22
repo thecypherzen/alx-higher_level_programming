@@ -8,10 +8,8 @@ console.log(numbers.reduce(
 		 }, 0
 ));
 */
-
-function myfunc(a,b,c){
-    console.log(arguments, typeof(arguments));
-}
-
-
-myfunc(1,2,3)
+myobj = {};
+console.log(myobj['1'] || 0);
+myobj['1'] = 5;
+console.log(myobj['1'] || 0);
+console.log(parseInt(true));

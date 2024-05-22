@@ -16,7 +16,7 @@ request(url, { json: true }, (err, res, body) => {
   if (err) {
     console.log(err.message);
   } else {
-    if (res.statusCode === 200) {
+      if (res.statusCode === 200) {
       fs.writeFile(path, body, (error) => {
         if (error) {
           console.log(error);
