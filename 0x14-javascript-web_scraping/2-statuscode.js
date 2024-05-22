@@ -11,6 +11,6 @@ const url = argv[2];
 
 request(url, (err, res, body) => {
   if (!err) {
-    console.log(res.statusCode);
+    console.log('code:', res.statusCode);
   }
 });
