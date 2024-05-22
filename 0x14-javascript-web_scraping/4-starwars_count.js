@@ -9,17 +9,20 @@
  */
 
 const request = require('request');
-const { argv } = require('node:process');
-const url = `${argv[2]}`;
+const url = process.argv[2];
 
 request(url, { json: true }, (err, res, body) => {
   // console.log(url);
-  if (!err && res.statusCode === 200) {
-    const wedgeUrl = 'https://swapi-api.alx-tools.com/api/people/18/';
-    let results = res?.body?.results;
-    results = results.filter(
-      (film) => film.characters.includes(wedgeUrl)
-    );
-    console.log(results.length);
+  if (err) {
+    console.log(err.message);
+  } else {
+    if (res.statusCode === 200) {
+      const wedgeUrl = 'https://swapi-api.alx-tools.com/api/people/18/';
+      let results = res?.body?.results;
+      results = results.filter(
+        (film) => film.characters.includes(wedgeUrl)
+      );
+      console.log(results.length);
+    }
   }
 });
