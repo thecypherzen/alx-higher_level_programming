@@ -14,7 +14,7 @@ const url = process.argv[2];
 request(url, { json: true }, (err, res, body) => {
   // console.log(url);
   if (err) {
-    console.log(err.message);
+    console.log(err);
   } else {
     if (res.statusCode === 200) {
       const wedgeUrl = 'https://swapi-api.alx-tools.com/api/people/18/';
