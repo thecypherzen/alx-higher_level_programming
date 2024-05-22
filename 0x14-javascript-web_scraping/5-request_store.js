@@ -14,7 +14,7 @@ const url = `${argv[2]}`;
 const path = `${argv[3]}`;
 
 request(url, { json: true }, (err, res, body) => {
-  if (!err) {
+  if (!err && res.statusCode === 200) {
     fs.writeFile(path, body, (error) => {
       if (error) {
         console.log(error);
