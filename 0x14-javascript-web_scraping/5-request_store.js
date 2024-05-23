@@ -9,21 +9,23 @@
 const fs = require('fs');
 const request = require('request');
 
-const url = process.argv[2];
-const path = process.argv[3];
+if (process.argv.length > 2) {
+  const url = process.argv[2];
+  const path = process.argv[3];
 
-request(url, { json: true }, (err, res, body) => {
-  if (err) {
-    console.log(err.message);
-  } else {
-      if (res.statusCode === 200) {
-      fs.writeFile(path, body, (error) => {
-        if (error) {
-          console.log(error);
-        }
-      });
+  request(url, { json: true }, (err, res, body) => {
+    if (err) {
+      console.log(err.message);
     } else {
-      console.log('code:', res.statusCode);
+      if (res.statusCode === 200) {
+        fs.writeFile(path, body, (error) => {
+          if (error) {
+            console.log(error);
+          }
+        });
+      } else {
+        console.log('code:', res.statusCode);
+      }
     }
-  }
-});
+  });
+}
