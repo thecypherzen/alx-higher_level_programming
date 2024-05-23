@@ -20,7 +20,7 @@ request(url, { json: true }, (err, res, body) => {
       const regex = /[*]*18/;
       const results = body?.results;
       let temp;
-      /*
+      /* solution using for...of => watch {varnames}
       let count = 0;
       // console.log(results);
       for (const result of results) {
@@ -32,6 +32,7 @@ request(url, { json: true }, (err, res, body) => {
       }
       console.log(count);
       */
+      // solution using reduce
       const count = results.reduce((acc, film) => {
         temp = film.characters.reduce((ac, actor) => {
           if (regex.test(actor)) {
