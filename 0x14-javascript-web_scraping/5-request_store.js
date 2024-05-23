@@ -10,10 +10,10 @@ const fs = require('fs');
 const request = require('request');
 
 if (process.argv.length > 2) {
-  const url = process.argv[2];
-  const path = process.argv[3];
+  const url = `${process.argv[2]}`;
+  const path = `${process.argv[3]}`;
 
-  request(url, { json: true }, (err, res, body) => {
+  request(url, (err, res, body) => {
     if (err) {
       console.log(err.message);
     } else {
