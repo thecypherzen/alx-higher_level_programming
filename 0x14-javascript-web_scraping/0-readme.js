@@ -3,7 +3,7 @@
 
 const { argv } = require('node:process');
 const fs = require('node:fs');
-const file = argv[2];
+const file = `${argv[2]}`;
 const encoding = 'utf-8';
 
 fs.readFile(file, encoding, (error, data) => {

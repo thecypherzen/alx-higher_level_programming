@@ -9,7 +9,7 @@
  */
 
 const request = require('request');
-const url = process.argv[2];
+const url = `${process.argv[2]}`;
 
 request(url, { json: true }, (err, res, body) => {
   // console.log(url);
@@ -19,6 +19,8 @@ request(url, { json: true }, (err, res, body) => {
     if (res.statusCode === 200) {
       const regex = /[*]*18/;
       const results = body?.results;
+      let temp;
+      /*
       let count = 0;
       // console.log(results);
       for (const result of results) {
@@ -29,12 +31,18 @@ request(url, { json: true }, (err, res, body) => {
         }
       }
       console.log(count);
-      /*
-      results = newResults.filter(
-        (film) => film.characters.includes(wedgeUrl)
-      );
-        console.log(results.length);
       */
+      const count = results.reduce((acc, film) => {
+        temp = film.characters.reduce((ac, actor) => {
+          if (regex.test(actor)) {
+            return ac + 1;
+          } else {
+            return ac;
+          }
+        }, 0);
+        return temp + acc;
+      }, 0);
+      console.log(count);
     }
   }
 });

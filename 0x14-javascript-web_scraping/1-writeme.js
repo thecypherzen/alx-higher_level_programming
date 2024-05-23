@@ -8,8 +8,8 @@ if (argv.length < 3) {
   process.exit();
 }
 
-const file = argv[2];
-const content = argv[3];
+const file = `${argv[2]}`;
+const content = `${argv[3]}`;
 
 fs.writeFile(file, content, (error) => {
   if (error) {

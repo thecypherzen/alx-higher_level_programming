@@ -7,7 +7,7 @@
 
 const request = require('request');
 const { argv } = require('node:process');
-const url = argv[2];
+const url = `${argv[2]}`;
 
 request(url, (err, res, body) => {
   if (!err) {
