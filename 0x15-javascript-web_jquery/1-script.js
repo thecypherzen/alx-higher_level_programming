@@ -1,4 +1,3 @@
-#!/usr/bin/node
 // Changes color of first header to red using JQuery
 
 $('document').ready(() => {

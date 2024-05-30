@@ -1,4 +1,3 @@
-#!/usr/bin/node
 /** A script that adds, removes and clears LI elements from a list when
  *  + the user clicks on:
  *
