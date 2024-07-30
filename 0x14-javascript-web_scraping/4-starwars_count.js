@@ -14,19 +14,25 @@ const request = require('request');
 
 if (argv.length > 2) {
   let total;
-  request(`${argv[2]}`, (err, response, body) => {
-    if (err) {
-      console.log(err);
-    } else if (response.statusCode === 200) {
-      const films = JSON.parse(body).results;
-      const charUrl = 'https://swapi-api.alx-tools.com/api/people/18/';
-      total = films.reduce((eCount, film) => {
-        const iCount = film.characters.reduce((acc, actor) => {
-          return actor === charUrl ? acc + 1 : acc;
+  try {
+    request(`${argv[2]}`, (err, response, body) => {
+      if (err) {
+        console.log(err);
+      } else if (response.statusCode === 200) {
+        const films = JSON.parse(body).results;
+        const charUrl = 'https://swapi-api.alx-tools.com/api/people/18/';
+        total = films.reduce((eCount, film) => {
+          const iCount = film.characters.reduce((acc, actor) => {
+            return actor === charUrl ? acc + 1 : acc;
+          }, 0);
+          return eCount + iCount;
         }, 0);
-        return eCount + iCount;
-      }, 0);
-      console.log(total);
-    }
-  });
+        console.log(total);
+      } else {
+        console.log(0);
+      }
+    });
+  } catch (err) {
+    console.log(0);
+  }
 }
