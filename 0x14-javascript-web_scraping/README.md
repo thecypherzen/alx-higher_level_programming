@@ -7,7 +7,7 @@ This is something entirely new.
 It's expected that at the end of this project, the following one should understand:
 - Why JavaScript programming is amazing
 - How to manipulate JSON data
-- How to use request and fetch API
+- How to use `request` and `fetch` API
 - How to read and write a file using fs module
 
 ### General Requirements ###
@@ -37,28 +37,29 @@ sudo apt-get install -y nodejs
 ```
 
 2. Semi-standard
+[Docomentation](https://github.com/standard/semistandard)
 ```
 sudo npm install semistandard --global
 
 ```
 3. `request` module
-***Request module has been deprecated since February 2020 - the team is considering alternative to replace this module - however, it’s a really simple and powerful module for practicing web-scraping in JavaScript (and still used a lot in the industry).***
+***[Request](https://github.com/request/request) module has been deprecated since February 2020 - the team is considering alternative to replace this module - however, it’s a really simple and powerful module for practicing web-scraping in JavaScript (and still used a lot in the industry).***
 ```
 sudo npm install request --global
 export NODE_PATH=/usr/lib/node_modules
 ```
 ### Project Timeline Details ###
-- **Released:** Tue 21 May. 2024 - 6am.
-- **1st Deadline:** Wed 22 May. 2024 - 6am.
+- **Released:** Tue 30 July 2024 - 6am.
+- **1st Deadline:** Wed 31 July. 2024 - 6am.
 - **Duration:** 24 hrs (1 day).
-- **Month** 7, **Week** 4, **Day** 2.
+
 
 ## Author ##
 - [William Inyam](https://github.com/thecypherzen/)
 
 
 ## File Tree ##
-**pending**
+
 
 
 ## Files ##
@@ -66,4 +67,3 @@ Files on the project are task based and are as follows:
 | SN | File | Description |
 |----|------|-------------|
 | 1. |[0-rectangle.js](https://github.com)  | A script that creates an empty class `Rectangle` that defines a rectangle:<br/><ul><li>ES6 `class` notation must be used.</li></ul>|
-| 2. | Pending |      |
