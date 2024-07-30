@@ -28,9 +28,7 @@ if (argv.length > 2) {
           return eCount + iCount;
         }, 0);
         console.log(total);
-      } else {
-        console.log(0);
       }
     });
-  } catch (err) { console.log(0); }
-} else { console.log(0); }
+  } catch (err) { console.log(err); }
+}
