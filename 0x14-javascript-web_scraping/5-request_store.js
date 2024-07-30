@@ -20,5 +20,7 @@ request(url, { json: true }, (err, response, body) => {
         console.log(err);
       }
     });
+  } else {
+    console.log('code:', response.statusCode);
   }
 });
