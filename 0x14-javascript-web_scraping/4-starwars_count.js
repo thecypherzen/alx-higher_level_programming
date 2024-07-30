@@ -32,7 +32,5 @@ if (argv.length > 2) {
         console.log(0);
       }
     });
-  } catch (err) {
-    console.log(0);
-  }
-}
+  } catch (err) { console.log(0); }
+} else { console.log(0); }
