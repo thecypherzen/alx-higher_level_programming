@@ -17,7 +17,7 @@ if (process.argv.length > 2) {
     if (err) {
       console.log(err);
     } else if (response.statusCode === 200) {
-      fs.writeFile(filename, body, 'utf8', (err) => {
+      fs.writeFile(filename, `${body}`, 'utf8', (err) => {
         if (err) {
           console.log(err);
         }
