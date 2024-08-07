@@ -41,7 +41,7 @@ It's expected that at the end of this project, the following one should understa
 - [JQuery API](https://api.jquery.com/)
 - [JQuery Ajax](https://learn.jquery.com/ajax/)
 
-<br/>
+
 ## Dependencies ##
 JQuery 3.x
 ```
@@ -50,14 +50,14 @@ JQuery 3.x
 </head>
 ```
 
-<br/>
+
 ## Project Timeline Details ##
 - **Released:** Wed 7 Aug 2024 - 6am.
 - **1st Deadline:** Thur 8 Aug 2024 - 6am.
 - **Duration:** 24 hrs (1 day).
 - **Author: **[William Inyam](https://github.com/thecypherzen/)
 
-<br/>
+
 ## Files ##
 Files on the project are task based and are as follows:
 | SN | File | Description |
