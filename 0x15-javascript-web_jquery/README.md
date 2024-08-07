@@ -55,7 +55,7 @@ JQuery 3.x
 - **Released:** Wed 7 Aug 2024 - 6am.
 - **1st Deadline:** Thur 8 Aug 2024 - 6am.
 - **Duration:** 24 hrs (1 day).
-- **Author: **[William Inyam](https://github.com/thecypherzen/)
+- ***Author:***[William Inyam](https://github.com/thecypherzen/)
 
 
 ## Files ##
