@@ -2,7 +2,6 @@
 
 Using *JavaScript* is awesome, but with it, you get to write too many lines of code for pretty simple tasks like simple DOM Elements selection. It gets with other tasks like toggling classnames, event handling and animations. [JQuery](https://api.jquery.com/), as a JS Library, makes life easier, given that we're able to do much with shorter lines of code. The good thing is - it's small - and can be imported using it's cdn link!
 
-<br/>
 ## Learning Objectives ##
 It's expected that at the end of this project, the following one should understand:
 - Why JQuery make front-end programming so easy (don’t forget to tweet today, with the hashtag #ilovejquery :))
@@ -16,7 +15,7 @@ It's expected that at the end of this project, the following one should understa
 - How to make a POST request with JQuery Ajax
 - How to listen/bind to DOM events
 
-<br/>
+
 ## General Requirements ##
 - Allowed editors: vi, vim, emacs
 - All files interpreted on Chrome (version 57.0)
@@ -26,7 +25,7 @@ It's expected that at the end of this project, the following one should understa
 - Not allowed to use var
 - HTML should not reload for each action: DOM manipulation, update values, fetch data, etc
 
-<br/>
+
 ## Resources ##
 - [What is JavaScript?](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
 - [Selector](https://jquery-tutorial.net/selectors/using-elements-ids-and-classes/)
