@@ -17,7 +17,7 @@ It's expected that at the end of this project, the following one should understa
 - How to listen/bind to DOM events
 
 <br/>
-### General Requirements ###
+## General Requirements ##
 - Allowed editors: vi, vim, emacs
 - All files interpreted on Chrome (version 57.0)
 - All files should end with a new line
@@ -43,7 +43,7 @@ It's expected that at the end of this project, the following one should understa
 - [JQuery Ajax](https://learn.jquery.com/ajax/)
 
 <br/>
-### Dependencies ###
+## Dependencies ##
 JQuery 3.x
 ```
 <head>
@@ -52,7 +52,7 @@ JQuery 3.x
 ```
 
 <br/>
-### Project Timeline Details ###
+## Project Timeline Details ##
 - **Released:** Wed 7 Aug 2024 - 6am.
 - **1st Deadline:** Thur 8 Aug 2024 - 6am.
 - **Duration:** 24 hrs (1 day).
