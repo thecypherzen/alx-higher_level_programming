@@ -11,15 +11,14 @@
 
 const argv = process.argv;
 const request = require('request');
+const charUrl = 'https://swapi-api.alx-tools.com/api/people/18/';
 
-let total;
 request(`${argv[2]}`, { json: true }, (err, response, body) => {
   if (err) {
     console.log(err);
   } else if (response.statusCode === 200) {
     const films = body.results;
-    const charUrl = 'https://swapi-api.alx-tools.com/api/people/18/';
-    total = films.reduce((eCount, film) => {
+    let total = films.reduce((eCount, film) => {
       const iCount = film.characters.reduce((acc, actor) => {
         return (actor === charUrl) ? acc + 1 : acc;
       }, 0);
