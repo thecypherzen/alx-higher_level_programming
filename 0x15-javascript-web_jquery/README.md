@@ -54,26 +54,17 @@ JQuery 3.x
 - **Released:** Wed 7 Aug 2024 - 6am.
 - **1st Deadline:** Thur 8 Aug 2024 - 6am.
 - **Duration:** 24 hrs (1 day).
-
-
-## Author ##
-- [William Inyam](https://github.com/thecypherzen/)
-
-
-## File Tree ##
-**pending**
+- **Author:**[William Inyam](https://github.com/thecypherzen/)
 
 
 ## Files ##
 Files on the project are task based and are as follows:
 | SN | File | Description |
 |----|------|-------------|
-| 1. |[0-script.js](https://github.com/thecypherzen/alx-higher_level_programming/blob/main/0x15-javascript-web_jquery/0-script.js)  | A JavaScript script that updates the text color of the <header> element to red (#FF0000) using `document.querySelector` to select the HTML tag:<ul><li>test with [0-main.html](https://github.com/thecypherzen/alx-higher_level_programming/blob/main/0x15-javascript-web_jquery/mainfiles/0-main.html).</li></ul> |
-| 2. |[1-script.js](https://github.com/thecypherzen/alx-higher_level_programming/blob/main/0x15-javascript-web_jquery/1-script.js) | JavaScript script that updates the text color of the <header> element to red (#FF0000) without using `document.querySelector` to select the HTML tag:<ul><li>test with [0-main.html](https://github.com/thecypherzen/alx-higher_level_programming/blob/main/0x15-javascript-web_jquery/mainfiles/1-main.html).</li></ul> |
-| 3. |[2-script.js](https://github.com/thecypherzen/alx-higher_level_programming/blob/main/0x15-javascript-web_jquery/2-script.js) | A JavaScript script that updates the text color of the <header> element to red (#FF0000) when the user clicks on the tag DIV#red_header without using `document.querySelector` to select the HTML tag:<ul><li>test with [1-main.html](https://github.com/thecypherzen/alx-higher_level_programming/blob/main/0x15-javascript-web_jquery/mainfiles/2-main.html)</li>
- |
-| 4. |[3-script.js](https://github.com/thecypherzen/alx-higher_level_programming/blob/main/0x15-javascript-web_jquery/3-script.js) | A JavaScript script that adds the class red to the `<header>` element when the user clicks on the tag `DIV#red_header` without using `document.querySelector` to select the HTML tag. <ul><li>test with [3-main.html](https://github.com/thecypherzen/alx-higher_level_programming/blob/main/0x15-javascript-web_jquery/mainfiles/3-main.html).</li></ul> 
- |
+| 1. |[0-script.js](https://github.com/thecypherzen/alx-higher_level_programming/blob/main/0x15-javascript-web_jquery/0-script.js)  | A JavaScript script that updates the text color of the <header> element to red (#FF0000) using `document.querySelector` to select the HTML tag:<ul><li>test with [0-main.html](https://github.com/thecypherzen/alx-higher_level_programming/blob/main/0x15-javascript-web_jquery/mainfiles/0-main.html).</li></ul>|
+| 2. |[1-script.js](https://github.com/thecypherzen/alx-higher_level_programming/blob/main/0x15-javascript-web_jquery/1-script.js) | JavaScript script that updates the text color of the <header> element to red (#FF0000) without using `document.querySelector` to select the HTML tag:<ul><li>test with [0-main.html](https://github.com/thecypherzen/alx-higher_level_programming/blob/main/0x15-javascript-web_jquery/mainfiles/1-main.html).</li></ul>|
+| 3. |[2-script.js](https://github.com/thecypherzen/alx-higher_level_programming/blob/main/0x15-javascript-web_jquery/2-script.js) | A JavaScript script that updates the text color of the <header> element to red (#FF0000) when the user clicks on the tag DIV#red_header without using `document.querySelector` to select the HTML tag:<ul><li>test with [1-main.html](https://github.com/thecypherzen/alx-higher_level_programming/blob/main/0x15-javascript-web_jquery/mainfiles/2-main.html)</li>|
+| 4. |[3-script.js](https://github.com/thecypherzen/alx-higher_level_programming/blob/main/0x15-javascript-web_jquery/3-script.js) | A JavaScript script that adds the class red to the `<header>` element when the user clicks on the tag `DIV#red_header` without using `document.querySelector` to select the HTML tag. <ul><li>test with [3-main.html](https://github.com/thecypherzen/alx-higher_level_programming/blob/main/0x15-javascript-web_jquery/mainfiles/3-main.html).</li></ul>|
 | 5. |[4-script.js](https://github.com/thecypherzen/alx-higher_level_programming/blob/main/0x15-javascript-web_jquery/4-script.js) | A JavaScript script that toggles the class of the `<header>` element when the user clicks on the tag `DIV#toggle_header` without using `document.querySelector` to select the HTML tag. <ul><li>The `<header>` element must always have one class: *red* or *green*, never both in the same time and never empty.</li><li>If the current class is red, when the user click on `DIV#toggle_header`, the class must be updated to *green* ; and the reverse.</li></li><li>test with [4-main.html](https://github.com/thecypherzen/alx-higher_level_programming/blob/main/0x15-javascript-web_jquery/mainfiles/4-main.html).</li></ul>|
 | 6. |[5-script.js](https://github.com/thecypherzen/alx-higher_level_programming/blob/main/0x15-javascript-web_jquery/5-script.js) |A JavaScript script that adds an `<li>` element to a list when the user clicks on the tag `DIV#add_item` without using `document.querySelector` to select the HTML tag. <ul><li>The new element must be: `<li>Item</li>`</li><li>The new element must be added to `UL.my_list`</li><li>test with [5-main.html](https://github.com/thecypherzen/alx-higher_level_programming/blob/main/0x15-javascript-web_jquery/mainfiles/5-main.html).</li></ul>|
 | 7. |[6-script.js](https://github.com/thecypherzen/alx-higher_level_programming/blob/main/0x15-javascript-web_jquery/6-script.js) |A JavaScript script that updates the text of the `<header>`element to *New Header!!!*when the user clicks on `DIV#update_header` without using `document.querySelector` to select the HTML tag. <ul><li>test with [6-main.html](https://github.com/thecypherzen/alx-higher_level_programming/blob/main/0x15-javascript-web_jquery/mainfiles/6-main.html).</li></ul> |
