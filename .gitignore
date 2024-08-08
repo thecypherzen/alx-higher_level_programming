@@ -1,30 +1,5 @@
 *~
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 *#
-=======
-.tst
->>>>>>> 437d351... 0x00-shell_basics project tasks submission
-=======
 *.tst
->>>>>>> 3531d50... Update gitignore
-=======
-.tst
->>>>>>> 437d351... 0x00-shell_basics project tasks submission
-=======
-*.tst
->>>>>>> 3531d50... Update gitignore
-=======
-.tst
->>>>>>> 437d351... 0x00-shell_basics project tasks submission
-=======
-*.tst
->>>>>>> 3531d50... Update gitignore
-=======
-*.tst
->>>>>>> ae08487284ffd0509af205190b88888858c22b12
+*__pycache__*
+mytest.py
