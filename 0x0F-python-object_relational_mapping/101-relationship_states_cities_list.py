@@ -34,8 +34,9 @@ if __name__ == "__main__":
 
     for state in states:
         print(f"{state.id}: {state.name}")
-        cities = state.cities
-        for city in cities:
-            print(f"\t{city.id}: {city.name}")
+        cities = getattr(state, "cities")
+        if (cities.__class__.__name__ == "InstrumentedList"):
+            for city in cities:
+                print(f"\t{city.id}: {city.name}")
 
     session.close()
