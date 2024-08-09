@@ -15,8 +15,9 @@
 import sys
 from relationship_city import City
 from relationship_state import Base, State
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine, inspect
+from sqlalchemy.orm import RelationshipProperty, sessionmaker
+
 
 if __name__ == "__main__":
     user = sys.argv[1]
@@ -31,12 +32,8 @@ if __name__ == "__main__":
 
     # fetch all states and cities
     states = session.query(State).order_by(State.id).all()
-
     for state in states:
         print(f"{state.id}: {state.name}")
-        cities = getattr(state, "cities")
-        if (cities.__class__.__name__ == "InstrumentedList"):
-            for city in cities:
-                print(f"\t{city.id}: {city.name}")
-
+        for city in state.cities:
+            print(f"\t{city.id}: {city.name}")
     session.close()
