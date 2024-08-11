@@ -15,7 +15,7 @@ import sys
 from relationship_city import City
 from relationship_state import Base, State
 from sqlalchemy import create_engine
-from sqlalchemy.orm import  sessionmaker
+from sqlalchemy.orm import sessionmaker
 
 
 if __name__ == "__main__":
@@ -24,13 +24,13 @@ if __name__ == "__main__":
     db = sys.argv[3]
 
     uri = f"mysql+mysqldb://{user}:{passwd}@localhost/{db}"
-    engine = create_engine(uri, pool_pre_ping=True )
+    engine = create_engine(uri, pool_pre_ping=True)
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
 
     # fetch all data
-    cities  = session.query(City).order_by(City.id).all()
+    cities = session.query(City).order_by(City.id).all()
     for city in cities:
-        print(f"{city.id}: {city.name} -> {city.state. name}")
+        print(f"{city.id}: {city.name} -> {city.state.name}")
     session.close()
